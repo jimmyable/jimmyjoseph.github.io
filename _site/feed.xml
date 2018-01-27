@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jimmy Joseph</title>
+    <description>A blog about lorem ipsum dolor sit amet</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 27 Jan 2018 21:27:46 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Jan 2018 21:27:46 +0000</lastBuildDate>
+    <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>AI TicTacToe</title>
+        <description>&lt;h2 id=&quot;basic-setup&quot;&gt;Basic Setup&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;Install Python 3&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Clone the &lt;a href=&quot;https://github.com/jimmyjoseph1295/AITicTacToe&quot;&gt;repo&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;game.py&lt;/code&gt; file&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;further-support&quot;&gt;Further Support&lt;/h2&gt; &lt;p&gt;If you don’t know how Python works, this code was inspired &lt;code class=&quot;highlighter-rouge&quot;&gt;heavily&lt;/code&gt; from &lt;a href=&quot;https://inventwithpython.com/chapter10.html&quot;&gt;Al Sweigart’s&lt;/a&gt; resources. He provides very detailed and beginner friendly python books and they’re all free.&lt;/p&gt; &lt;h2 id=&quot;are-you-still-here&quot;&gt;Are you still here?&lt;/h2&gt; &lt;p&gt;Have a code snippet then…&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;playAgain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This function returns True if the player wants to play again, otherwise it returns False.&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Do you want to play again? (yes or no)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;...</description>
+        <pubDate>Fri, 20 Oct 2017 04:32:44 +0100</pubDate>
+        <link>http://localhost:4000/ai-tictactoe/</link>
+        <guid isPermaLink="true">http://localhost:4000/ai-tictactoe/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>template</category>
+        
+        
+        <category>Python, AI</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code class=&quot;highlighter-rouge&quot;&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt; &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most...</description>
+        <pubDate>Tue, 04 Aug 2015 04:21:35 +0100</pubDate>
+        <link>http://localhost:4000/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>web</category>
+        
+        
+        <category>Jekyll is awesome</category>
+        
+      </item>
+    
+  </channel>
+</rss>
