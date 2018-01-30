@@ -9,7 +9,7 @@ tags:
 - template 
 categories:
 - Python, AI
-twitter_text: 'what? whats a twitter text?'
+twitter_text:
 ---
 
 ## Basic Setup
