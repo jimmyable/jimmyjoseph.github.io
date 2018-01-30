@@ -13,9 +13,7 @@ tags:
 - matplotlib
 - dataviz
 categories:
-- Data Visualisation
-- Data Mining
-- Python
+- Data Mining Snippets
 twitter_text: 
 ---
 

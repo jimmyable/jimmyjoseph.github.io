@@ -5,10 +5,11 @@ date: 2017-10-20 03:32:44
 image: '/assets/img/'
 description: 'A simple game modelled in Python with a computer "AI"'
 tags:
-- jekyll 
-- template 
+- python
+- AI
+- game
 categories:
-- Python, AI
+- ATBSWP
 twitter_text:
 ---
 

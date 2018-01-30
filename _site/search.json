@@ -2,7 +2,7 @@
   
     {
       "title"    : "Chocolate Visualisations",
-      "category" : "Data VisualisationData MiningPython",
+      "category" : "Data Mining Snippets",
       "tags"     : "python, scatterplot, barplot, numpy, pandas, matplotlib, and dataviz",
       "url"      : "/chocolate-viz/",
       "date"     : "27 Jan 2018"
@@ -10,8 +10,8 @@
   
     {
       "title"    : "AI TicTacToe",
-      "category" : "Python, AI",
-      "tags"     : "jekyll and template",
+      "category" : "ATBSWP",
+      "tags"     : "python, AI, and game",
       "url"      : "/ai-tictactoe/",
       "date"     : "20 Oct 2017"
     } 
