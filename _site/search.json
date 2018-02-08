@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Basic Java",
+      "category" : "BasicJava",
+      "tags"     : "java, loops, stacks, queues, and compile",
+      "url"      : "/basic-java/",
+      "date"     : "08 Feb 2018"
+    } ,
+  
+    {
       "title"    : "Chocolate Visualisations",
       "category" : "Data Mining Snippets",
       "tags"     : "python, scatterplot, barplot, numpy, pandas, matplotlib, and dataviz",

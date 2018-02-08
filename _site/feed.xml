@@ -5,9 +5,31 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Jan 2018 19:58:16 +0000</pubDate>
-    <lastBuildDate>Tue, 30 Jan 2018 19:58:16 +0000</lastBuildDate>
+    <pubDate>Thu, 08 Feb 2018 22:03:42 +0000</pubDate>
+    <lastBuildDate>Thu, 08 Feb 2018 22:03:42 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Basic Java</title>
+        <description>&lt;h2 id=&quot;why-java&quot;&gt;Why Java?&lt;/h2&gt; &lt;p&gt;Java is old, older than me atleast. But its not seen as old, its seen as a standard programming language. If you’re learning how to program you will end up with java at some point. And for good reason, its an efficient program that has standed the test of time.&lt;/p&gt; &lt;p&gt;In my opinion it is more “messy” for a beginner, you need to write more code. Mainly because everything is explicit and the language is designed for high end efficient softwares. Unlike python which uses much simpler scripting language but is more suited for quick “prototyping”.&lt;/p&gt; &lt;p&gt;It...</description>
+        <pubDate>Thu, 08 Feb 2018 21:34:47 +0000</pubDate>
+        <link>http://localhost:4000/basic-java/</link>
+        <guid isPermaLink="true">http://localhost:4000/basic-java/</guid>
+        
+        <category>java</category>
+        
+        <category>loops</category>
+        
+        <category>stacks</category>
+        
+        <category>queues</category>
+        
+        <category>compile</category>
+        
+        
+        <category>BasicJava</category>
+        
+      </item>
     
       <item>
         <title>Chocolate Visualisations</title>
