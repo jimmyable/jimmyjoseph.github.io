@@ -5,9 +5,37 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Feb 2018 22:03:42 +0000</pubDate>
-    <lastBuildDate>Thu, 08 Feb 2018 22:03:42 +0000</lastBuildDate>
+    <pubDate>Fri, 09 Feb 2018 12:58:35 +0000</pubDate>
+    <lastBuildDate>Fri, 09 Feb 2018 12:58:35 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>K-nearest Neighbours</title>
+        <description>&lt;h1 id=&quot;what-is-machine-learning&quot;&gt;What is Machine Learning?&lt;/h1&gt; &lt;p&gt;Machine Learning is using a computer to learn features and trends from data. Just like humans, a machine algorithm should increase its &lt;code class=&quot;highlighter-rouge&quot;&gt;Performance&lt;/code&gt; through increased &lt;code class=&quot;highlighter-rouge&quot;&gt;Experience&lt;/code&gt;, meaning it should get better with more data.&lt;/p&gt; &lt;p&gt;Machine Learning is already with us in many services we use:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Spam Filtering&lt;/li&gt; &lt;li&gt;Search engines&lt;/li&gt; &lt;li&gt;Fraud/Anomoly detection&lt;/li&gt; &lt;li&gt;Speech Recognition&lt;/li&gt; &lt;li&gt;Self-Driving cars&lt;/li&gt; &lt;li&gt;Recommendation Systems(Amazon/Netflix)&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;there-are-two-main-types-of-machine-learning&quot;&gt;There are two main types of machine learning:&lt;/h3&gt; &lt;p&gt;&lt;strong&gt;Supervised&lt;/strong&gt; - Data points have known outcome&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Unsupervised&lt;/strong&gt; - Data points have unknown outcome&lt;/p&gt; &lt;p&gt;We’re gonna focus on &lt;strong&gt;Supervised&lt;/strong&gt; learning here, and it can be...</description>
+        <pubDate>Fri, 09 Feb 2018 11:19:47 +0000</pubDate>
+        <link>http://localhost:4000/supervised-knn/</link>
+        <guid isPermaLink="true">http://localhost:4000/supervised-knn/</guid>
+        
+        <category>python</category>
+        
+        <category>knn</category>
+        
+        <category>machine learning</category>
+        
+        <category>numpy</category>
+        
+        <category>scikit</category>
+        
+        <category>classification</category>
+        
+        <category>feature scaling</category>
+        
+        <category>regression</category>
+        
+        
+        <category>ML &amp; Data Mining</category>
+        
+      </item>
     
       <item>
         <title>Basic Java</title>
@@ -53,7 +81,7 @@
         <category>dataviz</category>
         
         
-        <category>Data Mining Snippets</category>
+        <category>ML &amp; Data Mining</category>
         
       </item>
     
