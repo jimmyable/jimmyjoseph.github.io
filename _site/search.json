@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "MultiAgent Systems",
+      "category" : "Agents",
+      "tags"     : "agents, society, intelligence, autonomy, and interacting",
+      "url"      : "/multiagent-systems/",
+      "date"     : "12 Feb 2018"
+    } ,
+  
+    {
+      "title"    : "Intro to JADE",
+      "category" : "Agents",
+      "tags"     : "java, FIPA, agents, queues, and compile",
+      "url"      : "/jade/",
+      "date"     : "09 Feb 2018"
+    } ,
+  
+    {
       "title"    : "K-nearest Neighbours",
       "category" : "ML & Data Mining",
       "tags"     : "python, knn, machine learning, numpy, scikit, classification, feature scaling, and regression",

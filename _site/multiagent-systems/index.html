@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>K-nearest Neighbours</title>
-    <meta name="description" content="Exploring KNN, a simple supervised machine learning technique">
+    <title>MultiAgent Systems</title>
+    <meta name="description" content="What, Why, and How of MultiAgent Systems">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="K-nearest Neighbours">
-    <meta name="twitter:description" content="Exploring KNN, a simple supervised machine learning technique">
+    <meta name="twitter:title" content="MultiAgent Systems">
+    <meta name="twitter:description" content="What, Why, and How of MultiAgent Systems">
     
     <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/supervised-knn/">
-    <meta property="og:title" content="K-nearest Neighbours">
+    <meta property="og:url" content="http://localhost:4000/multiagent-systems/">
+    <meta property="og:title" content="MultiAgent Systems">
     
     <meta property="og:image" content="http://localhost:4000/assets/img/">
     
-    <meta property="og:description" content="Exploring KNN, a simple supervised machine learning technique">
+    <meta property="og:description" content="What, Why, and How of MultiAgent Systems">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="K-nearest Neighbours"/>
-    <meta itemprop="description" content="Exploring KNN, a simple supervised machine learning technique">
+    <meta itemprop="name" content="MultiAgent Systems"/>
+    <meta itemprop="description" content="What, Why, and How of MultiAgent Systems">
     <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/supervised-knn/">
+    <link rel="canonical" href="http://localhost:4000/multiagent-systems/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-02-09 11:19:47 +0000" class="date">09 Feb 2018</time>
+            <time itemprop="datePublished" datetime="2018-02-12 10:23:47 +0000" class="date">12 Feb 2018</time>
         
-        <h1 class="post-title" itemprop="name">K-nearest Neighbours</h1>
-        <p itemprop="description" class="subtitle">Exploring KNN, a simple supervised machine learning technique</p>
+        <h1 class="post-title" itemprop="name">MultiAgent Systems</h1>
+        <p itemprop="description" class="subtitle">What, Why, and How of MultiAgent Systems</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,138 +120,41 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="what-is-machine-learning">What is Machine Learning?</h1>
-<p>Machine Learning is using a computer to learn features and trends from data. Just like humans, a machine algorithm should increase its <code class="highlighter-rouge">Performance</code> through increased <code class="highlighter-rouge">Experience</code>, meaning it should get better with more data.</p>
+                <h1 id="what-are-multiagent-systems">What are MultiAgent Systems</h1>
+<p>MultiAgent systems is a field of Computer Science focusing on building autonomous agents, that can communicate with other agents.</p>
 
-<p>Machine Learning is already with us in many services we use:</p>
+<h1 id="why-multiagent-systems">Why MultiAgent Systems</h1>
+<p>Computing is becoming more <code class="highlighter-rouge">ubiquitious</code>, <code class="highlighter-rouge">interconnected</code>, <code class="highlighter-rouge">intellligent</code>, more and more tasks are <code class="highlighter-rouge">delegated</code> to it and it is becoming more <code class="highlighter-rouge">human-oriented</code>. What does this mean? Computing itself is becoming faster and more efficient. The internet created a gloabl network inteconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self driving car, almost unthinkable a decade ago.</p>
+
+<p>As our requirements become more complex we need a computing system that can manage all of this. This is the “vision” behind multiagent systems. A network of agents that can communicate effectively as humans do to get tasks done.</p>
+
+<p>In the case of self driving cars, we ideally want cars to be communicating with eachother to be most efficient. <a href="https://www.youtube.com/watch?v=iHzzSao6ypE">Traffic</a> is a huge problem in our societies where we waste to much time doing nothing, and still causing lots of accidents.</p>
+
+<h1 id="how-to-realise-multiagent-systems">How to realise MultiAgent Systems</h1>
+<p>The problem is so simple it can be summarised in just two bullet points:</p>
 <ul>
-  <li>Spam Filtering</li>
-  <li>Search engines</li>
-  <li>Fraud/Anomoly detection</li>
-  <li>Speech Recognition</li>
-  <li>Self-Driving cars</li>
-  <li>Recommendation Systems(Amazon/Netflix)</li>
+  <li>How do we <code class="highlighter-rouge">build agents</code> that are capable of independent, autonomous action in order to successfully carry out the tasks that we delegate to them?</li>
+  <li>How do we build agents that are capable of <code class="highlighter-rouge">interacting</code> (cooperating, coordinating, negotiating) with other agents in order to successfully carry out the tasks that we delegate to them, particularly when the other agents cannot be assumed to share the same interests/goals?</li>
 </ul>
 
-<h3 id="there-are-two-main-types-of-machine-learning">There are two main types of machine learning:</h3>
+<p>The Textbook on this topic is <a href="http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas//IMAS2e.html">An Introduction to MultiAgent Systems</a> by Micheal Wooldridge. I have made a mindmap of the topics covered in the book below.</p>
 
-<p><strong>Supervised</strong> - Data points have known outcome</p>
-
-<p><strong>Unsupervised</strong> - Data points have unknown outcome</p>
-
-<p>We’re gonna focus on <strong>Supervised</strong> learning here, and it can be broken down into two more categories:</p>
-
-<p><em><code class="highlighter-rouge">Regression</code></em> - Outcome is continous(numerical)</p>
-
-<p><em><code class="highlighter-rouge">Classification</code></em> - Outcome is a Class label</p>
-
-<p>Basically, in supervised learning you input <code class="highlighter-rouge">Data with answers</code> which is used to <code class="highlighter-rouge">fit</code> a <code class="highlighter-rouge">MODEL</code>, which can then <code class="highlighter-rouge">predict answers</code> for a bunch of <code class="highlighter-rouge">data without answers</code>. Lets look at an example with Spam or not spam.
-<img src="/assets/img/DataMiningSnippets/8.png" alt="Output" class="img-responsive" /></p>
-
-<h3 id="machine-learning-vocabulary">Machine Learning Vocabulary</h3>
-
-<ul>
-  <li><strong>Target</strong> - predicted category or value of the data<em>(column to predict)</em></li>
-  <li><strong>Features</strong> - properties of the data used for prediction<em>(non-target columns)</em></li>
-  <li><strong>Example</strong> - a single data point within the data</li>
-  <li><strong>Label</strong> - the target value for a single data point</li>
-</ul>
-
-<p><img src="/assets/img/DataMiningSnippets/9.png" alt="Output" class="img-responsive" /></p>
-
-<h1 id="k--nearest-neighbours">K- Nearest Neighbours</h1>
-
-<p>In pattern recognition, the k-nearest neighbors algorithm is a non-parametric method used for classification and regression. We are going to focus on classification.</p>
-
-<h2 id="what-is-classification">What is classification?</h2>
-<p>A flower shop wants to guess a customer’s purchase from similarity to most recent purchase. Which flower is a customer based on similairty to previous purchases?</p>
-
-<p><img src="/assets/img/DataMiningSnippets/10.png" alt="Output" class="img-responsive" /></p>
-
-<p>We can classify the images to find the similiarities in this case.</p>
-
-<h3 id="what-are-needed-for-classification">What are needed for classification</h3>
-<ul>
-  <li><strong>Model data with:</strong>
-    <ul>
-      <li>Features that can be quantitated</li>
-      <li>Labels that are known</li>
-    </ul>
-  </li>
-  <li><strong>Methods to measure similiarity</strong></li>
-</ul>
-
-<h3 id="knn-classification">KNN Classification</h3>
-<p>How can we use this particular alogrithm for classification?
-Lets say we have the data shown below, and we want to classify the new data point, what kind of metrics do we need to consider?</p>
-<h4 id="k-neighbors">K-Neighbors</h4>
-<p>We would have to choose the correct value for <code class="highlighter-rouge">K Neighbors</code>, how many points around the new point to consider. The vlaue of <code class="highlighter-rouge">K</code> affects the decision boundary. We won’t be going into more depth here.</p>
-<h4 id="distance-to-other-points">Distance to other points</h4>
-<p>We would also have to measure the closeness of the new point to other points, in this case the new point is closer to the orange colour which may be significant.</p>
-
-<p><img src="/assets/img/DataMiningSnippets/11.png" alt="Output" class="img-responsive" /></p>
-
-<h4 id="measuring-distances">Measuring Distances</h4>
-<p>There are two ways to measure distances between two points. <code class="highlighter-rouge">Euclidean</code> distance(L2 Distance), and <code class="highlighter-rouge">Manhattan</code> distance(L1 or City Block Distance). Which one is better will depend on your dataset.</p>
-
-<p>Scaling is also very important especially when there are many different features. Normalising the data in the preprocessing stage by performing a feature scaling stops “large” features from taking over too much predictive power. <a href="https://www.coursera.org/learn/machine-learning/lecture/xx3Da/gradient-descent-in-practice-i-feature-scaling">Feature scaling</a> usually improves accuracy.
-<img src="/assets/img/DataMiningSnippets/12.png" alt="Output" class="img-responsive" /></p>
-
-<h2 id="feature-scaling">Feature Scaling</h2>
-
-<h3 id="feature-scaling-methods">Feature Scaling methods</h3>
-<ul>
-  <li><strong>Standard Scaler</strong>: Mean center data and scale to unit <strong>variance</strong></li>
-  <li><strong>Minimum-Maximum Scaler</strong>: Scale data to fixed range (usually 0-1)</li>
-  <li><strong>Maximum Absolute Value Scaler</strong>: Scale maximum absolute value</li>
-</ul>
-
-<h3 id="the-syntax">The Syntax</h3>
-<p>Make sure you have <code class="highlighter-rouge">scikit-learn</code> installed.
-We will use <code class="highlighter-rouge">StandardScaler</code>, there is also <code class="highlighter-rouge">MinMaxScaler</code>, and <code class="highlighter-rouge">MaxAbsScaler</code> available.</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span> <span class="c">#Import the scaling method</span>
-
-<span class="n">StdSc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span> <span class="c">#Create an instance of the class</span>
-
-<span class="n">StdSc</span> <span class="o">=</span> <span class="n">StdSc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_data</span><span class="p">)</span> <span class="c">#Fit the scaling parameters</span>
-<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">KNN</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_data</span><span class="p">)</span> <span class="c">#Transform the data</span></code></pre></figure>
-
-<h2 id="knn-modelling">KNN Modelling</h2>
-
-<h3 id="characteristics">Characteristics</h3>
-<ul>
-  <li>Fast to create model because it simply stores data</li>
-  <li>Slow to predict because many distance calculations</li>
-  <li>Can require lots of memory if the data-set is large</li>
-</ul>
-
-<h3 id="the-syntax-1">The Syntax</h3>
-<p>The <code class="highlighter-rouge">fit</code> and <code class="highlighter-rouge">predict</code>/<code class="highlighter-rouge">transform</code> syntax is common in machine learning. We could have also used <code class="highlighter-rouge">KNeighborsRegressor</code> to perform regression.</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span> <span class="c">#Import the class method</span>
-
-<span class="n">KNN</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c">#Create and instance of the class</span>
-
-<span class="n">KNN</span> <span class="o">=</span> <span class="n">KNN</span><span class="o">.</span><span class="n">fir</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span> <span class="n">Y_data</span><span class="p">)</span>
-<span class="n">y_predict</span> <span class="o">=</span> <span class="n">KNN</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_data</span><span class="p">)</span></code></pre></figure>
-
-<p>Credits to <a href="https://software.intel.com/en-us/ai-academy">Intel AI Academy</a></p>
-
+<iframe width="800" height="600" frameborder="0" src="https://www.mindmeister.com/maps/public_map_shell/1031256826/multi-agent-systems?width=800&amp;height=600&amp;z=auto&amp;live_update=1&amp;no_logo=1" scrolling="no" style="overflow: hidden; margin-bottom: 5px;">Your browser is not able to display frames. Please visit <a href="https://www.mindmeister.com/1031256826/multi-agent-systems" target="_blank">Multi Agent Systems</a> on MindMeister.</iframe>
+<div class="mb-5"><a href="https://www.mindmeister.com/1031256826/multi-agent-systems" target="_blank">Multi Agent Systems</a> by <a href="https://www.mindmeister.com/users/channel/11375171" target="_blank">Jimmy Joseph</a></div>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/supervised-knn/%20via%20&#64;jimmyjoseph1295&hashtags=python,knn,machine learning,numpy,scikit,classification,feature scaling,regression,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/multiagent-systems/%20via%20&#64;jimmyjoseph1295&hashtags=agents,society,intelligence,autonomy,interacting,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/supervised-knn/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/multiagent-systems/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/supervised-knn/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/multiagent-systems/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -280,7 +183,7 @@ We will use <code class="highlighter-rouge">StandardScaler</code>, there is also
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/supervised-knn/';
+        var disqus_url = '/multiagent-systems/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

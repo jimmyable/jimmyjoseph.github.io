@@ -5,9 +5,53 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Feb 2018 12:58:35 +0000</pubDate>
-    <lastBuildDate>Fri, 09 Feb 2018 12:58:35 +0000</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2018 10:26:38 +0000</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2018 10:26:38 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>MultiAgent Systems</title>
+        <description>&lt;h1 id=&quot;what-are-multiagent-systems&quot;&gt;What are MultiAgent Systems&lt;/h1&gt; &lt;p&gt;MultiAgent systems is a field of Computer Science focusing on building autonomous agents, that can communicate with other agents.&lt;/p&gt; &lt;h1 id=&quot;why-multiagent-systems&quot;&gt;Why MultiAgent Systems&lt;/h1&gt; &lt;p&gt;Computing is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;ubiquitious&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;interconnected&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;intellligent&lt;/code&gt;, more and more tasks are &lt;code class=&quot;highlighter-rouge&quot;&gt;delegated&lt;/code&gt; to it and it is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;human-oriented&lt;/code&gt;. What does this mean? Computing itself is becoming faster and more efficient. The internet created a gloabl network inteconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self driving car, almost unthinkable a decade ago.&lt;/p&gt;...</description>
+        <pubDate>Mon, 12 Feb 2018 10:23:47 +0000</pubDate>
+        <link>http://localhost:4000/multiagent-systems/</link>
+        <guid isPermaLink="true">http://localhost:4000/multiagent-systems/</guid>
+        
+        <category>agents</category>
+        
+        <category>society</category>
+        
+        <category>intelligence</category>
+        
+        <category>autonomy</category>
+        
+        <category>interacting</category>
+        
+        
+        <category>Agents</category>
+        
+      </item>
+    
+      <item>
+        <title>Intro to JADE</title>
+        <description>&lt;h1 id=&quot;java-agent-development-framework&quot;&gt;&lt;em&gt;J&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ava&lt;/code&gt; &lt;em&gt;A&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gent&lt;/code&gt; &lt;em&gt;DE&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;velopment&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;framework&lt;/code&gt;&lt;/h1&gt; &lt;p&gt;JADE is a framework in java that allows the realisation of agents and multi-agent systems. It complies with the &lt;a href=&quot;http://www.fipa.org/&quot;&gt;FIPA&lt;/a&gt; specifications. The agent platform can be distributed within a network and thus does not need to reside within one machine/OS.&lt;/p&gt; &lt;h2 id=&quot;jade-adminstration-tutorial&quot;&gt;JADE Adminstration Tutorial&lt;/h2&gt; &lt;p&gt;Introducing the notions of:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Platform&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Main Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AMS&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DF&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Follow the figure below. A JADE application will have &lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt; elements, each with a unique name(A1,A2,..). &lt;code class=&quot;highlighter-rouge&quot;&gt;Agents&lt;/code&gt; act and interact by exchanging messages.&lt;/p&gt; &lt;p&gt;Agents...</description>
+        <pubDate>Fri, 09 Feb 2018 14:21:47 +0000</pubDate>
+        <link>http://localhost:4000/jade/</link>
+        <guid isPermaLink="true">http://localhost:4000/jade/</guid>
+        
+        <category>java</category>
+        
+        <category>FIPA</category>
+        
+        <category>agents</category>
+        
+        <category>queues</category>
+        
+        <category>compile</category>
+        
+        
+        <category>Agents</category>
+        
+      </item>
     
       <item>
         <title>K-nearest Neighbours</title>
