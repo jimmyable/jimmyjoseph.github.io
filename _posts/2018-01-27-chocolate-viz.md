@@ -19,7 +19,7 @@ twitter_text:
 
 ## Intro
 We are going to use a Chocolate dataset collected from [Kaggle](https://www.kaggle.com/rtatman/chocolate-bar-ratings/data), to perform some simple Data visualisation techniques.
-Numpy and Pandas library must be installed. Code and data can be retrived at [DataMiningSnippets](https://github.com/jimmyjoseph1295/DataMiningSnippets)
+Numpy and Pandas library must be installed. Code and data can be retrieved at [DataMiningSnippets](https://github.com/jimmyjoseph1295/DataMiningSnippets)
 
 **Numpy** - A library for Python, it is used for scientific computing
 
@@ -28,7 +28,7 @@ Numpy and Pandas library must be installed. Code and data can be retrived at [Da
 Installed using `pip install pandas numpy`
 
 ## Initialisation
-First step is to initialise the data into a Pandas dataframe.
+The first step is to initialise the data into a Pandas dataframe.
 So we import `os` to do os operations such as finding current filepath and opening files.
 `Numpy` and `pandas` modules are also imported.
 
@@ -46,7 +46,7 @@ data.head()
 ![Output](/assets/img/DataMiningSnippets/1.png){:class="img-responsive"}
 
 ## Built-in functions
-We can now easily inspect the data using some of the built-in pandas commands, such as number of rows, column names and data types within the dataframe.
+We can now easily inspect the data using some of the built-in pandas commands, such as the number of rows, column names and data types within the dataframe.
 
 {% highlight python %}
 # Number of rows
@@ -65,8 +65,8 @@ We can drop the columns "REF" and "Review Date" because we can. Also, its also n
 data.drop(columns=['REF','Review\nDate'])
 {% endhighlight %}
 
-Next lets count up the bean types. 
-We can also do a mean, median, and quartiles for Cocoa Perentages just by using `.describe()`
+Next let's count up the bean types. 
+We can also do a mean, median, and quartiles for Cocoa Percentages just by using `.describe()`
 
 {% highlight python %}
 beantypes = data['Bean\nType'].value_counts()
@@ -121,7 +121,7 @@ bc.bar(x,y)
 
 ## Seaborn
 
-But we haven't used numpy yet? What's the point in even making trvial plots that can be made on excel? Well, below is a randomly generated data plotted using `Seaborn`, it makes plots not easily do-able in excel.
+But we haven't used numpy yet? What's the point in even making trivial plots that can be made on excel? Well, below is a randomly generated data plotted using `Seaborn`, it makes plots not easily do-able in excel.
 
 {% highlight python %}
 from scipy.stats import kendalltau
@@ -137,7 +137,7 @@ sns.jointplot(x, y, kind="hex", stat_func=kendalltau, color="#4CB391")
 
 ![Output](/assets/img/DataMiningSnippets/5.png){:class="img-responsive"}
 
-But we can't just end with random data plots so lets make one more plot. Since we've introduced Seaborn, this time we will use it again and plot the counts of each ratings.
+But we can't just end with random data plots, so let's make one more plot. Since we've introduced Seaborn, this time we will use it again and plot the counts of each ratings.
 {% highlight python %}
 sns.countplot(x = 'Rating', data=data) #"Rating" is picked and plotted
 {% endhighlight %}

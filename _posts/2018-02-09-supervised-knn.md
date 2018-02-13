@@ -24,7 +24,7 @@ Machine Learning is using a computer to learn features and trends from data. Jus
 Machine Learning is already with us in many services we use:
 - Spam Filtering
 - Search engines
-- Fraud/Anomoly detection
+- Fraud/Anomaly detection
 - Speech Recognition
 - Self-Driving cars
 - Recommendation Systems(Amazon/Netflix)
@@ -35,14 +35,14 @@ Machine Learning is already with us in many services we use:
 
 **Unsupervised** - Data points have unknown outcome
 
-We're gonna focus on **Supervised** learning here, and it can be broken down into two more categories:
+We're going to focus on **Supervised** learning here, and it can be broken down into two more categories:
 
-*`Regression`* - Outcome is continous(numerical)
+*`Regression`* - Outcome is continuous(numerical)
 
 *`Classification`* - Outcome is a Class label
 
 
-Basically, in supervised learning you input `Data with answers` which is used to `fit` a `MODEL`, which can then `predict answers` for a bunch of `data without answers`. Lets look at an example with Spam or not spam.
+Basically, in supervised learning you input `Data with answers` which is used to `fit` a `MODEL`, which can then `predict answers` for a bunch of `data without answers`. Let's look at an example with Spam or not spam.
 ![Output](/assets/img/DataMiningSnippets/8.png){:class="img-responsive"}
 
 ### Machine Learning Vocabulary
@@ -56,29 +56,29 @@ Basically, in supervised learning you input `Data with answers` which is used to
 
 # K- Nearest Neighbours
 
-In pattern recognition, the k-nearest neighbors algorithm is a non-parametric method used for classification and regression. We are going to focus on classification.
+In pattern recognition, the k-nearest neighbours algorithm is a non-parametric method used for classification and regression. We are going to focus on classification.
 
 ## What is classification?
-A flower shop wants to guess a customer's purchase from similarity to most recent purchase. Which flower is a customer based on similairty to previous purchases?
+A flower shop wants to guess a customer's purchase from similarity to most recent purchase. Which flower is a customer based on similairity to previous purchases?
 
 
 ![Output](/assets/img/DataMiningSnippets/10.png){:class="img-responsive"}
 
-We can classify the images to find the similiarities in this case.
+We can classify the images to find the similarities in this case.
 
 ### What are needed for classification
 - **Model data with:**
 	- Features that can be quantitated
 	- Labels that are known
-- **Methods to measure similiarity**
+- **Methods to measure similarity**
 
 ### KNN Classification
-How can we use this particular alogrithm for classification?
-Lets say we have the data shown below, and we want to classify the new data point, what kind of metrics do we need to consider?
+How can we use this particular algorithm for classification?
+Let's say we have the data shown below, and we want to classify the new data point, what kind of metrics do we need to consider?
 #### K-Neighbors
-We would have to choose the correct value for `K Neighbors`, how many points around the new point to consider. The vlaue of `K` affects the decision boundary. We won't be going into more depth here.
+We would have to choose the correct value for `K Neighbors`, how many points around the new point to consider. The value of `K` affects the decision boundary. We won't be going into more depth here.
 #### Distance to other points
-We would also have to measure the closeness of the new point to other points, in this case the new point is closer to the orange colour which may be significant.
+We would also have to measure the closeness of the new point to other points, in this case, the new point is closer to the orange colour which may be significant.
 
 ![Output](/assets/img/DataMiningSnippets/11.png){:class="img-responsive"}
 

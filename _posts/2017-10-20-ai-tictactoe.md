@@ -21,7 +21,7 @@ twitter_text:
 
 ## Further Support
 
-If you don't know how Python works, this code was inspired `heavily` from [Al Sweigart's](https://inventwithpython.com/chapter10.html) resources. He provides very detailed and beginner friendly python books and they're all free.
+If you don't know how Python works, this code was inspired `heavily` from [Al Sweigart's](https://inventwithpython.com/chapter10.html) resources. He provides very detailed, and beginner friendly python books and they're all free.
 
 ## Are you still here?
 

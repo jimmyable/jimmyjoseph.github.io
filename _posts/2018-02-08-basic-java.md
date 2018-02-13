@@ -18,15 +18,15 @@ twitter_text:
 ## Why Java?
 
 
-Java is old, older than me atleast. But its not seen as old, its seen as a standard programming language. If you're learning how to program you will end up with java at some point. And for good reason, its an efficient program that has standed the test of time. 
+Java is old, older than me at least. But it's not seen as old, its seen as a standard programming language. If you're learning how to program you will end up with java at some point. And for good reason, it's an efficient program that has stood the test of time. 
 
 
-In my opinion it is more "messy" for a beginner, you need to write more code. Mainly because everything is explicit and the language is designed for high end efficient softwares. Unlike python which uses much simpler scripting language but is more suited for quick "prototyping". 
+In my opinion, it is more "messy" for a beginner, as you need to write more code. Mainly because everything is explicit and the language is designed for high-end efficient software. Unlike python which uses much simpler scripting language but is more suited for quick "prototyping". 
 
-It is recommended to use an IDE like [Eclipse](https://www.eclipse.org/) or [IntelliJ IDEA](https://www.jetbrains.com/idea/) if you plan to actually write java code. Missing paranthesis or brackets or simple mistakes can mean wasting a lot of time looking for what is going wrong after compiling. 
+It is recommended to use an IDE like [Eclipse](https://www.eclipse.org/) or [IntelliJ IDEA](https://www.jetbrains.com/idea/) if you plan to actually write java code. Missing parenthesis or brackets or simple mistakes can mean wasting a lot of time looking for what is going wrong after compiling. 
 
 ## Installing Java
-There are many ways to install and versions change all the time, for ubuntu try:
+There are many ways to install, and versions change all the time, for ubuntu try:
 
 {% highlight bash %}
 username@hostname:~$ sudo apt-get install openjdk-8-jdk
@@ -46,9 +46,9 @@ username@hostname:~$ java filepath/File
 {% endhighlight %}
 
 ## How to write "Hello World"
-Yeah its like five lines. This looks daunting to a beginner but you're just going to have to not understand some terms like `public class` or `main`. The quick overview is that every java file has classes, public and private, each class can have methods and every java code needs atleast one `main` method that runs the rest of the code.
+Yeah, it's like five lines. This looks daunting to a beginner, but you're just going to have to not understand some terms like `public class` or `main`. The quick overview is that every java file has classes, public and private, each class can have methods and every java code needs atleast one `main` method that runs the rest of the code.
 
-The "print function" is the `System.out.println`, for now imagine the rest as scaffolding.
+The "print function" is the `System.out.println`, for now, imagine the rest as scaffolding.
 
 {% highlight java %}
 public class HelloWorld {
@@ -60,7 +60,7 @@ public class HelloWorld {
 
 ## Taking Inputs from command line
 
-When you run a java code you cna send in intial input that the code can work with these are called `arguments`. We will also import a Scanner module to "scan" through the inputs. Why am i writing scanner like three times? Because you have to. I'm saying 'scanner' is a "Scanner" object, then im creating a new Scanner object with the input fed. You can ue scanner to take in more arguments and even make simple question answering games.
+When you run a java code you can send in initial input that the code can work with these are called `arguments`. We will also import a Scanner module to "scan" through the inputs. Why am I writing scanner like three times? Because you have to. I'm saying 'scanner' is a "Scanner" object, then I'm creating a new Scanner object with the input fed. You can use scanner to take in more arguments and even make simple question answering games.
 
 
 {% highlight java %}
@@ -261,7 +261,7 @@ public class Queue {
 {% endhighlight %}
 
 ## Extras
-If you want to do more all this code and more is on my [BasicJava](https://github.com/jimmyjoseph1295/BasicJava) repo. Theres also an exercise that created a Mortage calculator. 
+If you want to do more all this code and more is on my [BasicJava](https://github.com/jimmyjoseph1295/BasicJava) repo. There's also an exercise that created a Mortage calculator. 
 
 
 

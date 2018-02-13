@@ -137,21 +137,21 @@
 
 <p>Agents live on top of a <code class="highlighter-rouge">Platform</code>, which allows for services such as message delivery. A platform contains one or more <code class="highlighter-rouge">Containers</code>. Each container can contain 0 or more agents. A container can be thought of as a JVM.</p>
 
-<p>A special container called <code class="highlighter-rouge">Main Container</code> always exists in the platform, its like other containers except:</p>
+<p>A special container called <code class="highlighter-rouge">Main Container</code> always exists in the platform, it’s like other containers except:</p>
 <ol>
-  <li>It’s the first container to start in a platform.</li>
+  <li>It’s the first container to start on a platform.</li>
   <li>It comes with special agents called <code class="highlighter-rouge">AMS</code> and <code class="highlighter-rouge">DF</code>, which allows starting and killing other agents and DF allows <code class="highlighter-rouge">Yellow Pages</code> where agents can lookup other agent’s services.</li>
 </ol>
 
 <p><img src="/assets/img/JADE/1.png" alt="Output" class="img-responsive" /></p>
 
 <h2 id="agent-communication">Agent Communication</h2>
-<p>All agents can communicate with each other regardless of what container they are in. All communcation is in the ACL format, which includes:</p>
+<p>All agents can communicate with each other regardless of what container they are in. All communication is in the ACL format, which includes:</p>
 <ul>
   <li><code class="highlighter-rouge">sender</code> information</li>
-  <li><code class="highlighter-rouge">reciever</code> information</li>
+  <li><code class="highlighter-rouge">receiver</code> information</li>
   <li>the <code class="highlighter-rouge">communicative act</code> which represents the intention of the message, eg - INFORM, REQUEST etc. FIPA has defined the communicative acts.</li>
-  <li>the actual <code class="highlighter-rouge">content</code> of the message, this will contain the information that the reciever can process or act on.</li>
+  <li>the actual <code class="highlighter-rouge">content</code> of the message, this will contain the information that the receiver can process or act on.</li>
 </ul>
 
 <p>Read up more and work with <a href="http://jade.tilab.com/">JADE</a>.</p>

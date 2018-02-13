@@ -122,7 +122,7 @@
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
                 <h2 id="intro">Intro</h2>
 <p>We are going to use a Chocolate dataset collected from <a href="https://www.kaggle.com/rtatman/chocolate-bar-ratings/data">Kaggle</a>, to perform some simple Data visualisation techniques.
-Numpy and Pandas library must be installed. Code and data can be retrived at <a href="https://github.com/jimmyjoseph1295/DataMiningSnippets">DataMiningSnippets</a></p>
+Numpy and Pandas library must be installed. Code and data can be retrieved at <a href="https://github.com/jimmyjoseph1295/DataMiningSnippets">DataMiningSnippets</a></p>
 
 <p><strong>Numpy</strong> - A library for Python, it is used for scientific computing</p>
 
@@ -131,7 +131,7 @@ Numpy and Pandas library must be installed. Code and data can be retrived at <a 
 <p>Installed using <code class="highlighter-rouge">pip install pandas numpy</code></p>
 
 <h2 id="initialisation">Initialisation</h2>
-<p>First step is to initialise the data into a Pandas dataframe.
+<p>The first step is to initialise the data into a Pandas dataframe.
 So we import <code class="highlighter-rouge">os</code> to do os operations such as finding current filepath and opening files.
 <code class="highlighter-rouge">Numpy</code> and <code class="highlighter-rouge">pandas</code> modules are also imported.</p>
 
@@ -147,7 +147,7 @@ So we import <code class="highlighter-rouge">os</code> to do os operations such 
 <p><img src="/assets/img/DataMiningSnippets/1.png" alt="Output" class="img-responsive" /></p>
 
 <h2 id="built-in-functions">Built-in functions</h2>
-<p>We can now easily inspect the data using some of the built-in pandas commands, such as number of rows, column names and data types within the dataframe.</p>
+<p>We can now easily inspect the data using some of the built-in pandas commands, such as the number of rows, column names and data types within the dataframe.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Number of rows</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"no. of rows = "</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
@@ -162,8 +162,8 @@ So we import <code class="highlighter-rouge">os</code> to do os operations such 
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'REF'</span><span class="p">,</span><span class="s">'Review</span><span class="se">\n</span><span class="s">Date'</span><span class="p">])</span></code></pre></figure>
 
-<p>Next lets count up the bean types. 
-We can also do a mean, median, and quartiles for Cocoa Perentages just by using <code class="highlighter-rouge">.describe()</code></p>
+<p>Next let’s count up the bean types. 
+We can also do a mean, median, and quartiles for Cocoa Percentages just by using <code class="highlighter-rouge">.describe()</code></p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">beantypes</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'Bean</span><span class="se">\n</span><span class="s">Type'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="k">print</span><span class="p">(</span><span class="n">beantypes</span><span class="p">,</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
@@ -212,7 +212,7 @@ We can also do a mean, median, and quartiles for Cocoa Perentages just by using 
 
 <h2 id="seaborn">Seaborn</h2>
 
-<p>But we haven’t used numpy yet? What’s the point in even making trvial plots that can be made on excel? Well, below is a randomly generated data plotted using <code class="highlighter-rouge">Seaborn</code>, it makes plots not easily do-able in excel.</p>
+<p>But we haven’t used numpy yet? What’s the point in even making trivial plots that can be made on excel? Well, below is a randomly generated data plotted using <code class="highlighter-rouge">Seaborn</code>, it makes plots not easily do-able in excel.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">kendalltau</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
@@ -226,7 +226,7 @@ We can also do a mean, median, and quartiles for Cocoa Perentages just by using 
 
 <p><img src="/assets/img/DataMiningSnippets/5.png" alt="Output" class="img-responsive" /></p>
 
-<p>But we can’t just end with random data plots so lets make one more plot. Since we’ve introduced Seaborn, this time we will use it again and plot the counts of each ratings.</p>
+<p>But we can’t just end with random data plots, so let’s make one more plot. Since we’ve introduced Seaborn, this time we will use it again and plot the counts of each ratings.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">'Rating'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span> <span class="c">#"Rating" is picked and plotted</span></code></pre></figure>
 

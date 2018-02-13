@@ -15,17 +15,18 @@ categories:
 twitter_text: 
 ---
 
-# What are MultiAgent Systems
+# What are MultiAgent Systems?
 MultiAgent systems is a field of Computer Science focusing on building autonomous agents, that can communicate with other agents. 
 
-# Why MultiAgent Systems
-Computing is becoming more `ubiquitious`, `interconnected`, `intellligent`, more and more tasks are `delegated` to it and it is becoming more `human-oriented`. What does this mean? Computing itself is becoming faster and more efficient. The internet created a gloabl network inteconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self driving car, almost unthinkable a decade ago. 
+# Why MultiAgent Systems?
+Computing is becoming more `ubiquitous`, `interconnected`, `intelligent`, more and more tasks are `delegated` to it, and it is becoming more `human-oriented`. What does this mean? Computing itself is becoming faster and more efficient. The internet created a global network interconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self-driving car, almost unthinkable a decade ago. 
 
-As our requirements become more complex we need a computing system that can manage all of this. This is the "vision" behind multiagent systems. A network of agents that can communicate effectively as humans do to get tasks done. 
+As our requirements become more complex, we need a computing system that can manage all of this. This is the "vision" behind multiagent systems. A network of agents that can communicate effectively as humans do to get tasks done. 
 
-In the case of self driving cars, we ideally want cars to be communicating with eachother to be most efficient. [Traffic](https://www.youtube.com/watch?v=iHzzSao6ypE) is a huge problem in our societies where we waste to much time doing nothing, and still causing lots of accidents.
+In the case of self-driving cars, we ideally want cars to be communicating with each other to be most efficient. [Traffic](https://www.youtube.com/watch?v=iHzzSao6ypE) is a huge problem in our societies where we waste to much time doing nothing and still causing lots of accidents.
+Traffic lights are a way for humans to communicate with each other, and they're inefficient. Computers can communicate with each other at the speed of light so it's a no-brainer.
 
-# How to realise MultiAgent Systems
+# How to realise MultiAgent Systems?
 The problem is so simple it can be summarised in just two bullet points:
 - How do we `build agents` that are capable of independent, autonomous action in order to successfully carry out the tasks that we delegate to them? 
 - How do we build agents that are capable of `interacting` (cooperating, coordinating, negotiating) with other agents in order to successfully carry out the tasks that we delegate to them, particularly when the other agents cannot be assumed to share the same interests/goals? 
