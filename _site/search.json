@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Gradient Descent",
+      "category" : "Neural Networks",
+      "tags"     : "gradient descent, optimization, neural nets, stochastic, and mini-batch",
+      "url"      : "/gradient-descent/",
+      "date"     : "15 Feb 2018"
+    } ,
+  
+    {
       "title"    : "MultiAgent Systems",
       "category" : "Agents",
       "tags"     : "agents, society, intelligence, autonomy, and interacting",

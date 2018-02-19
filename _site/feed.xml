@@ -5,9 +5,31 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Feb 2018 21:43:40 +0000</pubDate>
-    <lastBuildDate>Tue, 13 Feb 2018 21:43:40 +0000</lastBuildDate>
+    <pubDate>Mon, 19 Feb 2018 20:30:42 +0000</pubDate>
+    <lastBuildDate>Mon, 19 Feb 2018 20:30:42 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Gradient Descent</title>
+        <description>&lt;h1 id=&quot;gradient-descent&quot;&gt;Gradient Descent&lt;/h1&gt; &lt;p&gt;Gradient descent is an iterative optimization algorithm for findinig the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/NeuralNets/1.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;gd-with-linear-regression&quot;&gt;GD with Linear Regression&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Say we have two parameters affecting the cost function (β0,β1)&lt;/li&gt; &lt;li&gt;This creates a surface as shown below rather than a line as above&lt;/li&gt; &lt;li&gt;Now how can we find the minimum without knowing how the surface J(β0,β1) looks like?&lt;/li&gt; &lt;/ul&gt;...</description>
+        <pubDate>Thu, 15 Feb 2018 11:33:47 +0000</pubDate>
+        <link>http://localhost:4000/gradient-descent/</link>
+        <guid isPermaLink="true">http://localhost:4000/gradient-descent/</guid>
+        
+        <category>gradient descent</category>
+        
+        <category>optimization</category>
+        
+        <category>neural nets</category>
+        
+        <category>stochastic</category>
+        
+        <category>mini-batch</category>
+        
+        
+        <category>Neural Networks</category>
+        
+      </item>
     
       <item>
         <title>MultiAgent Systems</title>
