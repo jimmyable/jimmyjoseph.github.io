@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "YOLO",
+      "category" : "Neural Networks",
+      "tags"     : "yolo, object detection, neural nets, cuda, and opencv",
+      "url"      : "/yolo/",
+      "date"     : "17 Feb 2018"
+    } ,
+  
+    {
       "title"    : "Gradient Descent",
       "category" : "Neural Networks",
       "tags"     : "gradient descent, optimization, neural nets, stochastic, and mini-batch",

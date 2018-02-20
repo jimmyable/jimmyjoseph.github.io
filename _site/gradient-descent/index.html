@@ -121,7 +121,7 @@
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
                 <h1 id="gradient-descent">Gradient Descent</h1>
-<p>Gradient descent is an iterative optimization algorithm for findinig the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.</p>
+<p>Gradient descent is an iterative optimization algorithm for finding the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.</p>
 
 <p><img src="/assets/img/NeuralNets/1.png" alt="Output" class="img-responsive" /></p>
 
@@ -135,13 +135,13 @@
 <p><strong>Well here’s what we can do:</strong></p>
 
 <ul>
-  <li>First we compute the gradient ∇J(β0,β1), which will point us to the direction of the biggest increase</li>
+  <li>First, we compute the gradient ∇J(β0,β1), which will point us to the direction of the biggest increase</li>
   <li>So we know -∇J(β0,β1) points in the opposite direction(the direction we want)</li>
 </ul>
 
 <p><img src="/assets/img/NeuralNets/2.png" alt="Output" class="img-responsive" /></p>
 
-<p>The gradient is actually a vector which contains co-ordinates of the partial derivaties of the parameters shown in the equation below.
+<p>The gradient is a vector which contains coordinates of the partial derivatives of the parameters shown in the equation below.
 <img src="/assets/img/NeuralNets/3.png" alt="Output" class="img-responsive" /></p>
 
 <p>We can therefore use the gradient(∇) and the cost function to calculate the next point from the current point to move towards(ω1 -&gt; ω2)
@@ -152,17 +152,19 @@
 <p><img src="/assets/img/NeuralNets/5.png" alt="Output" class="img-responsive" /></p>
 
 <h2 id="stochastic-gradient-descent">Stochastic Gradient Descent</h2>
-<p>Instead of using all the data, you can use just one data point to determine a gradient and cost function. But the path may not be most efficient, caused by noise from a single point. Also on a high feature space it may not obtain the most effective minima.
+<p>Instead of using all the data, you can use just one data point to determine a gradient and cost function. But the path may not be most efficient, caused by noise from a single point. Also on a high feature space, it may not obtain the most effective minima.
 <img src="/assets/img/NeuralNets/6.png" alt="Output" class="img-responsive" /></p>
 
 <h2 id="mini-batch-gradient-descent">Mini Batch Gradient Descent</h2>
 <p>There is a third way to perform gradient descent. It involves performing an update for every n training examples. This is the <code class="highlighter-rouge">best of both worlds</code> because:</p>
 <ul>
-  <li>Less memory usage compared with normal gradient descent</li>
+  <li>Less memory usage compared with the standard gradient descent</li>
   <li>Less noisy than stochastic gradient descent</li>
 </ul>
 
 <p><img src="/assets/img/NeuralNets/7.png" alt="Output" class="img-responsive" /></p>
+
+<p>Credits to <a href="https://software.intel.com/en-us/ai-academy">Intel AI Academy</a></p>
 
             </article>
 
