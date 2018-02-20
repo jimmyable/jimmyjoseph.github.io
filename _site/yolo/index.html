@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gradient Descent</title>
-    <meta name="description" content="An optimization algorithm to find a minimum of a function">
+    <title>YOLO</title>
+    <meta name="description" content="You Only Look Once #YOLO">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="Gradient Descent">
-    <meta name="twitter:description" content="An optimization algorithm to find a minimum of a function">
+    <meta name="twitter:title" content="YOLO">
+    <meta name="twitter:description" content="You Only Look Once #YOLO">
     
     <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://jimmyjoseph.co.uk/gradient-descent/">
-    <meta property="og:title" content="Gradient Descent">
+    <meta property="og:url" content="http://jimmyjoseph.co.uk/yolo/">
+    <meta property="og:title" content="YOLO">
     
     <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
     
-    <meta property="og:description" content="An optimization algorithm to find a minimum of a function">
+    <meta property="og:description" content="You Only Look Once #YOLO">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Gradient Descent"/>
-    <meta itemprop="description" content="An optimization algorithm to find a minimum of a function">
+    <meta itemprop="name" content="YOLO"/>
+    <meta itemprop="description" content="You Only Look Once #YOLO">
     <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://jimmyjoseph.co.uk/gradient-descent/">
+    <link rel="canonical" href="http://jimmyjoseph.co.uk/yolo/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-02-15 11:33:47 +0000" class="date">15 Feb 2018</time>
+            <time itemprop="datePublished" datetime="2018-02-17 14:07:47 +0000" class="date">17 Feb 2018</time>
         
-        <h1 class="post-title" itemprop="name">Gradient Descent</h1>
-        <p itemprop="description" class="subtitle">An optimization algorithm to find a minimum of a function</p>
+        <h1 class="post-title" itemprop="name">YOLO</h1>
+        <p itemprop="description" class="subtitle">You Only Look Once #YOLO</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,65 +120,135 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="gradient-descent">Gradient Descent</h1>
-<p>Gradient descent is an iterative optimization algorithm for finding the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.</p>
+                <h1 id="darknet">DarkNet</h1>
+<p>Joseph Redmon showcased DarkNet at <a href="https://www.ted.com/talks/joseph_redmon_how_a_computer_learns_to_recognize_objects_instantly?language=en">TED2017</a>. Less than a decade ago classification problems between a cat or dog was almost impossible, but advances in deep learning has changed that. Joseph worked on YOLO which is a revolutionary system that can identify objects it has been trained on, and it does it incredibly fast.</p>
 
-<p><img src="/assets/img/NeuralNets/1.png" alt="Output" class="img-responsive" /></p>
+<p>Fast enough and accurate enough to track objects in live video feeds. This technology can be employed in self-driving cars, CCTV cameras, factory lines etc.</p>
 
-<h2 id="gd-with-linear-regression">GD with Linear Regression</h2>
-<ul>
-  <li>Say we have two parameters affecting the cost function (β0,β1)</li>
-  <li>This creates a surface as shown below rather than a line as above</li>
-  <li>Now how can we find the minimum without knowing how the surface J(β0,β1) looks like?</li>
-</ul>
+<h1 id="how-to-install">How to install</h1>
+<p>Joseph has a pretty good guide on his <a href="https://pjreddie.com/darknet/install/">website</a>. But I will explain some of the main steps I did.
+If you want to just try YOLO on one image, then you can just clone the repo, complile and run. 
+If you want to use the live feed feature and use a GPU then things get a bit more tricky.
+Spoiler alert: The hardest part is installing CUDA</p>
 
-<p><strong>Well here’s what we can do:</strong></p>
+<h2 id="installing-cuda">Installing CUDA</h2>
+<p>I used Ubuntu 17.04(64 bit), to perform parallel computing on the GPU you will need <a href="https://developer.nvidia.com/cuda-downloads">CUDA</a></p>
 
-<ul>
-  <li>First, we compute the gradient ∇J(β0,β1), which will point us to the direction of the biggest increase</li>
-  <li>So we know -∇J(β0,β1) points in the opposite direction(the direction we want)</li>
-</ul>
+<p><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">Nvidia Installation Instructions</a></p>
 
-<p><img src="/assets/img/NeuralNets/2.png" alt="Output" class="img-responsive" /></p>
+<h3 id="pre-install-instructions">Pre-Install Instructions</h3>
+<p>I installed cuda 9.1. deb(local).</p>
 
-<p>The gradient is a vector which contains coordinates of the partial derivatives of the parameters shown in the equation below.
-<img src="/assets/img/NeuralNets/3.png" alt="Output" class="img-responsive" /></p>
+<p>Make sure you have a CUDA capabale GPU by looking up your GPU model <a href="https://developer.nvidia.com/cuda-gpus">here</a></p>
 
-<p>We can therefore use the gradient(∇) and the cost function to calculate the next point from the current point to move towards(ω1 -&gt; ω2)
-<img src="/assets/img/NeuralNets/4.png" alt="Output" class="img-responsive" /></p>
+<p>Make sure you have <code class="highlighter-rouge">gcc</code> installed</p>
 
-<p>We do this iteratively until we get to the minimum. α is used to choose how much of a jump we make from ω1 -&gt; ω2 etc. Too little of a jump means we have to iterative many times. Too big of a jump means we will overestimate and possibly miss the minima.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span>gcc <span class="nt">--version</span></code></pre></figure>
 
-<p><img src="/assets/img/NeuralNets/5.png" alt="Output" class="img-responsive" /></p>
+<p>Install kernel headers and dev packages by issuing:</p>
 
-<h2 id="stochastic-gradient-descent">Stochastic Gradient Descent</h2>
-<p>Instead of using all the data, you can use just one data point to determine a gradient and cost function. But the path may not be most efficient, caused by noise from a single point. Also on a high feature space, it may not obtain the most effective minima.
-<img src="/assets/img/NeuralNets/6.png" alt="Output" class="img-responsive" /></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>linux-headers-<span class="k">$(</span><span class="nb">uname</span> <span class="nt">-r</span><span class="k">)</span></code></pre></figure>
 
-<h2 id="mini-batch-gradient-descent">Mini Batch Gradient Descent</h2>
-<p>There is a third way to perform gradient descent. It involves performing an update for every n training examples. This is the <code class="highlighter-rouge">best of both worlds</code> because:</p>
-<ul>
-  <li>Less memory usage compared with the standard gradient descent</li>
-  <li>Less noisy than stochastic gradient descent</li>
-</ul>
+<h3 id="cuda-installation">CUDA Installation</h3>
+<p>You can install the .deb you downloaded by issuing:</p>
 
-<p><img src="/assets/img/NeuralNets/7.png" alt="Output" class="img-responsive" /></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>dpkg <span class="nt">-i</span> cuda-repo-&lt;distro&gt;_&lt;version&gt;_&lt;architecture&gt;.deb
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key add /var/cuda-repo-&lt;version&gt;/7fa2af80.pub
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key adv <span class="nt">--fetch-keys</span> https://developer.download.nvidia.com/compute/cuda/repos/&lt;distro&gt;/&lt;architecture&gt;/7fa2af80.pub
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>cuda</code></pre></figure>
 
-<p>Credits to <a href="https://software.intel.com/en-us/ai-academy">Intel AI Academy</a></p>
+<h3 id="cuda-post-install-instructions">CUDA Post Install Instructions</h3>
+<p>Set up the environment and etc by issuing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-9.1/bin<span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span>
+username@hostname:~<span class="nv">$ </span><span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-9.1/lib64<span class="se">\ </span><span class="o">{</span>LD_LIBRARY_PATH:+:<span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}</span><span class="o">}</span></code></pre></figure>
+
+<p>Some Power9 Stuff you may need to do as well.
+Make a file <code class="highlighter-rouge">/usr/lib/systemd/system/nvidia-persistenced.service</code>, I recommend using nano,
+Containing:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">[Unit]
+Description=NVIDIA Persistence Daemon
+Wants=syslog.target
+
+[Service]
+Type=forking
+PIDFile=/var/run/nvidia-persistenced/nvidia-persistenced.pid
+Restart=always
+ExecStart=/usr/bin/nvidia-persistenced --verbose
+ExecStopPost=/bin/rm -rf /var/run/nvidia-persistenced
+
+[Install]
+WantedBy=multi-user.target</code></pre></figure>
+
+<p>Then run the command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl <span class="nb">enable </span>nvidia-persistenced</code></pre></figure>
+
+<p>Next, we should install Persistence Daemon. I didn’t do this initially and had to change BIOS settings for graphics to Discrete from Hybrid, which made my battery life very bad. Or it doesn’t boot up, So it’s worth doing all the steps Nvidia recommends.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span>/usr/bin/nvidia-persistenced <span class="nt">--verbose</span></code></pre></figure>
+
+<h3 id="verification">Verification</h3>
+<p>If everything worked out then when you issue the following you shouldn’t get an error</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">cat</span> /proc/driver/nvidia/version</code></pre></figure>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>I had a weird problem where CUDA would install gcc-7 but wouldn’t let me compile with it. Instead I had to compile using gcc-6. In this case you will need to change your <code class="highlighter-rouge">gcc</code> symbolic link.</p>
+
+<p>Remove existing links</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">rm</span> /usr/bin/gcc
+<span class="nb">rm</span> /usr/bin/g++</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/gcc-6 gcc
+<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
+
+<p>OR</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~/.bash_profile
+
+<span class="nb">alias </span><span class="nv">gcc</span><span class="o">=</span><span class="s1">'gcc-6'</span>
+<span class="nb">alias </span>g++<span class="o">=</span><span class="s1">'g++-6'</span></code></pre></figure>
+
+<p>Hopefully that works!</p>
+
+<h2 id="opencv">OpenCV</h2>
+<p><a href="https://opencv.org/">OpenCV</a> is a computer vision library. It’s state of the art. We will need to install this too. But this is easy.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>libopencv-dev</code></pre></figure>
+
+<p>You can check if that worked by issuing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pkg-config <span class="nt">--modversion</span> opencv</code></pre></figure>
+
+<h2 id="compiling-darknet">Compiling DarkNet</h2>
+<p>First, issue <code class="highlighter-rouge">make</code>, then if there are no errors change <code class="highlighter-rouge">GPU=1</code>, if remaking shows no errors then try <code class="highlighter-rouge">OPENCV=1</code>.</p>
+
+<h3 id="yolo">YOLO</h3>
+<p>Everything should be set up. You can call the YOLO software with the webcam by running:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights</code></pre></figure>
+
+<h1 id="end-result">End result</h1>
+<p><img src="/assets/img/NeuralNets/8.png" alt="Output" class="img-responsive" /></p>
+
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/gradient-descent/%20via%20&#64;jimmyjoseph1295&hashtags=gradient descent,optimization,neural nets,stochastic,mini-batch,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/yolo/%20via%20&#64;jimmyjoseph1295&hashtags=yolo,object detection,neural nets,cuda,opencv,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/gradient-descent/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/yolo/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/gradient-descent/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/yolo/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -207,7 +277,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/gradient-descent/';
+        var disqus_url = '/yolo/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
