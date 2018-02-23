@@ -3,18 +3,18 @@
   <channel>
     <title>Jimmy Joseph</title>
     <description>A blog of stuff I find interesting/learning</description>
-    <link>http://jimmyjoseph.co.uk/</link>
-    <atom:link href="http://jimmyjoseph.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Feb 2018 11:33:49 +0000</pubDate>
-    <lastBuildDate>Tue, 20 Feb 2018 11:33:49 +0000</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 23 Feb 2018 11:28:45 +0000</pubDate>
+    <lastBuildDate>Fri, 23 Feb 2018 11:28:45 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
         <title>YOLO</title>
         <description>&lt;h1 id=&quot;darknet&quot;&gt;DarkNet&lt;/h1&gt; &lt;p&gt;Joseph Redmon showcased DarkNet at &lt;a href=&quot;https://www.ted.com/talks/joseph_redmon_how_a_computer_learns_to_recognize_objects_instantly?language=en&quot;&gt;TED2017&lt;/a&gt;. Less than a decade ago classification problems between a cat or dog was almost impossible, but advances in deep learning has changed that. Joseph worked on YOLO which is a revolutionary system that can identify objects it has been trained on, and it does it incredibly fast.&lt;/p&gt; &lt;p&gt;Fast enough and accurate enough to track objects in live video feeds. This technology can be employed in self-driving cars, CCTV cameras, factory lines etc.&lt;/p&gt; &lt;h1 id=&quot;how-to-install&quot;&gt;How to install&lt;/h1&gt; &lt;p&gt;Joseph has a pretty good guide on his &lt;a href=&quot;https://pjreddie.com/darknet/install/&quot;&gt;website&lt;/a&gt;. But I will explain some...</description>
         <pubDate>Sat, 17 Feb 2018 14:07:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/yolo/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/yolo/</guid>
+        <link>http://localhost:4000/yolo/</link>
+        <guid isPermaLink="true">http://localhost:4000/yolo/</guid>
         
         <category>yolo</category>
         
@@ -35,8 +35,8 @@
         <title>Gradient Descent</title>
         <description>&lt;h1 id=&quot;gradient-descent&quot;&gt;Gradient Descent&lt;/h1&gt; &lt;p&gt;Gradient descent is an iterative optimization algorithm for finding the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/NeuralNets/1.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;gd-with-linear-regression&quot;&gt;GD with Linear Regression&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Say we have two parameters affecting the cost function (β0,β1)&lt;/li&gt; &lt;li&gt;This creates a surface as shown below rather than a line as above&lt;/li&gt; &lt;li&gt;Now how can we find the minimum without knowing how the surface J(β0,β1) looks like?&lt;/li&gt; &lt;/ul&gt;...</description>
         <pubDate>Thu, 15 Feb 2018 11:33:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/gradient-descent/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/gradient-descent/</guid>
+        <link>http://localhost:4000/gradient-descent/</link>
+        <guid isPermaLink="true">http://localhost:4000/gradient-descent/</guid>
         
         <category>gradient descent</category>
         
@@ -57,8 +57,8 @@
         <title>MultiAgent Systems</title>
         <description>&lt;h1 id=&quot;what-are-multiagent-systems&quot;&gt;What are MultiAgent Systems?&lt;/h1&gt; &lt;p&gt;MultiAgent systems is a field of Computer Science focusing on building autonomous agents, that can communicate with other agents.&lt;/p&gt; &lt;h1 id=&quot;why-multiagent-systems&quot;&gt;Why MultiAgent Systems?&lt;/h1&gt; &lt;p&gt;Computing is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;ubiquitous&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;interconnected&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;intelligent&lt;/code&gt;, more and more tasks are &lt;code class=&quot;highlighter-rouge&quot;&gt;delegated&lt;/code&gt; to it, and it is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;human-oriented&lt;/code&gt;. What does this mean? Computing itself is becoming faster and more efficient. The internet created a global network interconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self-driving car, almost unthinkable a decade ago.&lt;/p&gt; &lt;p&gt;As...</description>
         <pubDate>Mon, 12 Feb 2018 10:23:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/multiagent-systems/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/multiagent-systems/</guid>
+        <link>http://localhost:4000/multiagent-systems/</link>
+        <guid isPermaLink="true">http://localhost:4000/multiagent-systems/</guid>
         
         <category>agents</category>
         
@@ -79,8 +79,8 @@
         <title>Intro to JADE</title>
         <description>&lt;h1 id=&quot;java-agent-development-framework&quot;&gt;&lt;em&gt;J&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ava&lt;/code&gt; &lt;em&gt;A&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gent&lt;/code&gt; &lt;em&gt;DE&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;velopment&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;framework&lt;/code&gt;&lt;/h1&gt; &lt;p&gt;JADE is a framework in java that allows the realisation of agents and multi-agent systems. It complies with the &lt;a href=&quot;http://www.fipa.org/&quot;&gt;FIPA&lt;/a&gt; specifications. The agent platform can be distributed within a network and thus does not need to reside within one machine/OS.&lt;/p&gt; &lt;h2 id=&quot;jade-adminstration-tutorial&quot;&gt;JADE Adminstration Tutorial&lt;/h2&gt; &lt;p&gt;Introducing the notions of:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Platform&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Main Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AMS&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DF&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Follow the figure below. A JADE application will have &lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt; elements, each with a unique name(A1,A2,..). &lt;code class=&quot;highlighter-rouge&quot;&gt;Agents&lt;/code&gt; act and interact by exchanging messages.&lt;/p&gt; &lt;p&gt;Agents...</description>
         <pubDate>Fri, 09 Feb 2018 14:21:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/jade/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/jade/</guid>
+        <link>http://localhost:4000/jade/</link>
+        <guid isPermaLink="true">http://localhost:4000/jade/</guid>
         
         <category>java</category>
         
@@ -101,8 +101,8 @@
         <title>K-nearest Neighbours</title>
         <description>&lt;h1 id=&quot;what-is-machine-learning&quot;&gt;What is Machine Learning?&lt;/h1&gt; &lt;p&gt;Machine Learning is using a computer to learn features and trends from data. Just like humans, a machine algorithm should increase its &lt;code class=&quot;highlighter-rouge&quot;&gt;Performance&lt;/code&gt; through increased &lt;code class=&quot;highlighter-rouge&quot;&gt;Experience&lt;/code&gt;, meaning it should get better with more data.&lt;/p&gt; &lt;p&gt;Machine Learning is already with us in many services we use:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Spam Filtering&lt;/li&gt; &lt;li&gt;Search engines&lt;/li&gt; &lt;li&gt;Fraud/Anomaly detection&lt;/li&gt; &lt;li&gt;Speech Recognition&lt;/li&gt; &lt;li&gt;Self-Driving cars&lt;/li&gt; &lt;li&gt;Recommendation Systems(Amazon/Netflix)&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;there-are-two-main-types-of-machine-learning&quot;&gt;There are two main types of machine learning:&lt;/h3&gt; &lt;p&gt;&lt;strong&gt;Supervised&lt;/strong&gt; - Data points have known outcome&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Unsupervised&lt;/strong&gt; - Data points have unknown outcome&lt;/p&gt; &lt;p&gt;We’re going to focus on &lt;strong&gt;Supervised&lt;/strong&gt; learning here, and it can...</description>
         <pubDate>Fri, 09 Feb 2018 11:19:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/supervised-knn/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/supervised-knn/</guid>
+        <link>http://localhost:4000/supervised-knn/</link>
+        <guid isPermaLink="true">http://localhost:4000/supervised-knn/</guid>
         
         <category>python</category>
         
@@ -129,8 +129,8 @@
         <title>Basic Java</title>
         <description>&lt;h2 id=&quot;why-java&quot;&gt;Why Java?&lt;/h2&gt; &lt;p&gt;Java is old, older than me at least. But it’s not seen as old, its seen as a standard programming language. If you’re learning how to program you will end up with java at some point. And for good reason, it’s an efficient program that has stood the test of time.&lt;/p&gt; &lt;p&gt;In my opinion, it is more “messy” for a beginner, as you need to write more code. Mainly because everything is explicit and the language is designed for high-end efficient software. Unlike python which uses much simpler scripting language but is more suited for quick “prototyping”.&lt;/p&gt;...</description>
         <pubDate>Thu, 08 Feb 2018 21:34:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/basic-java/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/basic-java/</guid>
+        <link>http://localhost:4000/basic-java/</link>
+        <guid isPermaLink="true">http://localhost:4000/basic-java/</guid>
         
         <category>java</category>
         
@@ -151,8 +151,8 @@
         <title>Chocolate Visualisations</title>
         <description>&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt; &lt;p&gt;We are going to use a Chocolate dataset collected from &lt;a href=&quot;https://www.kaggle.com/rtatman/chocolate-bar-ratings/data&quot;&gt;Kaggle&lt;/a&gt;, to perform some simple Data visualisation techniques. Numpy and Pandas library must be installed. Code and data can be retrieved at &lt;a href=&quot;https://github.com/jimmyjoseph1295/DataMiningSnippets&quot;&gt;DataMiningSnippets&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Numpy&lt;/strong&gt; - A library for Python, it is used for scientific computing&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Pandas&lt;/strong&gt; - This library allows for creation of data structures within Python and can perform manipulations and analysis on the data&lt;/p&gt; &lt;p&gt;Installed using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install pandas numpy&lt;/code&gt;&lt;/p&gt; &lt;h2 id=&quot;initialisation&quot;&gt;Initialisation&lt;/h2&gt; &lt;p&gt;The first step is to initialise the data into a Pandas dataframe. So we import &lt;code class=&quot;highlighter-rouge&quot;&gt;os&lt;/code&gt; to do os operations...</description>
         <pubDate>Sat, 27 Jan 2018 22:55:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/chocolate-viz/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/chocolate-viz/</guid>
+        <link>http://localhost:4000/chocolate-viz/</link>
+        <guid isPermaLink="true">http://localhost:4000/chocolate-viz/</guid>
         
         <category>python</category>
         
@@ -177,8 +177,8 @@
         <title>AI TicTacToe</title>
         <description>&lt;h2 id=&quot;basic-setup&quot;&gt;Basic Setup&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;Install Python 3&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Clone the &lt;a href=&quot;https://github.com/jimmyjoseph1295/AITicTacToe&quot;&gt;repo&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;game.py&lt;/code&gt; file&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;further-support&quot;&gt;Further Support&lt;/h2&gt; &lt;p&gt;If you don’t know how Python works, this code was inspired &lt;code class=&quot;highlighter-rouge&quot;&gt;heavily&lt;/code&gt; from &lt;a href=&quot;https://inventwithpython.com/chapter10.html&quot;&gt;Al Sweigart’s&lt;/a&gt; resources. He provides very detailed, and beginner friendly python books and they’re all free.&lt;/p&gt; &lt;h2 id=&quot;are-you-still-here&quot;&gt;Are you still here?&lt;/h2&gt; &lt;p&gt;Have a code snippet then…&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;playAgain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This function returns True if the player wants to play again, otherwise it returns False.&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Do you want to play again? (yes or no)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;...</description>
         <pubDate>Fri, 20 Oct 2017 04:32:44 +0100</pubDate>
-        <link>http://jimmyjoseph.co.uk/ai-tictactoe/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/ai-tictactoe/</guid>
+        <link>http://localhost:4000/ai-tictactoe/</link>
+        <guid isPermaLink="true">http://localhost:4000/ai-tictactoe/</guid>
         
         <category>python</category>
         

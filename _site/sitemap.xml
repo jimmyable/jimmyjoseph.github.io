@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/yolo/</loc>
+		<loc>http://localhost:4000/yolo/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/gradient-descent/</loc>
+		<loc>http://localhost:4000/gradient-descent/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/multiagent-systems/</loc>
+		<loc>http://localhost:4000/multiagent-systems/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/jade/</loc>
+		<loc>http://localhost:4000/jade/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/supervised-knn/</loc>
+		<loc>http://localhost:4000/supervised-knn/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/basic-java/</loc>
+		<loc>http://localhost:4000/basic-java/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/chocolate-viz/</loc>
+		<loc>http://localhost:4000/chocolate-viz/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/ai-tictactoe/</loc>
+		<loc>http://localhost:4000/ai-tictactoe/</loc>
 	  </url>
 	
 </urlset>
