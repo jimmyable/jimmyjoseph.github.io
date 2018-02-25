@@ -54,3 +54,5 @@ There is a third way to perform gradient descent. It involves performing an upda
 ![Output](/assets/img/NeuralNets/7.png){:class="img-responsive"}
 
 Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
+
+Follow the [code](https://github.com/jimmyjoseph1295/neuralNets)
