@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Artificial Neurons",
+      "category" : "Neural Networks",
+      "tags"     : "sigmoid, bias, neural nets, training, and layers",
+      "url"      : "/neurons/",
+      "date"     : "25 Feb 2018"
+    } ,
+  
+    {
       "title"    : "YOLO",
       "category" : "Neural Networks",
       "tags"     : "yolo, object detection, neural nets, cuda, and opencv",

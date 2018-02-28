@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AI TicTacToe</title>
-    <meta name="description" content="A simple game modelled in Python with a computer "AI"">
+    <title>Artificial Neurons</title>
+    <meta name="description" content="Introduction to Artificial Neurons">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="AI TicTacToe">
-    <meta name="twitter:description" content="A simple game modelled in Python with a computer "AI"">
+    <meta name="twitter:title" content="Artificial Neurons">
+    <meta name="twitter:description" content="Introduction to Artificial Neurons">
     
     <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/ai-tictactoe/">
-    <meta property="og:title" content="AI TicTacToe">
+    <meta property="og:url" content="http://localhost:4000/neurons/">
+    <meta property="og:title" content="Artificial Neurons">
     
     <meta property="og:image" content="http://localhost:4000/assets/img/">
     
-    <meta property="og:description" content="A simple game modelled in Python with a computer "AI"">
+    <meta property="og:description" content="Introduction to Artificial Neurons">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="AI TicTacToe"/>
-    <meta itemprop="description" content="A simple game modelled in Python with a computer "AI"">
+    <meta itemprop="name" content="Artificial Neurons"/>
+    <meta itemprop="description" content="Introduction to Artificial Neurons">
     <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/ai-tictactoe/">
+    <link rel="canonical" href="http://localhost:4000/neurons/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2017-10-20 04:32:44 +0100" class="date">20 Oct 2017</time>
+            <time itemprop="datePublished" datetime="2018-02-25 15:57:47 +0000" class="date">25 Feb 2018</time>
         
-        <h1 class="post-title" itemprop="name">AI TicTacToe</h1>
-        <p itemprop="description" class="subtitle">A simple game modelled in Python with a computer "AI"</p>
+        <h1 class="post-title" itemprop="name">Artificial Neurons</h1>
+        <p itemprop="description" class="subtitle">Introduction to Artificial Neurons</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,41 +120,62 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h2 id="basic-setup">Basic Setup</h2>
+                <h1 id="background">Background</h1>
+<p>Neural networks are old, the first models appeared in the early 1940’s, and the idea has been refined by many generations of great scientists. They took inspiration from biology to create a mathematical model, that takes in signals from previous neurons to generate signals that match the input. By layering many neurons, one can create a sophisticated model that can work as a useful function approximator.</p>
 
-<ol>
-  <li><a href="https://www.python.org/">Install Python 3</a></li>
-  <li>Clone the <a href="https://github.com/jimmyjoseph1295/AITicTacToe">repo</a></li>
-  <li>Run the <code class="highlighter-rouge">game.py</code> file</li>
-</ol>
+<h2 id="neural-net-structure">Neural Net Structure</h2>
+<p>A neural network <code class="highlighter-rouge">maps inputs to outputs</code>. You can think of it as a complex computational engine that can be trained to learn the features of a given training set.</p>
 
-<h2 id="further-support">Further Support</h2>
+<p><img src="/assets/img/NeuralNets/9.png" alt="Output" class="img-responsive" /></p>
 
-<p>If you don’t know how Python works, this code was inspired <code class="highlighter-rouge">heavily</code> from <a href="https://inventwithpython.com/chapter10.html">Al Sweigart’s</a> resources. He provides very detailed, and beginner friendly python books and they’re all free.</p>
+<h2 id="a-basic-neuron">A basic neuron</h2>
 
-<h2 id="are-you-still-here">Are you still here?</h2>
+<p><code class="highlighter-rouge">z</code> is the <code class="highlighter-rouge">"net input"</code> from the data or the layer preceding.
+<code class="highlighter-rouge">b</code> is the <code class="highlighter-rouge">"bias term</code>, used to fine-tune the networks</p>
 
-<p>Have a code snippet then…</p>
+<p><img src="/assets/img/NeuralNets/10.png" alt="Output" class="img-responsive" /></p>
+<h3 id="vector-notation">Vector Notation</h3>
+<p>We can go further and simplify the <code class="highlighter-rouge">z</code> function for large vectors as:
+<img src="/assets/img/NeuralNets/11.png" alt="Output" class="img-responsive" /></p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">playAgain</span><span class="p">():</span>
-<span class="c"># This function returns True if the player wants to play again, otherwise it returns False.</span>
-	<span class="k">print</span><span class="p">(</span><span class="s">'Do you want to play again? (yes or no)'</span><span class="p">)</span>
-	<span class="k">return</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'y'</span><span class="p">)</span></code></pre></figure>
+<p>Lets now define the <code class="highlighter-rouge">output to the next layer</code>, <code class="highlighter-rouge">"a"</code>, which uses an <code class="highlighter-rouge">activation function</code>, <code class="highlighter-rouge">"f"</code> over the <code class="highlighter-rouge">input data</code>,<code class="highlighter-rouge">"z"</code>.
+<img src="/assets/img/NeuralNets/12.png" alt="Output" class="img-responsive" /></p>
+
+<h3 id="in-relation-to-logistic-regression">In Relation to Logistic Regression</h3>
+<p>When we choose the <code class="highlighter-rouge">activation function</code> as the sigmoid function
+<img src="/assets/img/NeuralNets/13.png" alt="Output" class="img-responsive" />
+Then the neuron merely becomes a “unit” of logistic regression!
+Where:</p>
+
+<p>inputs -&gt; variables
+weights -&gt; coefficients
+bias term -&gt; constant term(intersect)</p>
+
+<h4 id="a-nice-property-of-sigmoid-function">A Nice property of sigmoid function</h4>
+<p>When differentiated the function it can be simplified easily, by utilising the quotient rule
+<img src="/assets/img/NeuralNets/14.png" alt="Output" class="img-responsive" /></p>
+
+<h2 id="an-example-of-a-neural-computation">An example of a Neural Computation</h2>
+<p><img src="/assets/img/NeuralNets/15.png" alt="Output" class="img-responsive" /></p>
+
+<h1 id="why-neural-nets">Why Neural Nets</h1>
+<p><strong>A good question is why not use a single neuron, why do we need large networks?</strong>
+Well, a single neuron (like a linear regression) only permits a linear decision boundary. Most real-world problems are much more complicated, so we can layer them up to form a better function approximator.</p>
 
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/ai-tictactoe/%20via%20&#64;jimmyjoseph1295&hashtags=python,AI,game,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/neurons/%20via%20&#64;jimmyjoseph1295&hashtags=sigmoid,bias,neural nets,training,layers,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/ai-tictactoe/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/neurons/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/ai-tictactoe/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/neurons/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -183,7 +204,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/ai-tictactoe/';
+        var disqus_url = '/neurons/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

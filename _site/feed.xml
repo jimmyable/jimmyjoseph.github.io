@@ -5,9 +5,31 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Feb 2018 15:55:00 +0000</pubDate>
-    <lastBuildDate>Sun, 25 Feb 2018 15:55:00 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Feb 2018 11:00:48 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Feb 2018 11:00:48 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Artificial Neurons</title>
+        <description>&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt; &lt;p&gt;Neural networks are old, the first models appeared in the early 1940’s, and the idea has been refined by many generations of great scientists. They took inspiration from biology to create a mathematical model, that takes in signals from previous neurons to generate signals that match the input. By layering many neurons, one can create a sophisticated model that can work as a useful function approximator.&lt;/p&gt; &lt;h2 id=&quot;neural-net-structure&quot;&gt;Neural Net Structure&lt;/h2&gt; &lt;p&gt;A neural network &lt;code class=&quot;highlighter-rouge&quot;&gt;maps inputs to outputs&lt;/code&gt;. You can think of it as a complex computational engine that can be trained to learn the features of a...</description>
+        <pubDate>Sun, 25 Feb 2018 15:57:47 +0000</pubDate>
+        <link>http://localhost:4000/neurons/</link>
+        <guid isPermaLink="true">http://localhost:4000/neurons/</guid>
+        
+        <category>sigmoid</category>
+        
+        <category>bias</category>
+        
+        <category>neural nets</category>
+        
+        <category>training</category>
+        
+        <category>layers</category>
+        
+        
+        <category>Neural Networks</category>
+        
+      </item>
     
       <item>
         <title>YOLO</title>
