@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Unique Characters",
+      "category" : "Problems",
+      "tags"     : "python, unique, and test",
+      "url"      : "/unique-characters/",
+      "date"     : "02 Mar 2018"
+    } ,
+  
+    {
       "title"    : "Artificial Neurons",
       "category" : "Neural Networks",
       "tags"     : "sigmoid, bias, neural nets, training, and layers",

@@ -5,9 +5,27 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Feb 2018 11:00:48 +0000</pubDate>
-    <lastBuildDate>Wed, 28 Feb 2018 11:00:48 +0000</lastBuildDate>
+    <pubDate>Mon, 19 Mar 2018 20:38:34 +0000</pubDate>
+    <lastBuildDate>Mon, 19 Mar 2018 20:38:34 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Unique Characters</title>
+        <description>&lt;h1 id=&quot;unique-characters&quot;&gt;Unique Characters&lt;/h1&gt; &lt;p&gt;We want to use python to build an algorithm that can check if a given string contains all unique characters. Run the code with the unit test to confirm its validity.&lt;/p&gt; &lt;h2 id=&quot;test-cases&quot;&gt;Test cases&lt;/h2&gt; &lt;p&gt;We will use the following test cases to determine if the algorithm is correct.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;None&lt;/code&gt; returns &lt;strong&gt;False&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;''&lt;/code&gt; returns &lt;strong&gt;True&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; returns &lt;strong&gt;False&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; returns &lt;strong&gt;True&lt;/strong&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UniqueChars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;has_unique_chars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;...</description>
+        <pubDate>Fri, 02 Mar 2018 20:40:47 +0000</pubDate>
+        <link>http://localhost:4000/unique-characters/</link>
+        <guid isPermaLink="true">http://localhost:4000/unique-characters/</guid>
+        
+        <category>python</category>
+        
+        <category>unique</category>
+        
+        <category>test</category>
+        
+        
+        <category>Problems</category>
+        
+      </item>
     
       <item>
         <title>Artificial Neurons</title>
