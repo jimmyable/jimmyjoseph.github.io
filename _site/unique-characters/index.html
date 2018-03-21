@@ -17,14 +17,14 @@
     <meta name="twitter:title" content="Unique Characters">
     <meta name="twitter:description" content="Creating an algorithm that can decide if a given string has all unique characters">
     
-    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
+    <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/unique-characters/">
+    <meta property="og:url" content="http://jimmyjoseph.co.uk/unique-characters/">
     <meta property="og:title" content="Unique Characters">
     
-    <meta property="og:image" content="http://localhost:4000/assets/img/">
+    <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
     
     <meta property="og:description" content="Creating an algorithm that can decide if a given string has all unique characters">
     <meta property="og:site_name" content="Jimmy Joseph">
@@ -32,7 +32,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Unique Characters"/>
     <meta itemprop="description" content="Creating an algorithm that can decide if a given string has all unique characters">
-    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -57,8 +57,8 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/unique-characters/">
-    <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
+    <link rel="canonical" href="http://jimmyjoseph.co.uk/unique-characters/">
+    <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
 </head>
 
     <body>
@@ -92,22 +92,22 @@
   <ul>
     
     
-      <li><a href="http://localhost:4000/">Home</a></li>
+      <li><a href="http://jimmyjoseph.co.uk/">Home</a></li>
     
     
     
-      <li><a href="http://localhost:4000/series">Series</a></li>
+      <li><a href="http://jimmyjoseph.co.uk/series">Series</a></li>
     
     
     
-      <li><a href="http://localhost:4000/tags">Tags</a></li>
+      <li><a href="http://jimmyjoseph.co.uk/tags">Tags</a></li>
     
     
     
-      <li><a href="http://localhost:4000/about">About Me</a></li>
+      <li><a href="http://jimmyjoseph.co.uk/about">About Me</a></li>
     
     
-    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://jimmyjoseph.co.uk/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -126,10 +126,10 @@
 <h2 id="test-cases">Test cases</h2>
 <p>We will use the following test cases to determine if the algorithm is correct.</p>
 <ul>
-  <li><code class="highlighter-rouge">None</code> returns <strong>False</strong></li>
-  <li><code class="highlighter-rouge">''</code> returns <strong>True</strong></li>
-  <li><code class="highlighter-rouge">foo</code> returns <strong>False</strong></li>
-  <li><code class="highlighter-rouge">bar</code> returns <strong>True</strong></li>
+  <li><code class="highlighter-rouge">None</code> <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">''</code> <em>returns</em> <strong>True</strong></li>
+  <li><code class="highlighter-rouge">'foo'</code> <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">'bar'</code> <em>returns</em> <strong>True</strong></li>
 </ul>
 
 <h2 id="code">Code</h2>
@@ -145,7 +145,7 @@
 
 <p>If the <code class="highlighter-rouge">string ==  None</code> then we can just return <strong>False</strong>, because nothing was really fed in.</p>
 
-<p>Before explaining the next step. In python a <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">set</a>(sometimes called unordered set) is a data type that can only contain <em>unique</em> elements. This means if I made a set of the word <strong>apple</strong> using <code class="highlighter-rouge">set('apple')</code> then printing it back out gives <code class="highlighter-rouge">{'e', 'p', 'a', 'l'}</code>, the individual characters. P.S you can store unique words by issuing <code class="highlighter-rouge">set(['apple'])</code>, in which case the unique element is the whole word.</p>
+<p>Before explaining the next step. In Python a <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">set</a>(sometimes called unordered set) is a data type that can only contain <em>unique</em> elements. This means if I made a set of the word <strong>apple</strong> using <code class="highlighter-rouge">set('apple')</code> then printing it back out gives <code class="highlighter-rouge">{'e', 'p', 'a', 'l'}</code>, the individual characters. P.S you can store unique words by issuing <code class="highlighter-rouge">set(['apple'])</code>, in which case the unique element is the whole word.</p>
 
 <p>Now that we have that straight, the last line <code class="highlighter-rouge">len(set(string))==len(string)</code> checks if the length of the unique characters are the same as the length of the original string. If they are equal then the original string contained only unique characters, which is returned.</p>
 
@@ -187,15 +187,15 @@
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/unique-characters/%20via%20&#64;jimmyjoseph1295&hashtags=python,unique,test,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/unique-characters/%20via%20&#64;jimmyjoseph1295&hashtags=python,unique,test,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/unique-characters/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/unique-characters/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/unique-characters/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/unique-characters/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>

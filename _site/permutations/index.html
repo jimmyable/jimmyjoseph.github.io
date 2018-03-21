@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Intro to JADE</title>
-    <meta name="description" content="Introduction to JADE">
+    <title>Permutation of Characters</title>
+    <meta name="description" content="Checking if one string is a permutation of another">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="Intro to JADE">
-    <meta name="twitter:description" content="Introduction to JADE">
+    <meta name="twitter:title" content="Permutation of Characters">
+    <meta name="twitter:description" content="Checking if one string is a permutation of another">
     
     <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://jimmyjoseph.co.uk/jade/">
-    <meta property="og:title" content="Intro to JADE">
+    <meta property="og:url" content="http://jimmyjoseph.co.uk/permutations/">
+    <meta property="og:title" content="Permutation of Characters">
     
     <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
     
-    <meta property="og:description" content="Introduction to JADE">
+    <meta property="og:description" content="Checking if one string is a permutation of another">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Intro to JADE"/>
-    <meta itemprop="description" content="Introduction to JADE">
+    <meta itemprop="name" content="Permutation of Characters"/>
+    <meta itemprop="description" content="Checking if one string is a permutation of another">
     <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://jimmyjoseph.co.uk/jade/">
+    <link rel="canonical" href="http://jimmyjoseph.co.uk/permutations/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-02-09 14:21:47 +0000" class="date">09 Feb 2018</time>
+            <time itemprop="datePublished" datetime="2018-03-07 07:17:47 +0000" class="date">07 Mar 2018</time>
         
-        <h1 class="post-title" itemprop="name">Intro to JADE</h1>
-        <p itemprop="description" class="subtitle">Introduction to JADE</p>
+        <h1 class="post-title" itemprop="name">Permutation of Characters</h1>
+        <p itemprop="description" class="subtitle">Checking if one string is a permutation of another</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,55 +120,80 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="java-agent-development-framework"><em>J</em><code class="highlighter-rouge">ava</code> <em>A</em><code class="highlighter-rouge">gent</code> <em>DE</em><code class="highlighter-rouge">velopment</code> <code class="highlighter-rouge">framework</code></h1>
-<p>JADE is a framework in java that allows the realisation of agents and multi-agent systems. It complies with the <a href="http://www.fipa.org/">FIPA</a> specifications. The agent platform can be distributed within a network and thus does not need to reside within one machine/OS.</p>
+                <h1 id="permuatation-of-characters">Permuatation of characters</h1>
+<p>So what are we doing here? we are checking if both strings contains the same characters but in a different order i.e permutation.</p>
 
-<h2 id="jade-adminstration-tutorial">JADE Adminstration Tutorial</h2>
-<p>Introducing the notions of:</p>
+<h2 id="test-cases">Test cases</h2>
+<p>The following test cases must produce these results.</p>
 <ul>
-  <li><strong><code class="highlighter-rouge">Agent</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Container</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Platform</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Main Container</code></strong></li>
-  <li><strong><code class="highlighter-rouge">AMS</code></strong> and <strong><code class="highlighter-rouge">DF</code></strong></li>
+  <li>One or more None inputs <em>returns</em> <strong>False</strong></li>
+  <li>One or more empty strings <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">'Nib'</code>, <code class="highlighter-rouge">'bin'</code> <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">'act'</code>, <code class="highlighter-rouge">'cat'</code> <em>returns</em> <strong>True</strong></li>
+  <li><code class="highlighter-rouge">'a ct'</code>, <code class="highlighter-rouge">'ca t'</code> <em>returns</em> <strong>True</strong></li>
 </ul>
 
-<p>Follow the figure below. A JADE application will have <code class="highlighter-rouge">Agent</code> elements, each with a unique name(A1,A2,..). <code class="highlighter-rouge">Agents</code> act and interact by exchanging messages.</p>
+<h2 id="code">Code</h2>
 
-<p>Agents live on top of a <code class="highlighter-rouge">Platform</code>, which allows for services such as message delivery. A platform contains one or more <code class="highlighter-rouge">Containers</code>. Each container can contain 0 or more agents. A container can be thought of as a JVM.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Permutations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-<p>A special container called <code class="highlighter-rouge">Main Container</code> always exists in the platform, it’s like other containers except:</p>
-<ol>
-  <li>It’s the first container to start on a platform.</li>
-  <li>It comes with special agents called <code class="highlighter-rouge">AMS</code> and <code class="highlighter-rouge">DF</code>, which allows starting and killing other agents and DF allows <code class="highlighter-rouge">Yellow Pages</code> where agents can lookup other agent’s services.</li>
-</ol>
+    <span class="k">def</span> <span class="nf">is_permutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">str1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">str2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span></code></pre></figure>
 
-<p><img src="/assets/img/JADE/1.png" alt="Output" class="img-responsive" /></p>
+<p>The function above is taking in the two strings we can send in. The first check makes sure neither of the strings are <code class="highlighter-rouge">None</code>, to satisfy the first two test cases.</p>
 
-<h2 id="agent-communication">Agent Communication</h2>
-<p>All agents can communicate with each other regardless of what container they are in. All communication is in the ACL format, which includes:</p>
-<ul>
-  <li><code class="highlighter-rouge">sender</code> information</li>
-  <li><code class="highlighter-rouge">receiver</code> information</li>
-  <li>the <code class="highlighter-rouge">communicative act</code> which represents the intention of the message, eg - INFORM, REQUEST etc. FIPA has defined the communicative acts.</li>
-  <li>the actual <code class="highlighter-rouge">content</code> of the message, this will contain the information that the receiver can process or act on.</li>
-</ul>
+<p>Next we use a standard Python function <a href="https://docs.python.org/3/howto/sorting.html">sorted</a>. This function sorts out the input, in an ascending order by default. You can sort by descending order by specifying additional parameters to the fucntion such as <code class="highlighter-rouge">reverese=True</code>. If you feel brave you can even use <code class="highlighter-rouge">keys</code> and <code class="highlighter-rouge">lambdas</code> to create very advanced sorting functions.</p>
 
-<p>Read up more and work with <a href="http://jade.tilab.com/">JADE</a>.</p>
+<p>So, the sorted fucntion sorts out the input string. The final line must give us a correct answer to the rest of our test cases now. Note that this algorithm is case sensitive, you can always convert both strings to a specified case before the equality comparison to change this.</p>
+
+<h2 id="unit-test">Unit Test</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span>
+
+
+<span class="k">class</span> <span class="nc">TestPermutation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_permutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'Nib'</span><span class="p">,</span> <span class="s">'bin'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'act'</span><span class="p">,</span> <span class="s">'cat'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'a ct'</span><span class="p">,</span> <span class="s">'ca t'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_permutation'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">TestPermutation</span><span class="p">()</span>
+    <span class="n">permutations</span> <span class="o">=</span> <span class="n">Permutations</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_permutation</span><span class="p">(</span><span class="n">permutations</span><span class="o">.</span><span class="n">is_permutation</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">permutations_alt</span> <span class="o">=</span> <span class="n">PermutationsAlt</span><span class="p">()</span>
+        <span class="n">test</span><span class="o">.</span><span class="n">test_permutation</span><span class="p">(</span><span class="n">permutations_alt</span><span class="o">.</span><span class="n">is_permutation</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">NameError</span><span class="p">:</span>
+        <span class="c"># Alternate solutions are only defined</span>
+        <span class="c"># in the solutions file</span>
+        <span class="k">pass</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/jade/%20via%20&#64;jimmyjoseph1295&hashtags=java,FIPA,agents,queues,compile,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/permutations/%20via%20&#64;jimmyjoseph1295&hashtags=python,permutation,test,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/jade/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/permutations/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/jade/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/permutations/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -197,7 +222,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/jade/';
+        var disqus_url = '/permutations/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

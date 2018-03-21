@@ -18,10 +18,10 @@ We want to use python to build an algorithm that can check if a given string con
 
 ## Test cases
 We will use the following test cases to determine if the algorithm is correct.
-- `None` returns **False**
-- `''` returns **True**
-- `foo` returns **False**
-- `bar` returns **True**
+- `None` *returns* **False**
+- `''` *returns* **True**
+- `'foo'` *returns* **False**
+- `'bar'` *returns* **True**
 
 ## Code
 {% highlight python %}
@@ -36,7 +36,7 @@ Okay so whats happening here? It's actually a very simple answer to a relatively
 
 If the `string ==  None` then we can just return **False**, because nothing was really fed in.
 
-Before explaining the next step. In python a [set](https://docs.python.org/3/tutorial/datastructures.html#sets)(sometimes called unordered set) is a data type that can only contain *unique* elements. This means if I made a set of the word **apple** using `set('apple')` then printing it back out gives `{'e', 'p', 'a', 'l'}`, the individual characters. P.S you can store unique words by issuing `set(['apple'])`, in which case the unique element is the whole word.
+Before explaining the next step. In Python a [set](https://docs.python.org/3/tutorial/datastructures.html#sets)(sometimes called unordered set) is a data type that can only contain *unique* elements. This means if I made a set of the word **apple** using `set('apple')` then printing it back out gives `{'e', 'p', 'a', 'l'}`, the individual characters. P.S you can store unique words by issuing `set(['apple'])`, in which case the unique element is the whole word.
 
 Now that we have that straight, the last line `len(set(string))==len(string)` checks if the length of the unique characters are the same as the length of the original string. If they are equal then the original string contained only unique characters, which is returned.
 

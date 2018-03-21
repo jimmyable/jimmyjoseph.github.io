@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Intro to JADE</title>
-    <meta name="description" content="Introduction to JADE">
+    <title>Compress a String</title>
+    <meta name="description" content="Compressing a string">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="Intro to JADE">
-    <meta name="twitter:description" content="Introduction to JADE">
+    <meta name="twitter:title" content="Compress a String">
+    <meta name="twitter:description" content="Compressing a string">
     
     <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://jimmyjoseph.co.uk/jade/">
-    <meta property="og:title" content="Intro to JADE">
+    <meta property="og:url" content="http://jimmyjoseph.co.uk/compress-string/">
+    <meta property="og:title" content="Compress a String">
     
     <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
     
-    <meta property="og:description" content="Introduction to JADE">
+    <meta property="og:description" content="Compressing a string">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Intro to JADE"/>
-    <meta itemprop="description" content="Introduction to JADE">
+    <meta itemprop="name" content="Compress a String"/>
+    <meta itemprop="description" content="Compressing a string">
     <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://jimmyjoseph.co.uk/jade/">
+    <link rel="canonical" href="http://jimmyjoseph.co.uk/compress-string/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-02-09 14:21:47 +0000" class="date">09 Feb 2018</time>
+            <time itemprop="datePublished" datetime="2018-03-17 08:05:47 +0000" class="date">17 Mar 2018</time>
         
-        <h1 class="post-title" itemprop="name">Intro to JADE</h1>
-        <p itemprop="description" class="subtitle">Introduction to JADE</p>
+        <h1 class="post-title" itemprop="name">Compress a String</h1>
+        <p itemprop="description" class="subtitle">Compressing a string</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,55 +120,82 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="java-agent-development-framework"><em>J</em><code class="highlighter-rouge">ava</code> <em>A</em><code class="highlighter-rouge">gent</code> <em>DE</em><code class="highlighter-rouge">velopment</code> <code class="highlighter-rouge">framework</code></h1>
-<p>JADE is a framework in java that allows the realisation of agents and multi-agent systems. It complies with the <a href="http://www.fipa.org/">FIPA</a> specifications. The agent platform can be distributed within a network and thus does not need to reside within one machine/OS.</p>
+                <h1 id="rotational-characters">Rotational Characters</h1>
+<p>If a word is rotated then it keeps its oringal order but the sequence might start or end at a different point. For example, <code class="highlighter-rouge">OGOGOG</code> is a rotation of <code class="highlighter-rouge">GOGOGO</code>, but not <code class="highlighter-rouge">GGGOOO</code> or <code class="highlighter-rouge">GGOOGO</code>. Another example is <code class="highlighter-rouge">Tree</code> which can be rotated to get <code class="highlighter-rouge">reeT</code>.</p>
 
-<h2 id="jade-adminstration-tutorial">JADE Adminstration Tutorial</h2>
-<p>Introducing the notions of:</p>
+<h2 id="tets-cases">Tets cases</h2>
+<p>Let’s define some test cases now.</p>
+
 <ul>
-  <li><strong><code class="highlighter-rouge">Agent</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Container</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Platform</code></strong></li>
-  <li><strong><code class="highlighter-rouge">Main Container</code></strong></li>
-  <li><strong><code class="highlighter-rouge">AMS</code></strong> and <strong><code class="highlighter-rouge">DF</code></strong></li>
+  <li>Any strings that differ in size <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">None</code>, <code class="highlighter-rouge">'foo'</code> <em>returns</em> <strong>False</strong> (any None results in False)</li>
+  <li><code class="highlighter-rouge">' '</code>, <code class="highlighter-rouge">'foo'</code> <em>returns</em> <strong>False</strong></li>
+  <li><code class="highlighter-rouge">' '</code>, <code class="highlighter-rouge">' '</code> <em>returns</em> <strong>True</strong></li>
+  <li><code class="highlighter-rouge">'foobarbaz'</code>, <code class="highlighter-rouge">'barbazfoo'</code> <em>returns</em> <strong>True</strong></li>
 </ul>
 
-<p>Follow the figure below. A JADE application will have <code class="highlighter-rouge">Agent</code> elements, each with a unique name(A1,A2,..). <code class="highlighter-rouge">Agents</code> act and interact by exchanging messages.</p>
+<h2 id="code">Code</h2>
 
-<p>Agents live on top of a <code class="highlighter-rouge">Platform</code>, which allows for services such as message delivery. A platform contains one or more <code class="highlighter-rouge">Containers</code>. Each container can contain 0 or more agents. A container can be thought of as a JVM.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Rotation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-<p>A special container called <code class="highlighter-rouge">Main Container</code> always exists in the platform, it’s like other containers except:</p>
-<ol>
-  <li>It’s the first container to start on a platform.</li>
-  <li>It comes with special agents called <code class="highlighter-rouge">AMS</code> and <code class="highlighter-rouge">DF</code>, which allows starting and killing other agents and DF allows <code class="highlighter-rouge">Yellow Pages</code> where agents can lookup other agent’s services.</li>
-</ol>
+    <span class="k">def</span> <span class="nf">is_substring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">s1</span> <span class="ow">in</span> <span class="n">s2</span>
 
-<p><img src="/assets/img/JADE/1.png" alt="Output" class="img-responsive" /></p>
+    <span class="k">def</span> <span class="nf">is_rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">s1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">s2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s2</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_substring</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="o">+</span> <span class="n">s2</span><span class="p">)</span></code></pre></figure>
 
-<h2 id="agent-communication">Agent Communication</h2>
-<p>All agents can communicate with each other regardless of what container they are in. All communication is in the ACL format, which includes:</p>
-<ul>
-  <li><code class="highlighter-rouge">sender</code> information</li>
-  <li><code class="highlighter-rouge">receiver</code> information</li>
-  <li>the <code class="highlighter-rouge">communicative act</code> which represents the intention of the message, eg - INFORM, REQUEST etc. FIPA has defined the communicative acts.</li>
-  <li>the actual <code class="highlighter-rouge">content</code> of the message, this will contain the information that the receiver can process or act on.</li>
-</ul>
+<p>What do we have here? We are only going to call the <code class="highlighter-rouge">is_rotation</code> function directly. It accepts two strings. To satisfy the first test case, we check if any of the strings are <code class="highlighter-rouge">None</code>, if so automatically return <code class="highlighter-rouge">False</code>.</p>
 
-<p>Read up more and work with <a href="http://jade.tilab.com/">JADE</a>.</p>
+<p>Next the <code class="highlighter-rouge">len()</code> function is used to check if both strings are the same size. If they are not the same size they cannot be permutations of eachother for obvious reasons.</p>
+
+<p>Next we do a clever trick. We send the first string and a conjuntcion of second string repeated as the second argument, to <code class="highlighter-rouge">is_substring</code>. Why?</p>
+
+<p>Looking at earlier example of <code class="highlighter-rouge">Tree</code> and <code class="highlighter-rouge">reeT</code>. If we add both stirngs we get <code class="highlighter-rouge">reeTreeT</code>, observe how by adding string2 to iteself we see string1 inside itself? This can only happen is both strings are rotational equaivalents of eachother.</p>
+
+<p>Looking back at the code, the <code class="highlighter-rouge">is_substring</code> checks exactly this, it looks for the first string in the repeated second string. If a match is found then the function returns <code class="highlighter-rouge">True</code>.</p>
+
+<h2 id="unit-test">Unit Test</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span>
+
+<span class="k">class</span> <span class="nc">TestRotation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rotation</span> <span class="o">=</span> <span class="n">Rotation</span><span class="p">()</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">'o'</span><span class="p">,</span> <span class="s">'oo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">'foobarbaz'</span><span class="p">,</span> <span class="s">'barbazfoo'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_rotation'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">TestRotation</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_rotation</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/jade/%20via%20&#64;jimmyjoseph1295&hashtags=java,FIPA,agents,queues,compile,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/compress-string/%20via%20&#64;jimmyjoseph1295&hashtags=python,rotational,test,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/jade/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/compress-string/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/jade/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/compress-string/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -197,7 +224,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/jade/';
+        var disqus_url = '/compress-string/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

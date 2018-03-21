@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "Compress a String",
+      "category" : "Problems",
+      "tags"     : "python, rotational, and test",
+      "url"      : "/compress-string/",
+      "date"     : "17 Mar 2018"
+    } ,
+  
+    {
+      "title"    : "Rotational Characters",
+      "category" : "Problems",
+      "tags"     : "python, rotational, and test",
+      "url"      : "/rotation-characters/",
+      "date"     : "12 Mar 2018"
+    } ,
+  
+    {
+      "title"    : "Permutation of Characters",
+      "category" : "Problems",
+      "tags"     : "python, permutation, and test",
+      "url"      : "/permutations/",
+      "date"     : "07 Mar 2018"
+    } ,
+  
+    {
       "title"    : "Unique Characters",
       "category" : "Problems",
       "tags"     : "python, unique, and test",
