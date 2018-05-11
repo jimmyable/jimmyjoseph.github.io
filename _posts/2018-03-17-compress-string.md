@@ -13,63 +13,77 @@ categories:
 twitter_text:
 ---
 
-# Rotational Characters
-If a word is rotated then it keeps its oringal order but the sequence might start or end at a different point. For example, `OGOGOG` is a rotation of `GOGOGO`, but not `GGGOOO` or `GGOOGO`. Another example is `Tree` which can be rotated to get `reeT`. 
+# String Compression
+It is possible to compress a string such that, a string orginally `AAABBCCCDD` becomes `A3B2C3D2`. In thi case we will only compress in order to save space. So for example `AABB` wouldn't be compressed to `A2B2` because it saves no space.
+
 
 ## Tets cases
 Let's define some test cases now.
 
-- Any strings that differ in size *returns* **False**
-- `None`, `'foo'` *returns* **False** (any None results in False)
-- `' '`, `'foo'` *returns* **False**
-- `' '`, `' '` *returns* **True**
-- `'foobarbaz'`, `'barbazfoo'` *returns* **True**
+- None -> None
+- '' -> ''
+- `AABBCC` -> `AABBCC`
+- `AAABCCDDDD` -> `A3BC2D4`
 
 ## Code
 {% highlight python %}
-class Rotation(object):
+class CompressString(object):
 
-    def is_substring(self, s1, s2):
-        return s1 in s2
-
-    def is_rotation(self, s1, s2):
-        if s1 is None or s2 is None:
-            return False
-        if len(s1) != len(s2):
-            return False
-        return self.is_substring(s1, s2 + s2)
+    def compress(self, string):
+        if string is None or not string:
+            return string
+        
+        result=''
+        prev_char = string[0]
+        count = 0 
+        
+        for char in string:
+            if char == prev_char:
+                count +=1
+            else:
+                result+= self.partial_result(prev_char, count)
+                prev_char = char
+                count = 1
+        result += self.partial_result(prev_char, count)
+        return result if len(result) < len(string) else string
+                
+    def partial_result(self, prev_char,count):
+        return prev_char + (str(count) if count >1 else '')
 {% endhighlight %}
 
-What do we have here? We are only going to call the `is_rotation` function directly. It accepts two strings. To satisfy the first test case, we check if any of the strings are `None`, if so automatically return `False`. 
+The first thing to check is if the string provided is `None`, if it is, then we can simply return the same thing.
 
-Next the `len()` function is used to check if both strings are the same size. If they are not the same size they cannot be permutations of eachother for obvious reasons.
+Now the meat of the code:
+For every character in the given string, if the current character is the same as the last one then add 1 to the count.
+If it is not then, save what we have so far(previous letter and its count).
+And use the current character as to perform the rest of the loop, if it repeats then increase the count each time.
 
-Next we do a clever trick. We send the first string and a conjuntcion of second string repeated as the second argument, to `is_substring`. Why?
+In the end we check if the compressed string size < string size, if so then we know we are saving space and thus return the compressed string. Or else just return the same string as given.
 
-Looking at earlier example of `Tree` and `reeT`. If we add both stirngs we get `reeTreeT`, observe how by adding string2 to iteself we see string1 inside itself? This can only happen is both strings are rotational equaivalents of eachother. 
 
-Looking back at the code, the `is_substring` checks exactly this, it looks for the first string in the repeated second string. If a match is found then the function returns `True`.
 
 ## Unit Test
 
 {% highlight python %}
 from nose.tools import assert_equal
 
-class TestRotation(object):
 
-    def test_rotation(self):
-        rotation = Rotation()
-        assert_equal(rotation.is_rotation('o', 'oo'), False)
-        assert_equal(rotation.is_rotation(None, 'foo'), False)
-        assert_equal(rotation.is_rotation('', 'foo'), False)
-        assert_equal(rotation.is_rotation('', ''), True)
-        assert_equal(rotation.is_rotation('foobarbaz', 'barbazfoo'), True)
-        print('Success: test_rotation')
+class TestCompress(object):
+
+    def test_compress(self, func):
+        assert_equal(func(None), None)
+        assert_equal(func(''), '')
+        assert_equal(func('AABBCC'), 'AABBCC')
+        assert_equal(func('AAABCCDDDDE'), 'A3BC2D4E')
+        assert_equal(func('BAAACCDDDD'), 'BA3C2D4')
+        assert_equal(func('AAABAACCDDDD'), 'A3BA2C2D4')
+        print('Success: test_compress')
 
 
 def main():
-    test = TestRotation()
-    test.test_rotation()
+    test = TestCompress()
+    compress_string = CompressString()
+    test.test_compress(compress_string.compress)
 
 
 if __name__ == '__main__':

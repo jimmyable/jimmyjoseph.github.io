@@ -120,63 +120,74 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="rotational-characters">Rotational Characters</h1>
-<p>If a word is rotated then it keeps its oringal order but the sequence might start or end at a different point. For example, <code class="highlighter-rouge">OGOGOG</code> is a rotation of <code class="highlighter-rouge">GOGOGO</code>, but not <code class="highlighter-rouge">GGGOOO</code> or <code class="highlighter-rouge">GGOOGO</code>. Another example is <code class="highlighter-rouge">Tree</code> which can be rotated to get <code class="highlighter-rouge">reeT</code>.</p>
+                <h1 id="string-compression">String Compression</h1>
+<p>It is possible to compress a string such that, a string orginally <code class="highlighter-rouge">AAABBCCCDD</code> becomes <code class="highlighter-rouge">A3B2C3D2</code>. In thi case we will only compress in order to save space. So for example <code class="highlighter-rouge">AABB</code> wouldn’t be compressed to <code class="highlighter-rouge">A2B2</code> because it saves no space.</p>
 
 <h2 id="tets-cases">Tets cases</h2>
 <p>Let’s define some test cases now.</p>
 
 <ul>
-  <li>Any strings that differ in size <em>returns</em> <strong>False</strong></li>
-  <li><code class="highlighter-rouge">None</code>, <code class="highlighter-rouge">'foo'</code> <em>returns</em> <strong>False</strong> (any None results in False)</li>
-  <li><code class="highlighter-rouge">' '</code>, <code class="highlighter-rouge">'foo'</code> <em>returns</em> <strong>False</strong></li>
-  <li><code class="highlighter-rouge">' '</code>, <code class="highlighter-rouge">' '</code> <em>returns</em> <strong>True</strong></li>
-  <li><code class="highlighter-rouge">'foobarbaz'</code>, <code class="highlighter-rouge">'barbazfoo'</code> <em>returns</em> <strong>True</strong></li>
+  <li>None -&gt; None</li>
+  <li>’’ -&gt; ‘’</li>
+  <li><code class="highlighter-rouge">AABBCC</code> -&gt; <code class="highlighter-rouge">AABBCC</code></li>
+  <li><code class="highlighter-rouge">AAABCCDDDD</code> -&gt; <code class="highlighter-rouge">A3BC2D4</code></li>
 </ul>
 
 <h2 id="code">Code</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Rotation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">CompressString</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">is_substring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">s1</span> <span class="ow">in</span> <span class="n">s2</span>
+    <span class="k">def</span> <span class="nf">compress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">string</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">string</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">string</span>
+        
+        <span class="n">result</span><span class="o">=</span><span class="s">''</span>
+        <span class="n">prev_char</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> 
+        
+        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="n">prev_char</span><span class="p">:</span>
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">partial_result</span><span class="p">(</span><span class="n">prev_char</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+                <span class="n">prev_char</span> <span class="o">=</span> <span class="n">char</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">partial_result</span><span class="p">(</span><span class="n">prev_char</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="k">else</span> <span class="n">string</span>
+                
+    <span class="k">def</span> <span class="nf">partial_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev_char</span><span class="p">,</span><span class="n">count</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">prev_char</span> <span class="o">+</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span><span class="mi">1</span> <span class="k">else</span> <span class="s">''</span><span class="p">)</span></code></pre></figure>
 
-    <span class="k">def</span> <span class="nf">is_rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">s1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">s2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s2</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_substring</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="o">+</span> <span class="n">s2</span><span class="p">)</span></code></pre></figure>
+<p>The first thing to check is if the string provided is <code class="highlighter-rouge">None</code>, if it is, then we can simply return the same thing.</p>
 
-<p>What do we have here? We are only going to call the <code class="highlighter-rouge">is_rotation</code> function directly. It accepts two strings. To satisfy the first test case, we check if any of the strings are <code class="highlighter-rouge">None</code>, if so automatically return <code class="highlighter-rouge">False</code>.</p>
+<p>Now the meat of the code:
+For every character in the given string, if the current character is the same as the last one then add 1 to the count.
+If it is not then, save what we have so far(previous letter and its count).
+And use the current character as to perform the rest of the loop, if it repeats then increase the count each time.</p>
 
-<p>Next the <code class="highlighter-rouge">len()</code> function is used to check if both strings are the same size. If they are not the same size they cannot be permutations of eachother for obvious reasons.</p>
-
-<p>Next we do a clever trick. We send the first string and a conjuntcion of second string repeated as the second argument, to <code class="highlighter-rouge">is_substring</code>. Why?</p>
-
-<p>Looking at earlier example of <code class="highlighter-rouge">Tree</code> and <code class="highlighter-rouge">reeT</code>. If we add both stirngs we get <code class="highlighter-rouge">reeTreeT</code>, observe how by adding string2 to iteself we see string1 inside itself? This can only happen is both strings are rotational equaivalents of eachother.</p>
-
-<p>Looking back at the code, the <code class="highlighter-rouge">is_substring</code> checks exactly this, it looks for the first string in the repeated second string. If a match is found then the function returns <code class="highlighter-rouge">True</code>.</p>
+<p>In the end we check if the compressed string size &lt; string size, if so then we know we are saving space and thus return the compressed string. Or else just return the same string as given.</p>
 
 <h2 id="unit-test">Unit Test</h2>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span>
 
-<span class="k">class</span> <span class="nc">TestRotation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">test_rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">rotation</span> <span class="o">=</span> <span class="n">Rotation</span><span class="p">()</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">'o'</span><span class="p">,</span> <span class="s">'oo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">is_rotation</span><span class="p">(</span><span class="s">'foobarbaz'</span><span class="p">,</span> <span class="s">'barbazfoo'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_rotation'</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">TestCompress</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_compress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="bp">None</span><span class="p">),</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">''</span><span class="p">),</span> <span class="s">''</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'AABBCC'</span><span class="p">),</span> <span class="s">'AABBCC'</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'AAABCCDDDDE'</span><span class="p">),</span> <span class="s">'A3BC2D4E'</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'BAAACCDDDD'</span><span class="p">),</span> <span class="s">'BA3C2D4'</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'AAABAACCDDDD'</span><span class="p">),</span> <span class="s">'A3BA2C2D4'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_compress'</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">test</span> <span class="o">=</span> <span class="n">TestRotation</span><span class="p">()</span>
-    <span class="n">test</span><span class="o">.</span><span class="n">test_rotation</span><span class="p">()</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">TestCompress</span><span class="p">()</span>
+    <span class="n">compress_string</span> <span class="o">=</span> <span class="n">CompressString</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_compress</span><span class="p">(</span><span class="n">compress_string</span><span class="o">.</span><span class="n">compress</span><span class="p">)</span>
 
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
