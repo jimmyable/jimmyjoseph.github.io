@@ -147,7 +147,7 @@ Spoiler alert: The hardest part is installing CUDA</p>
 
 <p>Install kernel headers and dev packages by issuing:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get install linux-headers-<span class="k">$(</span>uname <span class="nt">-r</span><span class="k">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>linux-headers-<span class="k">$(</span><span class="nb">uname</span> <span class="nt">-r</span><span class="k">)</span></code></pre></figure>
 
 <h3 id="cuda-installation">CUDA Installation</h3>
 <p>You can install the .deb you downloaded by issuing:</p>
@@ -156,7 +156,7 @@ Spoiler alert: The hardest part is installing CUDA</p>
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key add /var/cuda-repo-&lt;version&gt;/7fa2af80.pub
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key adv <span class="nt">--fetch-keys</span> https://developer.download.nvidia.com/compute/cuda/repos/&lt;distro&gt;/&lt;architecture&gt;/7fa2af80.pub
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
-username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get install cuda</code></pre></figure>
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>cuda</code></pre></figure>
 
 <h3 id="cuda-post-install-instructions">CUDA Post Install Instructions</h3>
 <p>Set up the environment and etc by issuing:</p>
@@ -200,11 +200,11 @@ WantedBy=multi-user.target</code></pre></figure>
 
 <p>Remove existing links</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rm /usr/bin/gcc
-rm /usr/bin/g++</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">rm</span> /usr/bin/gcc
+<span class="nb">rm</span> /usr/bin/g++</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln <span class="nt">-s</span> /usr/local/bin/gcc-6 gcc
-ln <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/gcc-6 gcc
+<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
 
 <p>OR</p>
 
@@ -218,7 +218,7 @@ ln <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
 <h2 id="opencv">OpenCV</h2>
 <p><a href="https://opencv.org/">OpenCV</a> is a computer vision library. It’s state of the art. We will need to install this too. But this is easy.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install libopencv-dev</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>libopencv-dev</code></pre></figure>
 
 <p>You can check if that worked by issuing:</p>
 
