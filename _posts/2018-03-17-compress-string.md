@@ -8,8 +8,11 @@ tags:
 - python
 - rotational
 - test
+- arrays
+- strings
 categories:
 - Problems
+- Arrays and Strings
 twitter_text:
 ---
 
@@ -53,7 +56,7 @@ class CompressString(object):
 
 The first thing to check is if the string provided is `None`, if it is, then we can simply return the same thing.
 
-Now the meat of the code:
+Now the **meat** of the code:
 For every character in the given string, if the current character is the same as the last one then add 1 to the count.
 If it is not then, save what we have so far(previous letter and its count).
 And use the current character as to perform the rest of the loop, if it repeats then increase the count each time.

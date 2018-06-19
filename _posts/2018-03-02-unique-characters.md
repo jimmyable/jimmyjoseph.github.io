@@ -8,8 +8,11 @@ tags:
 - python
 - unique
 - test
+- arrays
+- strings
 categories:
 - Problems
+- Arrays and Strings
 twitter_text:
 ---
 
