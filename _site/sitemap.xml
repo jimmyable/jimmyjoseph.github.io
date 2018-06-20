@@ -2,55 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/compress-string/</loc>
+		<loc>http://localhost:4000/reverse-characters-in-a-string/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/rotation-characters/</loc>
+		<loc>http://localhost:4000/compress-string/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/permutations/</loc>
+		<loc>http://localhost:4000/rotation-characters/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/unique-characters/</loc>
+		<loc>http://localhost:4000/permutations/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/neurons/</loc>
+		<loc>http://localhost:4000/unique-characters/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/yolo/</loc>
+		<loc>http://localhost:4000/neurons/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/gradient-descent/</loc>
+		<loc>http://localhost:4000/yolo/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/multiagent-systems/</loc>
+		<loc>http://localhost:4000/gradient-descent/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/jade/</loc>
+		<loc>http://localhost:4000/multiagent-systems/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/supervised-knn/</loc>
+		<loc>http://localhost:4000/jade/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/basic-java/</loc>
+		<loc>http://localhost:4000/supervised-knn/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/chocolate-viz/</loc>
+		<loc>http://localhost:4000/basic-java/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://jimmyjoseph.co.uk/ai-tictactoe/</loc>
+		<loc>http://localhost:4000/chocolate-viz/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://localhost:4000/ai-tictactoe/</loc>
 	  </url>
 	
 </urlset>

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Permutation of Characters</title>
-    <meta name="description" content="Checking if one string is a permutation of another">
+    <title>Reverse characters in a string(in-place)</title>
+    <meta name="description" content="Implement a function to reverse a string (a list of characters), in-place.">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyjoseph1295">
-    <meta name="twitter:title" content="Permutation of Characters">
-    <meta name="twitter:description" content="Checking if one string is a permutation of another">
+    <meta name="twitter:title" content="Reverse characters in a string(in-place)">
+    <meta name="twitter:description" content="Implement a function to reverse a string (a list of characters), in-place.">
     
     <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/permutations/">
-    <meta property="og:title" content="Permutation of Characters">
+    <meta property="og:url" content="http://localhost:4000/reverse-characters-in-a-string/">
+    <meta property="og:title" content="Reverse characters in a string(in-place)">
     
     <meta property="og:image" content="http://localhost:4000/assets/img/">
     
-    <meta property="og:description" content="Checking if one string is a permutation of another">
+    <meta property="og:description" content="Implement a function to reverse a string (a list of characters), in-place.">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Permutation of Characters"/>
-    <meta itemprop="description" content="Checking if one string is a permutation of another">
+    <meta itemprop="name" content="Reverse characters in a string(in-place)"/>
+    <meta itemprop="description" content="Implement a function to reverse a string (a list of characters), in-place.">
     <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/permutations/">
+    <link rel="canonical" href="http://localhost:4000/reverse-characters-in-a-string/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-03-07 07:17:47 +0000" class="date">07 Mar 2018</time>
+            <time itemprop="datePublished" datetime="2018-06-20 00:02:47 +0100" class="date">20 Jun 2018</time>
         
-        <h1 class="post-title" itemprop="name">Permutation of Characters</h1>
-        <p itemprop="description" class="subtitle">Checking if one string is a permutation of another</p>
+        <h1 class="post-title" itemprop="name">Reverse characters in a string(in-place)</h1>
+        <p itemprop="description" class="subtitle">Implement a function to reverse a string (a list of characters), in-place.</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,61 +120,83 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="permuatation-of-characters">Permuatation of characters</h1>
-<p>So what are we doing here? we are checking if both strings contains the same characters but in a different order i.e permutation.</p>
+                <h1 id="reverse-characters-in-a-stringin-place">Reverse characters in a string(in-place)</h1>
+<p>Self explanatory really, pretty much if x=[“x”,”y”,”Z”] was fed in, then the output should be x=[“z”,”y”,”x”].</p>
 
-<h2 id="test-cases">Test cases</h2>
-<p>The following test cases must produce these results.</p>
+<h2 id="tets-cases">Tets cases</h2>
+<p>Let’s define some test cases now.</p>
+
 <ul>
-  <li>One or more None inputs <em>returns</em> <strong>False</strong></li>
-  <li>One or more empty strings <em>returns</em> <strong>False</strong></li>
-  <li><code class="highlighter-rouge">'Nib'</code>, <code class="highlighter-rouge">'bin'</code> <em>returns</em> <strong>False</strong></li>
-  <li><code class="highlighter-rouge">'act'</code>, <code class="highlighter-rouge">'cat'</code> <em>returns</em> <strong>True</strong></li>
-  <li><code class="highlighter-rouge">'a ct'</code>, <code class="highlighter-rouge">'ca t'</code> <em>returns</em> <strong>True</strong></li>
+  <li>None -&gt; None</li>
+  <li>[’’] -&gt; [’’]</li>
+  <li>[‘f’, ‘o’, ‘o’, ‘ ‘, ‘b’, ‘a’, ‘r’] -&gt; [‘r’, ‘a’, ‘b’, ‘ ‘, ‘o’, ‘o’, ‘f’]</li>
 </ul>
 
-<h2 id="code">Code</h2>
+<h2 id="method-1">Method 1</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Permutations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">ReverseString</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">is_permutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">str1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">str2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span></code></pre></figure>
+    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chars</span><span class="p">):</span>
+        <span class="c">#print(chars, "+++")</span>
+        <span class="n">rev</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">if</span> <span class="n">chars</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">chars</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">)):</span>
+                <span class="n">rev</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chars</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+            <span class="c">#print(rev,"___")</span>
+            <span class="k">return</span> <span class="n">rev</span></code></pre></figure>
 
-<p>The function above is taking in the two strings we can send in. The first check makes sure neither of the strings are <code class="highlighter-rouge">None</code>, to satisfy the first two test cases.</p>
+<p>This method is pretty easy, I made a second variable and for the length of the incoming string I pop out the last element and add it to the new list. Because Popping happens in a LIFO this method works. But this is not “in-place”.</p>
 
-<p>Next we use a standard Python function <a href="https://docs.python.org/3/howto/sorting.html">sorted</a>. This function sorts out the input, in an ascending order by default. You can sort by descending order by specifying additional parameters to the fucntion such as <code class="highlighter-rouge">reverese=True</code>. If you feel brave you can even use <code class="highlighter-rouge">keys</code> and <code class="highlighter-rouge">lambdas</code> to create very advanced sorting functions.</p>
+<h2 id="method-2">Method 2</h2>
 
-<p>So, the sorted fucntion sorts out the input string. The final line must give us a correct answer to the rest of our test cases now. Note that this algorithm is case sensitive, you can always convert both strings to a specified case before the equality comparison to change this.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+
+
+<span class="k">class</span> <span class="nc">ReverseString</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chars</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">chars</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s">"++++"</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">chars</span><span class="p">[</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">],</span><span class="n">chars</span><span class="p">[</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">],</span><span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">chars</span><span class="p">[</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">chars</span><span class="p">[</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">],</span> <span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">chars</span></code></pre></figure>
+
+<p>“In-place” means, reversing the string without making using any temporary storage. This algorithm is more efficinet. The print statements show how the rearranging is carried out.</p>
+
+<p>Essentially, The first and last charatcers are switched, then the second and second last, then third and third last, and so on until the middle. At this point the whole string is flipped and we have achieved the goal.</p>
 
 <h2 id="unit-test">Unit Test</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># %load test_reverse_string.py</span>
+<span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span>
 
 
-<span class="k">class</span> <span class="nc">TestPermutation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TestReverse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">test_permutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'Nib'</span><span class="p">,</span> <span class="s">'bin'</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'act'</span><span class="p">,</span> <span class="s">'cat'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s">'a ct'</span><span class="p">,</span> <span class="s">'ca t'</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_permutation'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">test_reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="bp">None</span><span class="p">),</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">([</span><span class="s">''</span><span class="p">]),</span> <span class="p">[</span><span class="s">''</span><span class="p">])</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">func</span><span class="p">(</span>
+            <span class="p">[</span><span class="s">'f'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">]),</span>
+            <span class="p">[</span><span class="s">'r'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_reverse'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_reverse_inplace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="n">target_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'f'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">]</span>
+        <span class="n">func</span><span class="p">(</span><span class="n">target_list</span><span class="p">)</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">target_list</span><span class="p">,</span> <span class="p">[</span><span class="s">'r'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_reverse_inplace'</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">test</span> <span class="o">=</span> <span class="n">TestPermutation</span><span class="p">()</span>
-    <span class="n">permutations</span> <span class="o">=</span> <span class="n">Permutations</span><span class="p">()</span>
-    <span class="n">test</span><span class="o">.</span><span class="n">test_permutation</span><span class="p">(</span><span class="n">permutations</span><span class="o">.</span><span class="n">is_permutation</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">permutations_alt</span> <span class="o">=</span> <span class="n">PermutationsAlt</span><span class="p">()</span>
-        <span class="n">test</span><span class="o">.</span><span class="n">test_permutation</span><span class="p">(</span><span class="n">permutations_alt</span><span class="o">.</span><span class="n">is_permutation</span><span class="p">)</span>
-    <span class="k">except</span> <span class="nb">NameError</span><span class="p">:</span>
-        <span class="c"># Alternate solutions are only defined</span>
-        <span class="c"># in the solutions file</span>
-        <span class="k">pass</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">TestReverse</span><span class="p">()</span>
+    <span class="n">reverse_string</span> <span class="o">=</span> <span class="n">ReverseString</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_reverse</span><span class="p">(</span><span class="n">reverse_string</span><span class="o">.</span><span class="n">reverse</span><span class="p">)</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_reverse_inplace</span><span class="p">(</span><span class="n">reverse_string</span><span class="o">.</span><span class="n">reverse</span><span class="p">)</span>
 
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
@@ -185,15 +207,15 @@
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/permutations/%20via%20&#64;jimmyjoseph1295&hashtags=python,permutation,test,arrays,strings,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/reverse-characters-in-a-string/%20via%20&#64;jimmyjoseph1295&hashtags=python,reverse,arrays,strings,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/permutations/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/reverse-characters-in-a-string/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/permutations/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/reverse-characters-in-a-string/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -222,7 +244,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/permutations/';
+        var disqus_url = '/reverse-characters-in-a-string/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

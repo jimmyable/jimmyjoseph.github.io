@@ -1,33 +1,41 @@
 [
   
     {
+      "title"    : "Reverse characters in a string(in-place)",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, reverse, arrays, and strings",
+      "url"      : "/reverse-characters-in-a-string/",
+      "date"     : "20 Jun 2018"
+    } ,
+  
+    {
       "title"    : "Compress a String",
-      "category" : "Problems",
-      "tags"     : "python, rotational, and test",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, rotational, test, arrays, and strings",
       "url"      : "/compress-string/",
       "date"     : "17 Mar 2018"
     } ,
   
     {
       "title"    : "Rotational Characters",
-      "category" : "Problems",
-      "tags"     : "python, rotational, and test",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, rotational, test, arrays, and strings",
       "url"      : "/rotation-characters/",
       "date"     : "12 Mar 2018"
     } ,
   
     {
       "title"    : "Permutation of Characters",
-      "category" : "Problems",
-      "tags"     : "python, permutation, and test",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, permutation, test, arrays, and strings",
       "url"      : "/permutations/",
       "date"     : "07 Mar 2018"
     } ,
   
     {
       "title"    : "Unique Characters",
-      "category" : "Problems",
-      "tags"     : "python, unique, and test",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, unique, test, arrays, and strings",
       "url"      : "/unique-characters/",
       "date"     : "02 Mar 2018"
     } ,
