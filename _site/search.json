@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Find the single different char between two strings",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, find, arrays, and strings",
+      "url"      : "/find-the-single-different-char-between-two-strings/",
+      "date"     : "21 Jun 2018"
+    } ,
+  
+    {
       "title"    : "Reverse characters in a string(in-place)",
       "category" : "ProblemsArrays and Strings",
       "tags"     : "python, reverse, arrays, and strings",
