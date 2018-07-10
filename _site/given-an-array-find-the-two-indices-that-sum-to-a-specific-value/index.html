@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Find the single different char between two strings</title>
-    <meta name="description" content="Two strings walks into a bar, one of them has a special letter the other does not. We have to find which one">
+    <title>Given an array, find the two indices that sum to a specific value.</title>
+    <meta name="description" content="Find two numbers in a given list, check if it sums to tha target value, if so print out the indices of those two numbers">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyable_">
-    <meta name="twitter:title" content="Find the single different char between two strings">
-    <meta name="twitter:description" content="Two strings walks into a bar, one of them has a special letter the other does not. We have to find which one">
+    <meta name="twitter:title" content="Given an array, find the two indices that sum to a specific value.">
+    <meta name="twitter:description" content="Find two numbers in a given list, check if it sums to tha target value, if so print out the indices of those two numbers">
     
     <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/find-the-single-different-char-between-two-strings/">
-    <meta property="og:title" content="Find the single different char between two strings">
+    <meta property="og:url" content="http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/">
+    <meta property="og:title" content="Given an array, find the two indices that sum to a specific value.">
     
     <meta property="og:image" content="http://localhost:4000/assets/img/">
     
-    <meta property="og:description" content="Two strings walks into a bar, one of them has a special letter the other does not. We have to find which one">
+    <meta property="og:description" content="Find two numbers in a given list, check if it sums to tha target value, if so print out the indices of those two numbers">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Find the single different char between two strings"/>
-    <meta itemprop="description" content="Two strings walks into a bar, one of them has a special letter the other does not. We have to find which one">
+    <meta itemprop="name" content="Given an array, find the two indices that sum to a specific value."/>
+    <meta itemprop="description" content="Find two numbers in a given list, check if it sums to tha target value, if so print out the indices of those two numbers">
     <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/find-the-single-different-char-between-two-strings/">
+    <link rel="canonical" href="http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-06-21 00:11:47 +0100" class="date">21 Jun 2018</time>
+            <time itemprop="datePublished" datetime="2018-06-22 11:24:47 +0100" class="date">22 Jun 2018</time>
         
-        <h1 class="post-title" itemprop="name">Find the single different char between two strings</h1>
-        <p itemprop="description" class="subtitle">Two strings walks into a bar, one of them has a special letter the other does not. We have to find which one</p>
+        <h1 class="post-title" itemprop="name">Given an array, find the two indices that sum to a specific value.</h1>
+        <p itemprop="description" class="subtitle">Find two numbers in a given list, check if it sums to tha target value, if so print out the indices of those two numbers</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,90 +120,115 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h1 id="find-the-single-different-char-between-two-strings">Find the single different char between two strings.</h1>
-<p>Again, simple puzzle. We just have to find the different unique letter the second string has and first one doesn’t</p>
+                <h1 id="given-an-array-find-the-two-indices-that-sum-to-a-specific-value">Given an array, find the two indices that sum to a specific value.</h1>
+<p>Try to understand Method #2, its pretty clever imo.</p>
 
 <h2 id="tets-cases">Tets cases</h2>
 <p>Let’s define some test cases now.</p>
 
 <ul>
   <li>None input -&gt; TypeError</li>
-  <li><code class="highlighter-rouge">'abcd'</code>, <code class="highlighter-rouge">'abcde'</code> -&gt; <code class="highlighter-rouge">'e'</code></li>
-  <li><code class="highlighter-rouge">'aaabbcdd'</code>, <code class="highlighter-rouge">'abdbacade'</code> -&gt; <code class="highlighter-rouge">'e'</code>
-    <h2 id="method-1">Method 1</h2>
-  </li>
+  <li><code class="highlighter-rouge">[]</code> -&gt; ValueError</li>
+  <li><code class="highlighter-rouge">[1, 3, 2, -7, 5], 7 </code> -&gt; <code class="highlighter-rouge">[2, 4]</code></li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h2 id="method-1">Method 1</h2>
 
-    <span class="k">def</span> <span class="nf">find_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">t</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">two_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">val</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="nb">TypeError</span>
+        <span class="k">if</span> <span class="n">nums</span> <span class="o">==</span><span class="p">[]</span> <span class="ow">and</span> <span class="n">val</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">ValueError</span>
+            
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">s1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-            <span class="n">s2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">coffee</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations_with_replacement</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+            <span class="c">#print(x)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="n">z</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="c">#print(z)</span>
+                <span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+                    <span class="n">coffee</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">coffee</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">coffee</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">coffee</span><span class="p">)</span>
             
-            <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">s2</span><span class="o">-</span><span class="n">s1</span><span class="p">)</span>
-            <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-            
-            <span class="k">return</span> <span class="n">y</span></code></pre></figure>
+            <span class="n">answer</span> <span class="o">=</span><span class="p">[]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coffee</span><span class="p">)):</span>
+                <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nums</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">coffee</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">answer</span></code></pre></figure>
 
-<p>What I did was if s and t were None then we raise a <em>TypeError</em> as the testcase demanded.
-Otherwise I use the <code class="highlighter-rouge">set()</code> function to find unique elements of both input strings. Take away the sets to find out what is left. The conversion to list and popping was just me improvising because for some reason <code class="highlighter-rouge">str()</code> didn’t just convert a set into a string and I didn’t research much further.</p>
+<p>My naive method, first I do the usual checks if input is None or empty and raise the appropirate errors.</p>
 
-<p>All in all what I made does infact pass the test cases.</p>
+<p>Then I create(initilaise) a list called <code class="highlighter-rouge">coffee</code> which I will use to store which numbers make up the target.
+I also imported <code class="highlighter-rouge">itertools</code> its a built-in package so you don’t need to <code class="highlighter-rouge">pip</code> it. 
+I used it to create every <strong>TWO</strong> combinations that can be made up of the input, if you uncomment the <code class="highlighter-rouge">print(x)</code> you can see how this is stored in <code class="highlighter-rouge">x</code>. Essentially I’ve created a list <code class="highlighter-rouge">x</code> which contains tuples of every two combinations.</p>
+
+<p>Then for each element(tuple) in the list, i pop it and sum them. If they add up to the target then the constieunts are stored in <code class="highlighter-rouge">coffee</code>.</p>
+
+<p>Its stored as a tuple in list, which is why i use a <em>hack</em> to pop the tuple element and make it s list element.</p>
+
+<p>Next I use <code class="highlighter-rouge">list.index("x")</code> to find out the indices where these numbers belong. This are both stored in <code class="highlighter-rouge">answer</code>.</p>
+
+<p>Thats it. Now the test cases can be passed. Although it works I admit there is definitely improvements to be made. This wouldn’t work for test cases with repeated numbers etc. I also don’t have a good route if nothing equals target.</p>
 
 <h2 id="method-2">Method 2</h2>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">find_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">str1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">str2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'str1 or str2 cannot be None'</span><span class="p">)</span>
-        <span class="n">seen</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">str1</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-                <span class="n">seen</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">two_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">target</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'nums or target cannot be None'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'nums cannot be empty'</span><span class="p">)</span>
+        <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span>
+            <span class="n">cache_target</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">num</span>
+            <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">cache</span><span class="p">[</span><span class="n">num</span><span class="p">],</span> <span class="n">index</span><span class="p">]</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">seen</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">seen</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">str2</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">seen</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-            <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">char</span>
-            <span class="k">if</span> <span class="n">seen</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">char</span>
-        
+                <span class="n">cache</span><span class="p">[</span><span class="n">cache_target</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span>
         <span class="k">return</span> <span class="bp">None</span></code></pre></figure>
 
-<p>The <strong>Correct</strong> way to do it is shown here. Why this is more correct is that it works for even more abstract tests cases if there were any. For example if the input was “AAB”, “AB” the left over string is “A” which this function can identify and my one won’t.</p>
+<p>The “correct” way to do it as per <strong>donnemartin</strong>. Usual errors are raised for the first two test cases.</p>
 
-<p>So how does it work?
-Well, each charcter of String1 is looped and the letter along with its number of occurances are recorded.</p>
+<p>I think this is a really clever way to solve this puzzle if you can get your head around it. In summary, a dictionary caled <code class="highlighter-rouge">cache</code> is initilaised. Then for each index and value of the input, the input and its different to the target is found.</p>
 
-<p>In the second loop if the same letter is coming up then an occurance is taken off, if there is a <em>KeyError</em> this means its not in the <code class="highlighter-rouge">seen</code> dictionary and therefore unique so that can be spat out. If a letter does appear in the second string but higher occurances and therefore brings the <code class="highlighter-rouge">seen[char]</code>’s value to below 0, then it is the extra letter, it can be printed out.</p>
+<p><strong>What is being stored in cache?</strong></p>
+
+<p>Good Q! the difference of the current number and its index. why? What we need at the end is two indices. Saving the difference tells us that IF, IF the difference comes up next on the list there was a previous number that can sum to the target. So we only need the stored index, the “future” current index and thats the answer.</p>
+
+<p>I maybe explaining this badly. So, lets try again. We have <code class="highlighter-rouge">x</code> as the current number, we find the difference between <code class="highlighter-rouge">x</code> and target. If <code class="highlighter-rouge">x</code> was 1, and target being 7, the difference would be 7-1=6. This means if 6 was to appear later in the list we know we had a prevoius number that can sum to the target 7. So we only need to store the index of 1, and the difference that can help 1 meet its target.</p>
+
+<p>Let’s say 6 does come up in the input. In that case by checking the cache we see 6 with a previous number would meet the target. Since we stored the previous number’s index next to 6, we can output that index and the current index(which is 6 in this case) and thats it. VOILA!</p>
 
 <h2 id="unit-test">Unit Test</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># %load test_reverse_string.py</span>
-<span class="c"># %load test_str_diff.py</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># %load test_two_sum.py</span>
 <span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span><span class="p">,</span> <span class="n">assert_raises</span>
 
 
-<span class="k">class</span> <span class="nc">TestFindDiff</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TestTwoSum</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">test_find_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_two_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">solution</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">()</span>
-        <span class="n">assert_raises</span><span class="p">(</span><span class="nb">TypeError</span><span class="p">,</span> <span class="n">solution</span><span class="o">.</span><span class="n">find_diff</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">find_diff</span><span class="p">(</span><span class="s">'abcd'</span><span class="p">,</span> <span class="s">'abcde'</span><span class="p">),</span> <span class="s">'e'</span><span class="p">)</span>
-        <span class="n">assert_equal</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">find_diff</span><span class="p">(</span><span class="s">'aaabbcdd'</span><span class="p">,</span> <span class="s">'abdbacade'</span><span class="p">),</span> <span class="s">'e'</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_find_diff'</span><span class="p">)</span>
+        <span class="n">assert_raises</span><span class="p">(</span><span class="nb">TypeError</span><span class="p">,</span> <span class="n">solution</span><span class="o">.</span><span class="n">two_sum</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">assert_raises</span><span class="p">(</span><span class="nb">ValueError</span><span class="p">,</span> <span class="n">solution</span><span class="o">.</span><span class="n">two_sum</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="mi">7</span>
+        <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+        <span class="n">assert_equal</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">two_sum</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">),</span> <span class="n">expected</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Success: test_two_sum'</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">test</span> <span class="o">=</span> <span class="n">TestFindDiff</span><span class="p">()</span>
-    <span class="n">test</span><span class="o">.</span><span class="n">test_find_diff</span><span class="p">()</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">TestTwoSum</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">test_two_sum</span><span class="p">()</span>
 
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
@@ -214,15 +239,15 @@ Well, each charcter of String1 is looped and the letter along with its number of
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/find-the-single-different-char-between-two-strings/%20via%20&#64;jimmyable_&hashtags=python,find,arrays,strings,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/%20via%20&#64;jimmyable_&hashtags=python,find,arrays,strings,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/find-the-single-different-char-between-two-strings/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/find-the-single-different-char-between-two-strings/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -251,7 +276,7 @@ Well, each charcter of String1 is looped and the letter along with its number of
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/find-the-single-different-char-between-two-strings/';
+        var disqus_url = '/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

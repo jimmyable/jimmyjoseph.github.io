@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Given an array, find the two indices that sum to a specific value.",
+      "category" : "ProblemsArrays and Strings",
+      "tags"     : "python, find, arrays, and strings",
+      "url"      : "/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/",
+      "date"     : "22 Jun 2018"
+    } ,
+  
+    {
       "title"    : "Find the single different char between two strings",
       "category" : "ProblemsArrays and Strings",
       "tags"     : "python, find, arrays, and strings",
