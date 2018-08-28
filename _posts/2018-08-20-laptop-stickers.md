@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hexagonal Stickers"
+title: "Hexagonal Laptop Stickers"
 date: 2018-08-20 12:41:47
 image: '/assets/img/'
 description: 'Making some hexagonal stickers for my laptop'

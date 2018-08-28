@@ -10,7 +10,6 @@ tags:
 - arrays
 - strings
 categories:
-- Problems
 - Arrays and Strings
 twitter_text:
 ---

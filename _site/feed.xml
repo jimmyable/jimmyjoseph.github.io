@@ -5,12 +5,34 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Aug 2018 20:07:00 +0100</pubDate>
-    <lastBuildDate>Tue, 28 Aug 2018 20:07:00 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Aug 2018 22:24:47 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Aug 2018 22:24:47 +0100</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
-        <title>Hexagonal Stickers</title>
+        <title>Farming Likes on Instagram</title>
+        <description>&lt;h1 id=&quot;what-is-farming-likes&quot;&gt;What is farming likes?&lt;/h1&gt; &lt;p&gt;Farming likes usually takes the form of posting “click-bait” articles or photos. Sometimes it is possible to pay to buy followers and likes/dislikes for your/someone else’s posts. What’s the point? &lt;code class=&quot;highlighter-rouge&quot;&gt;To get more likes on posts&lt;/code&gt;, yeah this is society now.&lt;/p&gt; &lt;p&gt;Anyways, there is another way!&lt;/p&gt; &lt;h1 id=&quot;gets-bots-to-do-your-dirty-work&quot;&gt;Gets Bots to do your dirty work&lt;/h1&gt; &lt;p&gt;&lt;a href=&quot;https://timgrossmann.github.io/InstaPy/&quot;&gt;InstaPy&lt;/a&gt; is a bot thats designed for exactly this. &lt;strong&gt;“An automation script that uses your Instagram account to like and follow others with the aim of them liking and following back”.&lt;/strong&gt;&lt;/p&gt; &lt;h1 id=&quot;so-whats-the-gist&quot;&gt;So whats the gist?&lt;/h1&gt; &lt;p&gt;You give your...</description>
+        <pubDate>Tue, 28 Aug 2018 21:52:47 +0100</pubDate>
+        <link>http://localhost:4000/farming-likes-on-instagram/</link>
+        <guid isPermaLink="true">http://localhost:4000/farming-likes-on-instagram/</guid>
+        
+        <category>Instagram</category>
+        
+        <category>farming</category>
+        
+        <category>Likes</category>
+        
+        <category>InstaPy</category>
+        
+        <category>python</category>
+        
+        
+        <category>Miscellaneous</category>
+        
+      </item>
+    
+      <item>
+        <title>Hexagonal Laptop Stickers</title>
         <description>&lt;p&gt;So Let’s make some stickers. I will be using &lt;a href=&quot;https://www.gimp.org/&quot;&gt;GIMP&lt;/a&gt;, since it’s free. I will be using sticker paper to print the final A4 page onto.&lt;/p&gt;
 
 &lt;h1 id=&quot;making-a-hexagonal-grid&quot;&gt;Making a hexagonal grid&lt;/h1&gt;
@@ -58,8 +80,6 @@
         <category>strings</category>
         
         
-        <category>Problems</category>
-        
         <category>Arrays and Strings</category>
         
       </item>
@@ -80,8 +100,6 @@
         <category>strings</category>
         
         
-        <category>Problems</category>
-        
         <category>Arrays and Strings</category>
         
       </item>
@@ -101,8 +119,6 @@
         
         <category>strings</category>
         
-        
-        <category>Problems</category>
         
         <category>Arrays and Strings</category>
         
@@ -126,8 +142,6 @@
         <category>strings</category>
         
         
-        <category>Problems</category>
-        
         <category>Arrays and Strings</category>
         
       </item>
@@ -149,8 +163,6 @@
         
         <category>strings</category>
         
-        
-        <category>Problems</category>
         
         <category>Arrays and Strings</category>
         
@@ -174,8 +186,6 @@
         <category>strings</category>
         
         
-        <category>Problems</category>
-        
         <category>Arrays and Strings</category>
         
       </item>
@@ -197,8 +207,6 @@
         
         <category>strings</category>
         
-        
-        <category>Problems</category>
         
         <category>Arrays and Strings</category>
         
@@ -222,29 +230,7 @@
         <category>layers</category>
         
         
-        <category>Neural Networks</category>
-        
-      </item>
-    
-      <item>
-        <title>YOLO</title>
-        <description>&lt;h1 id=&quot;darknet&quot;&gt;DarkNet&lt;/h1&gt; &lt;p&gt;Joseph Redmon showcased DarkNet at &lt;a href=&quot;https://www.ted.com/talks/joseph_redmon_how_a_computer_learns_to_recognize_objects_instantly?language=en&quot;&gt;TED2017&lt;/a&gt;. Less than a decade ago classification problems between a cat or dog was almost impossible, but advances in deep learning has changed that. Joseph worked on YOLO which is a revolutionary system that can identify objects it has been trained on, and it does it incredibly fast.&lt;/p&gt; &lt;p&gt;Fast enough and accurate enough to track objects in live video feeds. This technology can be employed in self-driving cars, CCTV cameras, factory lines etc.&lt;/p&gt; &lt;h1 id=&quot;how-to-install&quot;&gt;How to install&lt;/h1&gt; &lt;p&gt;Joseph has a pretty good guide on his &lt;a href=&quot;https://pjreddie.com/darknet/install/&quot;&gt;website&lt;/a&gt;. But I will explain some...</description>
-        <pubDate>Sat, 17 Feb 2018 14:07:47 +0000</pubDate>
-        <link>http://localhost:4000/yolo/</link>
-        <guid isPermaLink="true">http://localhost:4000/yolo/</guid>
-        
-        <category>yolo</category>
-        
-        <category>object detection</category>
-        
-        <category>neural nets</category>
-        
-        <category>cuda</category>
-        
-        <category>opencv</category>
-        
-        
-        <category>Neural Networks</category>
+        <category>Intel AI Academy</category>
         
       </item>
     
