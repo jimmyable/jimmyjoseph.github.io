@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Hexagonal Stickers",
+      "category" : "Miscellaneous",
+      "tags"     : "gimp, hexagon, stickers, brands, and google",
+      "url"      : "/laptop-stickers/",
+      "date"     : "20 Aug 2018"
+    } ,
+  
+    {
       "title"    : "Given an array, find the two indices that sum to a specific value.",
       "category" : "ProblemsArrays and Strings",
       "tags"     : "python, find, arrays, and strings",

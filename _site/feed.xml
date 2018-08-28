@@ -5,9 +5,42 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Jul 2018 22:41:28 +0100</pubDate>
-    <lastBuildDate>Tue, 10 Jul 2018 22:41:28 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Aug 2018 20:07:00 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Aug 2018 20:07:00 +0100</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Hexagonal Stickers</title>
+        <description>&lt;p&gt;So Let’s make some stickers. I will be using &lt;a href=&quot;https://www.gimp.org/&quot;&gt;GIMP&lt;/a&gt;, since it’s free. I will be using sticker paper to print the final A4 page onto.&lt;/p&gt;
+
+&lt;h1 id=&quot;making-a-hexagonal-grid&quot;&gt;Making a hexagonal grid&lt;/h1&gt;
+
+&lt;p&gt;I used this &lt;a href=&quot;https://www.youtube.com/watch?v=dHYTjFNSb9w&quot;&gt;video&lt;/a&gt; to create a hex grid in python.&lt;/p&gt;
+
+&lt;p&gt;Then I simply searchred for high-res transparent logos(.png) and imported them into GIMP as a Layer. Some logos required a fill to make it look better. I mainly used colours from the &lt;a href=&quot;https://material.io/design/color/the-color-system.html&quot;&gt;Material Design&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The final product looks like this:
+&lt;img src=&quot;/assets/img/Stickers/stickers.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Aug 2018 13:41:47 +0100</pubDate>
+        <link>http://localhost:4000/laptop-stickers/</link>
+        <guid isPermaLink="true">http://localhost:4000/laptop-stickers/</guid>
+        
+        <category>gimp</category>
+        
+        <category>hexagon</category>
+        
+        <category>stickers</category>
+        
+        <category>brands</category>
+        
+        <category>google</category>
+        
+        
+        <category>Miscellaneous</category>
+        
+      </item>
     
       <item>
         <title>Given an array, find the two indices that sum to a specific value.</title>
@@ -209,28 +242,6 @@
         <category>cuda</category>
         
         <category>opencv</category>
-        
-        
-        <category>Neural Networks</category>
-        
-      </item>
-    
-      <item>
-        <title>Gradient Descent</title>
-        <description>&lt;h1 id=&quot;gradient-descent&quot;&gt;Gradient Descent&lt;/h1&gt; &lt;p&gt;Gradient descent is an iterative optimization algorithm for finding the minimum of a function. The basic idea is, we have a cost function that we want to minimize. We start from a point calculate the negative gradient and move further in that direction, eventually reaching the minimum.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/NeuralNets/1.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;gd-with-linear-regression&quot;&gt;GD with Linear Regression&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Say we have two parameters affecting the cost function (β0,β1)&lt;/li&gt; &lt;li&gt;This creates a surface as shown below rather than a line as above&lt;/li&gt; &lt;li&gt;Now how can we find the minimum without knowing how the surface J(β0,β1) looks like?&lt;/li&gt; &lt;/ul&gt;...</description>
-        <pubDate>Thu, 15 Feb 2018 11:33:47 +0000</pubDate>
-        <link>http://localhost:4000/gradient-descent/</link>
-        <guid isPermaLink="true">http://localhost:4000/gradient-descent/</guid>
-        
-        <category>gradient descent</category>
-        
-        <category>optimization</category>
-        
-        <category>neural nets</category>
-        
-        <category>stochastic</category>
-        
-        <category>mini-batch</category>
         
         
         <category>Neural Networks</category>
