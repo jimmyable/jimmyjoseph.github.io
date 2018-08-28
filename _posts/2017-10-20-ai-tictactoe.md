@@ -9,7 +9,7 @@ tags:
 - AI
 - game
 categories:
-- ATBSWP
+- Automate_The_Boring_Stuff_With_Python
 twitter_text:
 ---
 

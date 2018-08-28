@@ -11,7 +11,7 @@ tags:
 - stochastic
 - mini-batch
 categories:
-- Neural Networks
+- Intel AI Academy
 twitter_text: 
 ---
 

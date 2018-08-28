@@ -11,7 +11,7 @@ tags:
 - autonomy
 - interacting
 categories:
-- Agents
+- Miscellaneous
 twitter_text: 
 ---
 

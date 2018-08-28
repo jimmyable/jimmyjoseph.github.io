@@ -11,7 +11,7 @@ tags:
 - queues
 - compile
 categories:
-- BasicJava
+- Miscellaneous
 twitter_text: 
 ---
 

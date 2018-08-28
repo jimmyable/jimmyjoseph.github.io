@@ -14,7 +14,7 @@ tags:
 - feature scaling
 - regression
 categories:
-- ML & Data Mining 
+- Machine Learning & Data Mining 
 twitter_text: 
 ---
 
