@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "The Big O",
+      "category" : "CompSci",
+      "tags"     : "BigO, CompSci, and complexity",
+      "url"      : "/the-big-o/",
+      "date"     : "06 Oct 2018"
+    } ,
+  
+    {
       "title"    : "Farming Likes on Instagram",
       "category" : "Miscellaneous",
       "tags"     : "Instagram, farming, Likes, InstaPy, and python",
