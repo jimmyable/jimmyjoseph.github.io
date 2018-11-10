@@ -14,7 +14,7 @@ tags:
 - feature scaling
 - regression
 categories:
-- Machine Learning & Data Mining 
+- Intel AI Machine Leaning
 twitter_text: 
 ---
 

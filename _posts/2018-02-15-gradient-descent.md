@@ -11,7 +11,7 @@ tags:
 - stochastic
 - mini-batch
 categories:
-- Intel AI Academy
+- Intel AI Machine Leaning
 twitter_text: 
 ---
 
