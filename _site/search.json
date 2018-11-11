@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "KNN and supervised learning",
+      "category" : "CompSci",
+      "tags"     : "KNN, SupervisedLearning, and MachineLearning",
+      "url"      : "/knn/",
+      "date"     : "04 Nov 2018"
+    } ,
+  
+    {
       "title"    : "The Big O",
       "category" : "CompSci",
       "tags"     : "BigO, CompSci, and complexity",
@@ -82,7 +90,7 @@
   
     {
       "title"    : "Artificial Neurons",
-      "category" : "Intel AI Academy",
+      "category" : "Intel AI Machine Leaning",
       "tags"     : "sigmoid, bias, neural nets, training, and layers",
       "url"      : "/neurons/",
       "date"     : "25 Feb 2018"
@@ -98,7 +106,7 @@
   
     {
       "title"    : "Gradient Descent",
-      "category" : "Intel AI Academy",
+      "category" : "Intel AI Machine Leaning",
       "tags"     : "gradient descent, optimization, neural nets, stochastic, and mini-batch",
       "url"      : "/gradient-descent/",
       "date"     : "15 Feb 2018"
@@ -122,7 +130,7 @@
   
     {
       "title"    : "K-nearest Neighbours",
-      "category" : "Machine Learning & Data Mining",
+      "category" : "Intel AI Machine Leaning",
       "tags"     : "python, knn, machine learning, numpy, scikit, classification, feature scaling, and regression",
       "url"      : "/supervised-knn/",
       "date"     : "09 Feb 2018"
@@ -138,7 +146,7 @@
   
     {
       "title"    : "Chocolate Visualisations",
-      "category" : "Machine Learning & Data Mining",
+      "category" : "Intel AI Machine Leaning",
       "tags"     : "python, scatterplot, barplot, numpy, pandas, matplotlib, and dataviz",
       "url"      : "/chocolate-viz/",
       "date"     : "27 Jan 2018"
