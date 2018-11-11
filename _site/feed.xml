@@ -5,25 +5,25 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://jimmyjoseph.co.uk/</link>
     <atom:link href="http://jimmyjoseph.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Nov 2018 15:34:19 +0000</pubDate>
-    <lastBuildDate>Sun, 11 Nov 2018 15:34:19 +0000</lastBuildDate>
+    <pubDate>Sun, 11 Nov 2018 18:27:13 +0000</pubDate>
+    <lastBuildDate>Sun, 11 Nov 2018 18:27:13 +0000</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
-        <title>KNN and supervised learning</title>
-        <description>&lt;h1 id=&quot;what-is-the-big-o&quot;&gt;What is the “Big O”&lt;/h1&gt; &lt;p&gt;&lt;strong&gt;Big O&lt;/strong&gt;, is a metric used to describe how &lt;em&gt;complex&lt;/em&gt; an algorithm is. Not understanding is might lead to algorithms or code that is unnecessarily complex.&lt;/p&gt; &lt;h1 id=&quot;the-analogy&quot;&gt;The Analogy&lt;/h1&gt; &lt;p&gt;You want to send file X to friend A. He lives 500 miles away. If the file was 1MB then sending it using the internet would be the quickest. But what if the file is 100MB? Sure it’s slower than transferring 1MB but quicker than driving 500 miles?&lt;/p&gt; &lt;p&gt;Now what about 1TB? or 100TB? Now driving might be quicker.&lt;/p&gt; &lt;h1 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h1&gt; &lt;p&gt;An algorithm is...</description>
+        <title>[Book Review] - FOCUS</title>
+        <description>&lt;h1 id=&quot;focus&quot;&gt;&lt;strong&gt;FOCUS&lt;/strong&gt;&lt;/h1&gt; &lt;h1 id=&quot;part-1---finding-your-focus&quot;&gt;&lt;em&gt;Part 1 - Finding your Focus&lt;/em&gt;&lt;/h1&gt; &lt;h2 id=&quot;ch1-your-vital-20&quot;&gt;CH1 Your vital 20%&lt;/h2&gt; &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;80/20&lt;/code&gt; rule. Use it to filter your life commitments.&lt;/p&gt; &lt;p&gt;Every morning when you wake up take a minute to remind what you’re thankful in life and things you’re looking forward to that day.&lt;/p&gt; &lt;p&gt;20% of bad thoughts cause 80% of the worries. Note good points throughout the day and compliment yourself on why even the most trivial ones(since you worry about trivial negatives).&lt;/p&gt; &lt;p&gt;Compliment others on their positive work.&lt;/p&gt; &lt;p&gt;At the end of the day, look over the events of the day highlighting good...</description>
         <pubDate>Sun, 04 Nov 2018 14:26:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/knn/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/knn/</guid>
+        <link>http://jimmyjoseph.co.uk/book-focus/</link>
+        <guid isPermaLink="true">http://jimmyjoseph.co.uk/book-focus/</guid>
         
-        <category>KNN</category>
+        <category>Focus</category>
         
-        <category>SupervisedLearning</category>
+        <category>Development</category>
         
-        <category>MachineLearning</category>
+        <category>Time-Management</category>
         
         
-        <category>CompSci</category>
+        <category>Books</category>
         
       </item>
     

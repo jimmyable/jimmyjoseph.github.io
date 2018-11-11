@@ -1,5 +1,6 @@
 If you like the theme, make sure to check out willian's other projects. He is an awesome dude [@willian_justen](https://twitter.com/willian_justen)
 
+The particles animation is by [VincentGarreau](https://github.com/VincentGarreau/particles.js/)
 
 # How to make me work!
 First clone the repo(duh!)
