@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "KNN Example",
+      "category" : "Intel AI Machine Leaning",
+      "tags"     : "python, knn, machine learning, numpy, scikit, classification, feature scaling, and regression",
+      "url"      : "/knn-example/",
+      "date"     : "09 Nov 2018"
+    } ,
+  
+    {
       "title"    : "[Book Review] - FOCUS",
       "category" : "Books",
       "tags"     : "Focus, Development, and Time-Management",
