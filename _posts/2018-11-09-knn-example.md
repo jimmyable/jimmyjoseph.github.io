@@ -13,6 +13,9 @@ tags:
 - classification
 - feature scaling
 - regression
+- knn
+- telecoms
+- accuracy
 categories:
 - Intel AI Machine Leaning
 twitter_text: 
@@ -25,7 +28,7 @@ Using the telecom customer churn data we will do some preprocessing and the use 
 {% highlight python %}
 import os, pandas as pd
 
-fileloc = 'Done/Intel-ML101-Class1/Intel-ML101_Class1/data/Orange_Telecom_Churn_Data.csv'
+fileloc = 'data/Orange_Telecom_Churn_Data.csv'
 data = pd.read_csv(fileloc)
 
 data.head(1).T

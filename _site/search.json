@@ -1,9 +1,17 @@
 [
   
     {
+      "title"    : "Data Splitting &amp; Cross Validation",
+      "category" : "Intel AI Machine Leaning",
+      "tags"     : "python, knn, machine learning, numpy, scikit, cross validation, splitting, and scaling",
+      "url"      : "/data-splitting-cross-val/",
+      "date"     : "19 Nov 2018"
+    } ,
+  
+    {
       "title"    : "KNN Example",
       "category" : "Intel AI Machine Leaning",
-      "tags"     : "python, knn, machine learning, numpy, scikit, classification, feature scaling, and regression",
+      "tags"     : "python, knn, machine learning, numpy, scikit, classification, feature scaling, regression, knn, telecoms, and accuracy",
       "url"      : "/knn-example/",
       "date"     : "09 Nov 2018"
     } ,
