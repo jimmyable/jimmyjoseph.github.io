@@ -382,6 +382,228 @@
 
 <p><img src="/assets/img/IntelAI/SGD8.png" alt="Output" class="img-responsive" /></p>
 
+<h1 id="rigde-regression">Rigde Regression</h1>
+<p>Rigde Regression uses L2 normalization to reduce the magnitude of the coefficients. This can be helpful when there is high variance in the data. The regularization functions in sklearn has cross-validation built in.</p>
+
+<p>We are going to fit a (non-cross validated) Ridge model to a range of $\alpha$ values and plot the RMSE using cross validated error function created above.</p>
+
+<p>Alpha values:
+    <script type="math/tex">[0.005, 0.05, 0.1, 0.3, 1, 3, 5, 10, 15, 30, 80]</script></p>
+
+<p>Now for the <code class="highlighter-rouge">RidgeCV</code> method, it’s not possible to get the alpha values for the models that weren’t selected. The resulting error values and $\alpha$ values are very similair to what is obtained above.</p>
+
+<p>Finally we can compare the error values of prior and the Ridge models.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RidgeCV</span>
+
+<span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
+
+<span class="n">ridgeCV</span> <span class="o">=</span> <span class="n">RidgeCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">,</span>
+                 <span class="n">cv</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">ridgeCV_rmse</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">ridgeCV</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">ridgeCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span> <span class="n">ridgeCV_rmse</span><span class="p">)</span></code></pre></figure>
+
+<blockquote>
+  <p>15.0 32169.176205672433</p>
+</blockquote>
+
+<h1 id="lasso-regression">Lasso Regression</h1>
+
+<p>Just like <code class="highlighter-rouge">RidgeCV</code>, <code class="highlighter-rouge">LassoCV</code> is a function but uses L1 regularization. L1 regularization will selectively shrink some coefficients, which is effectively performing feature elimination.</p>
+
+<p><code class="highlighter-rouge">LassoCV</code> does not have allow a scoring function but the <code class="highlighter-rouge">rmse</code> function created above can be used for model evaluation.</p>
+
+<p><em>There is also <code class="highlighter-rouge">ElasticNetCV</code> which uses a combination of both L1 and L2 normalisation/regularisation</em></p>
+
+<p>Using alphas:
+<script type="math/tex">[1e-5, 5e-5, 0.0001, 0.0005]</script></p>
+
+<p>Fit a Lasso model using cross validation and determine the optimum value for $\alpha$, and the RMSE using the function above. The magnitude of alphas can be different to the Ridge model.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LassoCV</span>
+
+<span class="n">alphas2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1e-5</span><span class="p">,</span> <span class="mf">5e-5</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.0005</span><span class="p">])</span>
+
+<span class="n">lassoCV</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas2</span><span class="p">,</span> 
+                 <span class="n">max_iter</span><span class="o">=</span><span class="mf">5e4</span><span class="p">,</span>
+                 <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">lassoCV_rmse</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">lassoCV</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">lassoCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span> <span class="n">lassoCV_rmse</span><span class="p">)</span> <span class="c">#Lasso is slower</span></code></pre></figure>
+
+<blockquote>
+  <p>0.0005 39257.393991448225</p>
+</blockquote>
+
+<p>We can determine how many of these features remain non-zero.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">'Of {} coefficients, {} are non-zero with Lasso.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lassoCV</span><span class="o">.</span><span class="n">coef_</span><span class="p">),</span>
+                                                              <span class="nb">len</span><span class="p">(</span><span class="n">lassoCV</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">])))</span></code></pre></figure>
+
+<blockquote>
+  <p>Of 294 coefficients, 274 are non-zero with Lasso.</p>
+</blockquote>
+
+<h1 id="elasticnet">ElasticNet</h1>
+
+<p>Using the same alphas as Lasso, we will now try an <code class="highlighter-rouge">ElasticNetCV</code>, with L1 ratios between 0.1 and 0.9</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">ElasticNetCV</span>
+
+<span class="n">l1_ratios</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+
+<span class="n">elasticNetCV</span> <span class="o">=</span> <span class="n">ElasticNetCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas2</span><span class="p">,</span>
+                           <span class="n">l1_ratio</span><span class="o">=</span><span class="n">l1_ratios</span><span class="p">,</span>
+                           <span class="n">max_iter</span><span class="o">=</span><span class="mf">1e4</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">elasticNetCV_rmse</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">elasticNetCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">l1_ratio_</span><span class="p">,</span> <span class="n">elasticNetCV_rmse</span><span class="p">)</span></code></pre></figure>
+
+<blockquote>
+  <p>0.0005 0.1 35001.23429607454</p>
+</blockquote>
+
+<p>Its easiest to compare the RMSE calculations for all models in a table.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rmse_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">linearRegression_rmse</span><span class="p">,</span> <span class="n">ridgeCV_rmse</span><span class="p">,</span> <span class="n">lassoCV_rmse</span><span class="p">,</span> <span class="n">elasticNetCV_rmse</span><span class="p">]</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Linear'</span><span class="p">,</span> <span class="s">'Ridge'</span><span class="p">,</span> <span class="s">'Lasso'</span><span class="p">,</span><span class="s">'ElasticNet'</span><span class="p">]</span>
+
+<span class="n">rmse_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">rmse_vals</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">rmse_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s">'RMSE'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rmse_df</span></code></pre></figure>
+
+<p><img src="/assets/img/IntelAI/SGD9.png" alt="Output" class="img-responsive" /></p>
+
+<p>Plotting the actual and predicted housing prices as before.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Ridge'</span><span class="p">,</span> <span class="s">'Lasso'</span><span class="p">,</span> <span class="s">'ElasticNet'</span><span class="p">]</span>
+
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">ridgeCV</span><span class="p">,</span> <span class="n">lassoCV</span><span class="p">,</span> <span class="n">elasticNetCV</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">mod</span><span class="p">,</span> <span class="n">lab</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">mod</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span>
+           <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">)</span>
+    
+<span class="n">leg</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">leg</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s">'black'</span><span class="p">)</span>
+<span class="n">leg</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s">'Actual Price'</span><span class="p">,</span>
+      <span class="n">ylabel</span><span class="o">=</span><span class="s">'Predicted Price'</span><span class="p">,</span>
+      <span class="n">title</span><span class="o">=</span><span class="s">'Linear Regression Results'</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/assets/img/IntelAI/SGD10.png" alt="Output" class="img-responsive" /></p>
+
+<h1 id="stochastic-gradient-descent">Stochastic Gradient Descent</h1>
+
+<p>Linear Models in general are sensitive to scaling. SGD is <strong>very senstive</strong> to scaling</p>
+
+<p>And a high value of learning rate can cause the algorithmn to diverge, while too low of a value may take too long to converge.</p>
+
+<p>Fitting a stochastic gradient descent model without a regularization penalty(the relavant parameter is <code class="highlighter-rouge">penalty</code>)</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Import SGDRegressor and prepare the parameters</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDRegressor</span>
+
+<span class="n">model_parameters_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'Linear'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'none'</span><span class="p">},</span>
+    <span class="s">'Lasso'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l2'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">lassoCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">},</span>
+    <span class="s">'Ridge'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l1'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">ridgeCV_rmse</span><span class="p">},</span>
+    <span class="s">'ElasticNet'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'elasticnet'</span><span class="p">,</span> 
+                   <span class="s">'alpha'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span>
+                   <span class="s">'l1_ratio'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">l1_ratio_</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">new_rmses</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">modellabel</span><span class="p">,</span> <span class="n">parameters</span> <span class="ow">in</span> <span class="n">model_parameters_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c"># following notation passes the dict items as arguments</span>
+    <span class="n">SGD</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="o">**</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="n">SGD</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">new_rmses</span><span class="p">[</span><span class="n">modellabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">SGD</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
+<span class="n">rmse_df</span><span class="p">[</span><span class="s">'RMSE-SGD'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">new_rmses</span><span class="p">)</span>
+<span class="n">rmse_df</span></code></pre></figure>
+
+<p><img src="/assets/img/IntelAI/SGD11.png" alt="Output" class="img-responsive" /></p>
+
+<p>We can see that the error values are vert high. This means the algorithm is divering, and can be due to high scaling/learning rate.</p>
+
+<p>What happens if we adjust the learning rate?</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Import SGDRegressor and prepare the parameters</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDRegressor</span>
+
+<span class="n">model_parameters_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'Linear'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'none'</span><span class="p">},</span>
+    <span class="s">'Lasso'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l2'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">lassoCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">},</span>
+    <span class="s">'Ridge'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l1'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">ridgeCV_rmse</span><span class="p">},</span>
+    <span class="s">'ElasticNet'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'elasticnet'</span><span class="p">,</span> 
+                   <span class="s">'alpha'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span>
+                   <span class="s">'l1_ratio'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">l1_ratio_</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">new_rmses</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">modellabel</span><span class="p">,</span> <span class="n">parameters</span> <span class="ow">in</span> <span class="n">model_parameters_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c"># following notation passes the dict items as arguments</span>
+    <span class="n">SGD</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">eta0</span><span class="o">=</span><span class="mf">1e-7</span><span class="p">,</span><span class="o">**</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="n">SGD</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">new_rmses</span><span class="p">[</span><span class="n">modellabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">SGD</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
+<span class="n">rmse_df</span><span class="p">[</span><span class="s">'RMSE-SGD-learningrate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">new_rmses</span><span class="p">)</span>
+<span class="n">rmse_df</span></code></pre></figure>
+
+<p><img src="/assets/img/IntelAI/SGD12.png" alt="Output" class="img-responsive" /></p>
+
+<p>The error values are much lower. Now let’s try scaling the training data.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Import SGDRegressor and prepare the parameters</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDRegressor</span>
+
+<span class="n">model_parameters_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'Linear'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'none'</span><span class="p">},</span>
+    <span class="s">'Lasso'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l2'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">lassoCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">},</span>
+    <span class="s">'Ridge'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'l1'</span><span class="p">,</span>
+           <span class="s">'alpha'</span><span class="p">:</span> <span class="n">ridgeCV_rmse</span><span class="p">},</span>
+    <span class="s">'ElasticNet'</span><span class="p">:</span> <span class="p">{</span><span class="s">'penalty'</span><span class="p">:</span> <span class="s">'elasticnet'</span><span class="p">,</span> 
+                   <span class="s">'alpha'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">alpha_</span><span class="p">,</span>
+                   <span class="s">'l1_ratio'</span><span class="p">:</span> <span class="n">elasticNetCV</span><span class="o">.</span><span class="n">l1_ratio_</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">new_rmses</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">modellabel</span><span class="p">,</span> <span class="n">parameters</span> <span class="ow">in</span> <span class="n">model_parameters_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c"># following notation passes the dict items as arguments</span>
+    <span class="n">SGD</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="o">**</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="n">SGD</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">new_rmses</span><span class="p">[</span><span class="n">modellabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">SGD</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">))</span>
+
+<span class="n">rmse_df</span><span class="p">[</span><span class="s">'RMSE-SGD-learningrate-Scaled'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">new_rmses</span><span class="p">)</span>
+<span class="n">rmse_df</span></code></pre></figure>
+
+<p><img src="/assets/img/IntelAI/SGD13.png" alt="Output" class="img-responsive" /></p>
+
 <p>Credits to <a href="https://software.intel.com/en-us/ai-academy">Intel AI Academy</a></p>
 
 

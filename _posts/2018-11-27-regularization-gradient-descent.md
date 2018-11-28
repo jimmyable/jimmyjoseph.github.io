@@ -321,6 +321,240 @@ ax.set(xlabel='Actual Price',
 
 ![Output](/assets/img/IntelAI/SGD8.png){:class="img-responsive"}
 
+# Rigde Regression
+Rigde Regression uses L2 normalization to reduce the magnitude of the coefficients. This can be helpful when there is high variance in the data. The regularization functions in sklearn has cross-validation built in.
+
+We are going to fit a (non-cross validated) Ridge model to a range of $\alpha$ values and plot the RMSE using cross validated error function created above.
+
+Alpha values:
+    $$[0.005, 0.05, 0.1, 0.3, 1, 3, 5, 10, 15, 30, 80]$$
+
+Now for the `RidgeCV` method, it's not possible to get the alpha values for the models that weren't selected. The resulting error values and $\alpha$ values are very similair to what is obtained above.
+
+Finally we can compare the error values of prior and the Ridge models.
+
+{% highlight python %}
+from sklearn.linear_model import RidgeCV
+
+alphas = [0.005, 0.05, 0.1, 0.3, 1, 3, 5, 10, 15, 30, 80]
+
+ridgeCV = RidgeCV(alphas=alphas,
+                 cv=4).fit(X_train, y_train)
+
+ridgeCV_rmse = rmse(y_test, ridgeCV.predict(X_test))
+
+print(ridgeCV.alpha_, ridgeCV_rmse)
+{% endhighlight %}
+>15.0 32169.176205672433
+
+# Lasso Regression
+
+Just like `RidgeCV`, `LassoCV` is a function but uses L1 regularization. L1 regularization will selectively shrink some coefficients, which is effectively performing feature elimination.
+
+`LassoCV` does not have allow a scoring function but the `rmse` function created above can be used for model evaluation.
+
+*There is also `ElasticNetCV` which uses a combination of both L1 and L2 normalisation/regularisation*
+
+Using alphas:
+$$[1e-5, 5e-5, 0.0001, 0.0005]$$
+
+Fit a Lasso model using cross validation and determine the optimum value for $\alpha$, and the RMSE using the function above. The magnitude of alphas can be different to the Ridge model.
+
+{% highlight python %}
+from sklearn.linear_model import LassoCV
+
+alphas2 = np.array([1e-5, 5e-5, 0.0001, 0.0005])
+
+lassoCV = LassoCV(alphas=alphas2, 
+                 max_iter=5e4,
+                 cv=3).fit(X_train, y_train)
+
+lassoCV_rmse = rmse(y_test, lassoCV.predict(X_test))
+
+print(lassoCV.alpha_, lassoCV_rmse) #Lasso is slower
+{% endhighlight %}
+
+>0.0005 39257.393991448225
+
+We can determine how many of these features remain non-zero.
+
+{% highlight python %}
+print('Of {} coefficients, {} are non-zero with Lasso.'.format(len(lassoCV.coef_),
+                                                              len(lassoCV.coef_.nonzero()[0])))
+{% endhighlight %}
+>Of 294 coefficients, 274 are non-zero with Lasso.
+
+# ElasticNet
+
+Using the same alphas as Lasso, we will now try an `ElasticNetCV`, with L1 ratios between 0.1 and 0.9
+
+{% highlight python %}
+from sklearn.linear_model import ElasticNetCV
+
+l1_ratios = np.linspace(0.1, 0.9, 9)
+
+elasticNetCV = ElasticNetCV(alphas=alphas2,
+                           l1_ratio=l1_ratios,
+                           max_iter=1e4).fit(X_train, y_train)
+
+elasticNetCV_rmse = rmse(y_test, elasticNetCV.predict(X_test))
+
+print(elasticNetCV.alpha_, elasticNetCV.l1_ratio_, elasticNetCV_rmse)
+{% endhighlight %}
+
+>0.0005 0.1 35001.23429607454
+
+Its easiest to compare the RMSE calculations for all models in a table.
+
+{% highlight python %}
+rmse_vals = [linearRegression_rmse, ridgeCV_rmse, lassoCV_rmse, elasticNetCV_rmse]
+
+labels = ['Linear', 'Ridge', 'Lasso','ElasticNet']
+
+rmse_df = pd.Series(rmse_vals, index=labels).to_frame()
+rmse_df.rename(columns={0:'RMSE'}, inplace=1)
+rmse_df
+{% endhighlight %}
+
+![Output](/assets/img/IntelAI/SGD9.png){:class="img-responsive"}
+
+Plotting the actual and predicted housing prices as before.
+
+{% highlight python %}
+f = plt.figure(figsize=(6,6))
+ax = plt.axes()
+
+labels = ['Ridge', 'Lasso', 'ElasticNet']
+
+models = [ridgeCV, lassoCV, elasticNetCV]
+
+for mod, lab in zip(models, labels):
+    ax.plot(y_test, mod.predict(X_test),
+           marker='o', ls='', ms=3.0, label=lab)
+    
+leg = plt.legend(frameon=True)
+leg.get_frame().set_edgecolor('black')
+leg.get_frame().set_linewidth(1.0)
+
+ax.set(xlabel='Actual Price',
+      ylabel='Predicted Price',
+      title='Linear Regression Results')
+{% endhighlight %}
+
+![Output](/assets/img/IntelAI/SGD10.png){:class="img-responsive"}
+
+# Stochastic Gradient Descent
+
+Linear Models in general are sensitive to scaling. SGD is **very senstive** to scaling
+
+And a high value of learning rate can cause the algorithmn to diverge, while too low of a value may take too long to converge.
+
+Fitting a stochastic gradient descent model without a regularization penalty(the relavant parameter is `penalty`)
+
+{% highlight python %}
+
+# Import SGDRegressor and prepare the parameters
+
+from sklearn.linear_model import SGDRegressor
+
+model_parameters_dict = {
+    'Linear': {'penalty': 'none'},
+    'Lasso': {'penalty': 'l2',
+           'alpha': lassoCV.alpha_},
+    'Ridge': {'penalty': 'l1',
+           'alpha': ridgeCV_rmse},
+    'ElasticNet': {'penalty': 'elasticnet', 
+                   'alpha': elasticNetCV.alpha_,
+                   'l1_ratio': elasticNetCV.l1_ratio_}
+}
+
+new_rmses = {}
+for modellabel, parameters in model_parameters_dict.items():
+    # following notation passes the dict items as arguments
+    SGD = SGDRegressor(**parameters)
+    SGD.fit(X_train, y_train)
+    new_rmses[modellabel] = rmse(y_test, SGD.predict(X_test))
+
+rmse_df['RMSE-SGD'] = pd.Series(new_rmses)
+rmse_df
+{% endhighlight %}
+
+![Output](/assets/img/IntelAI/SGD11.png){:class="img-responsive"}
+
+We can see that the error values are vert high. This means the algorithm is divering, and can be due to high scaling/learning rate.
+
+What happens if we adjust the learning rate?
+
+{% highlight python %}
+# Import SGDRegressor and prepare the parameters
+
+from sklearn.linear_model import SGDRegressor
+
+model_parameters_dict = {
+    'Linear': {'penalty': 'none'},
+    'Lasso': {'penalty': 'l2',
+           'alpha': lassoCV.alpha_},
+    'Ridge': {'penalty': 'l1',
+           'alpha': ridgeCV_rmse},
+    'ElasticNet': {'penalty': 'elasticnet', 
+                   'alpha': elasticNetCV.alpha_,
+                   'l1_ratio': elasticNetCV.l1_ratio_}
+}
+
+new_rmses = {}
+for modellabel, parameters in model_parameters_dict.items():
+    # following notation passes the dict items as arguments
+    SGD = SGDRegressor(eta0=1e-7,**parameters)
+    SGD.fit(X_train, y_train)
+    new_rmses[modellabel] = rmse(y_test, SGD.predict(X_test))
+
+rmse_df['RMSE-SGD-learningrate'] = pd.Series(new_rmses)
+rmse_df
+{% endhighlight %}
+
+![Output](/assets/img/IntelAI/SGD12.png){:class="img-responsive"}
+
+The error values are much lower. Now let's try scaling the training data.
+
+{% highlight python %}
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.fit_transform(X_test)
+
+{% endhighlight %}
+
+{% highlight python %}
+# Import SGDRegressor and prepare the parameters
+
+from sklearn.linear_model import SGDRegressor
+
+model_parameters_dict = {
+    'Linear': {'penalty': 'none'},
+    'Lasso': {'penalty': 'l2',
+           'alpha': lassoCV.alpha_},
+    'Ridge': {'penalty': 'l1',
+           'alpha': ridgeCV_rmse},
+    'ElasticNet': {'penalty': 'elasticnet', 
+                   'alpha': elasticNetCV.alpha_,
+                   'l1_ratio': elasticNetCV.l1_ratio_}
+}
+
+new_rmses = {}
+for modellabel, parameters in model_parameters_dict.items():
+    # following notation passes the dict items as arguments
+    SGD = SGDRegressor(**parameters)
+    SGD.fit(X_train_scaled, y_train)
+    new_rmses[modellabel] = rmse(y_test, SGD.predict(X_test_scaled))
+
+rmse_df['RMSE-SGD-learningrate-Scaled'] = pd.Series(new_rmses)
+rmse_df
+{% endhighlight %}
+
+![Output](/assets/img/IntelAI/SGD13.png){:class="img-responsive"}
+
 Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
 
 {% highlight python %}
