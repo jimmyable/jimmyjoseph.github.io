@@ -5,9 +5,41 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Nov 2018 13:11:54 +0000</pubDate>
-    <lastBuildDate>Mon, 26 Nov 2018 13:11:54 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Nov 2018 12:20:35 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Nov 2018 12:20:35 +0000</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Regularization and Gradient Descent</title>
+        <description>&lt;h1 id=&quot;regularization-and-gradient-descent&quot;&gt;Regularization and Gradient Descent&lt;/h1&gt; &lt;p&gt;In this worked example we will explore &lt;code class=&quot;highlighter-rouge&quot;&gt;regression&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;polynomial features&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;regularization&lt;/code&gt; using very simple sparse data.&lt;/p&gt; &lt;p&gt;First we import the data, which contains and x and y columns of noisy data.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/X_Y_Sinusoid_Data.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Now we will generate 100 equally spaced &lt;strong&gt;x&lt;/strong&gt; data points and over the range of 0 to 1. Using these points we will generate the &lt;strong&gt;y&lt;/strong&gt; points of &lt;em&gt;ground truth&lt;/em&gt; from...</description>
+        <pubDate>Tue, 27 Nov 2018 07:26:47 +0000</pubDate>
+        <link>http://localhost:4000/regularization-gradient-descent/</link>
+        <guid isPermaLink="true">http://localhost:4000/regularization-gradient-descent/</guid>
+        
+        <category>python</category>
+        
+        <category>regularization</category>
+        
+        <category>machine learning</category>
+        
+        <category>numpy</category>
+        
+        <category>scikit</category>
+        
+        <category>stochastic gradient descent</category>
+        
+        <category>ridge regression</category>
+        
+        <category>scaling</category>
+        
+        <category>lasso regression</category>
+        
+        <category>elastic net</category>
+        
+        
+        <category>Intel AI Machine Leaning</category>
+        
+      </item>
     
       <item>
         <title>Data Splitting &amp; Cross Validation</title>
@@ -212,28 +244,6 @@
         <category>python</category>
         
         <category>reverse</category>
-        
-        <category>arrays</category>
-        
-        <category>strings</category>
-        
-        
-        <category>Arrays and Strings</category>
-        
-      </item>
-    
-      <item>
-        <title>Compress a String</title>
-        <description>&lt;h1 id=&quot;string-compression&quot;&gt;String Compression&lt;/h1&gt; &lt;p&gt;It is possible to compress a string such that, a string orginally &lt;code class=&quot;highlighter-rouge&quot;&gt;AAABBCCCDD&lt;/code&gt; becomes &lt;code class=&quot;highlighter-rouge&quot;&gt;A3B2C3D2&lt;/code&gt;. In thi case we will only compress in order to save space. So for example &lt;code class=&quot;highlighter-rouge&quot;&gt;AABB&lt;/code&gt; wouldn’t be compressed to &lt;code class=&quot;highlighter-rouge&quot;&gt;A2B2&lt;/code&gt; because it saves no space.&lt;/p&gt; &lt;h2 id=&quot;tets-cases&quot;&gt;Tets cases&lt;/h2&gt; &lt;p&gt;Let’s define some test cases now.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;None -&amp;gt; None&lt;/li&gt; &lt;li&gt;’’ -&amp;gt; ‘’&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AABBCC&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;AABBCC&lt;/code&gt;&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AAABCCDDDD&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;A3BC2D4&lt;/code&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompressString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span...</description>
-        <pubDate>Sat, 17 Mar 2018 08:05:47 +0000</pubDate>
-        <link>http://localhost:4000/compress-string/</link>
-        <guid isPermaLink="true">http://localhost:4000/compress-string/</guid>
-        
-        <category>python</category>
-        
-        <category>rotational</category>
-        
-        <category>test</category>
         
         <category>arrays</category>
         
