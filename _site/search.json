@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Logistic Regression and Classification Error Metrics",
+      "category" : "Intel AI Machine Leaning",
+      "tags"     : "python, logistic regression, machine learning, numpy, scikit, classification, ridge regression, error metrics, lasso regression, and stratified shuffle split",
+      "url"      : "/log-regress-classification-error/",
+      "date"     : "03 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Regularization and Gradient Descent",
       "category" : "Intel AI Machine Leaning",
       "tags"     : "python, regularization, machine learning, numpy, scikit, stochastic gradient descent, ridge regression, scaling, lasso regression, and elastic net",

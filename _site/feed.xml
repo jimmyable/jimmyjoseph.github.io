@@ -5,9 +5,41 @@
     <description>A blog of stuff I find interesting/learning</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Nov 2018 15:51:57 +0000</pubDate>
-    <lastBuildDate>Wed, 28 Nov 2018 15:51:57 +0000</lastBuildDate>
+    <pubDate>Tue, 04 Dec 2018 17:36:25 +0000</pubDate>
+    <lastBuildDate>Tue, 04 Dec 2018 17:36:25 +0000</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Logistic Regression and Classification Error Metrics</title>
+        <description>&lt;h1 id=&quot;logistic-regression-and-classification-error-metrics&quot;&gt;Logistic Regression and Classification Error Metrics&lt;/h1&gt; &lt;p&gt;In this worked example, we use &lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones&quot;&gt;Human Activity Recognition with Smartphones&lt;/a&gt; database, which was built from the recordings of study participants performing activities of daily living (ADL) while carrying a smartphone with an embedded inertial sensors. The objective is to classify activities into one of the six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) performed.&lt;/p&gt; &lt;p&gt;For each record in the dataset it is provided:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.&lt;/li&gt; &lt;li&gt;Triaxial Angular velocity from the gyroscope.&lt;/li&gt; &lt;li&gt;A 561-feature vector with time and...</description>
+        <pubDate>Mon, 03 Dec 2018 10:28:47 +0000</pubDate>
+        <link>http://localhost:4000/log-regress-classification-error/</link>
+        <guid isPermaLink="true">http://localhost:4000/log-regress-classification-error/</guid>
+        
+        <category>python</category>
+        
+        <category>logistic regression</category>
+        
+        <category>machine learning</category>
+        
+        <category>numpy</category>
+        
+        <category>scikit</category>
+        
+        <category>classification</category>
+        
+        <category>ridge regression</category>
+        
+        <category>error metrics</category>
+        
+        <category>lasso regression</category>
+        
+        <category>stratified shuffle split</category>
+        
+        
+        <category>Intel AI Machine Leaning</category>
+        
+      </item>
     
       <item>
         <title>Regularization and Gradient Descent</title>
@@ -224,26 +256,6 @@
         <category>python</category>
         
         <category>find</category>
-        
-        <category>arrays</category>
-        
-        <category>strings</category>
-        
-        
-        <category>Arrays and Strings</category>
-        
-      </item>
-    
-      <item>
-        <title>Reverse characters in a string(in-place)</title>
-        <description>&lt;h1 id=&quot;reverse-characters-in-a-stringin-place&quot;&gt;Reverse characters in a string(in-place)&lt;/h1&gt; &lt;p&gt;Self explanatory really, pretty much if x=[“x”,”y”,”Z”] was fed in, then the output should be x=[“z”,”y”,”x”].&lt;/p&gt; &lt;h2 id=&quot;tets-cases&quot;&gt;Tets cases&lt;/h2&gt; &lt;p&gt;Let’s define some test cases now.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;None -&amp;gt; None&lt;/li&gt; &lt;li&gt;[’’] -&amp;gt; [’’]&lt;/li&gt; &lt;li&gt;[‘f’, ‘o’, ‘o’, ‘ ‘, ‘b’, ‘a’, ‘r’] -&amp;gt; [‘r’, ‘a’, ‘b’, ‘ ‘, ‘o’, ‘o’, ‘f’]&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;method-1&quot;&gt;Method 1&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ReverseString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#print(chars, &quot;+++&quot;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt; &lt;span...</description>
-        <pubDate>Wed, 20 Jun 2018 00:02:47 +0100</pubDate>
-        <link>http://localhost:4000/reverse-characters-in-a-string/</link>
-        <guid isPermaLink="true">http://localhost:4000/reverse-characters-in-a-string/</guid>
-        
-        <category>python</category>
-        
-        <category>reverse</category>
         
         <category>arrays</category>
         
