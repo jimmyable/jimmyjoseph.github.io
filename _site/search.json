@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Naive Bayes",
+      "category" : "Intel AI Machine Leaning",
+      "tags"     : "python, naive bayes, machine learning, bayes, scikit, classification, probability, error metrics, confusion matrix, and train test split",
+      "url"      : "/naive-bayes/",
+      "date"     : "24 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Logistic Regression and Classification Error Metrics",
       "category" : "Intel AI Machine Leaning",
       "tags"     : "python, logistic regression, machine learning, numpy, scikit, classification, ridge regression, error metrics, lasso regression, and stratified shuffle split",
