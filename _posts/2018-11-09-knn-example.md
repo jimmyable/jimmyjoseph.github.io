@@ -184,7 +184,7 @@ pl.plot(np.arange(1, len(accuracy_vals)+1), accuracy_vals, 'b', label = 'x', lin
 
 When k=1 it's neighbor is the same as itself. Therefore the model is again overfitting. As k-value increases the accuracy is generally getting worse as the model shits to underfitting.
 
-Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
+Credits to [Intel AI Academy](https://software.intel.com/en-us/home)
 
 
 

@@ -583,7 +583,7 @@ plt.tight_layout()
 
 ![Output](/assets/img/IntelAI/logError13.png){:class="img-responsive"}
 
-Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
+Credits to [Intel AI Academy](https://software.intel.com/en-us/home)
 
 {% highlight python %}
 

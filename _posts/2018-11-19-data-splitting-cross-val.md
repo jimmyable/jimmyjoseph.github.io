@@ -318,7 +318,7 @@ ax.set(xlabel = 'Ground Truth',
 ![Output](/assets/img/IntelAI/crossval2.png){:class="img-responsive"}
 
 
-Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
+Credits to [Intel AI Academy](https://software.intel.com/en-us/home)
 
 {% highlight python %}
 

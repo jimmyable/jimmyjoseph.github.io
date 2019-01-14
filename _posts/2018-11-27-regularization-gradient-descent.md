@@ -555,7 +555,7 @@ rmse_df
 
 ![Output](/assets/img/IntelAI/SGD13.png){:class="img-responsive"}
 
-Credits to [Intel AI Academy](https://software.intel.com/en-us/ai-academy)
+Credits to [Intel AI Academy](https://software.intel.com/en-us/home)
 
 {% highlight python %}
 
