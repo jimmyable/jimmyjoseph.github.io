@@ -2,107 +2,111 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
-		<loc>http://localhost:4000/svm-wine/</loc>
+		<loc>http://jimmyjoseph.co.uk/intelligent-rpa/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/naive-bayes/</loc>
+		<loc>http://jimmyjoseph.co.uk/svm-wine/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/log-regress-classification-error/</loc>
+		<loc>http://jimmyjoseph.co.uk/naive-bayes/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/regularization-gradient-descent/</loc>
+		<loc>http://jimmyjoseph.co.uk/log-regress-classification-error/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/data-splitting-cross-val/</loc>
+		<loc>http://jimmyjoseph.co.uk/regularization-gradient-descent/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/knn-example/</loc>
+		<loc>http://jimmyjoseph.co.uk/data-splitting-cross-val/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/book-focus/</loc>
+		<loc>http://jimmyjoseph.co.uk/knn-example/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/the-big-o/</loc>
+		<loc>http://jimmyjoseph.co.uk/book-focus/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/farming-likes-on-instagram/</loc>
+		<loc>http://jimmyjoseph.co.uk/the-big-o/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/laptop-stickers/</loc>
+		<loc>http://jimmyjoseph.co.uk/farming-likes-on-instagram/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/</loc>
+		<loc>http://jimmyjoseph.co.uk/laptop-stickers/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/find-the-single-different-char-between-two-strings/</loc>
+		<loc>http://jimmyjoseph.co.uk/given-an-array-find-the-two-indices-that-sum-to-a-specific-value/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/reverse-characters-in-a-string/</loc>
+		<loc>http://jimmyjoseph.co.uk/find-the-single-different-char-between-two-strings/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/compress-string/</loc>
+		<loc>http://jimmyjoseph.co.uk/reverse-characters-in-a-string/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/rotation-characters/</loc>
+		<loc>http://jimmyjoseph.co.uk/compress-string/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/permutations/</loc>
+		<loc>http://jimmyjoseph.co.uk/rotation-characters/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/unique-characters/</loc>
+		<loc>http://jimmyjoseph.co.uk/permutations/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/neurons/</loc>
+		<loc>http://jimmyjoseph.co.uk/unique-characters/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/yolo/</loc>
+		<loc>http://jimmyjoseph.co.uk/neurons/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/gradient-descent/</loc>
+		<loc>http://jimmyjoseph.co.uk/yolo/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/multiagent-systems/</loc>
+		<loc>http://jimmyjoseph.co.uk/gradient-descent/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/jade/</loc>
+		<loc>http://jimmyjoseph.co.uk/multiagent-systems/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/supervised-knn/</loc>
+		<loc>http://jimmyjoseph.co.uk/jade/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/basic-java/</loc>
+		<loc>http://jimmyjoseph.co.uk/supervised-knn/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/chocolate-viz/</loc>
+		<loc>http://jimmyjoseph.co.uk/basic-java/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/ai-tictactoe/</loc>
+		<loc>http://jimmyjoseph.co.uk/chocolate-viz/</loc>
+	  </url>
+	
+	  <url>
+		<loc>http://jimmyjoseph.co.uk/ai-tictactoe/</loc>
 	  </url>
 	
 </urlset>

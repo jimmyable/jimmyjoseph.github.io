@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SVM using Wine data</title>
-    <meta name="description" content="Exploring Support vector machines using open wine data">
+    <title>Using ML to filter tasks for RPA</title>
+    <meta name="description" content="Not all process are primed for RPA, and this is not black and white. Some process may have counterparts which are automatable. It is a matter of being able t...">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/jimmyjoseph1295?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jimmyable_">
-    <meta name="twitter:title" content="SVM using Wine data">
-    <meta name="twitter:description" content="Exploring Support vector machines using open wine data">
+    <meta name="twitter:title" content="Using ML to filter tasks for RPA">
+    <meta name="twitter:description" content="Not all process are primed for RPA, and this is not black and white. Some process may have counterparts which are automatable. It is a matter of being able t...">
     
     <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://jimmyjoseph.co.uk/svm-wine/">
-    <meta property="og:title" content="SVM using Wine data">
+    <meta property="og:url" content="http://jimmyjoseph.co.uk/intelligent-rpa/">
+    <meta property="og:title" content="Using ML to filter tasks for RPA">
     
     <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
     
-    <meta property="og:description" content="Exploring Support vector machines using open wine data">
+    <meta property="og:description" content="Not all process are primed for RPA, and this is not black and white. Some process may have counterparts which are automatable. It is a matter of being able t...">
     <meta property="og:site_name" content="Jimmy Joseph">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="SVM using Wine data"/>
-    <meta itemprop="description" content="Exploring Support vector machines using open wine data">
+    <meta itemprop="name" content="Using ML to filter tasks for RPA"/>
+    <meta itemprop="description" content="Not all process are primed for RPA, and this is not black and white. Some process may have counterparts which are automatable. It is a matter of being able t...">
     <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://jimmyjoseph.co.uk/svm-wine/">
+    <link rel="canonical" href="http://jimmyjoseph.co.uk/intelligent-rpa/">
     <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
 </head>
 
@@ -68,10 +68,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2019-01-09 11:56:47 +0000" class="date">09 Jan 2019</time>
+            <time itemprop="datePublished" datetime="2020-03-25 12:24:47 +0000" class="date">25 Mar 2020</time>
         
-        <h1 class="post-title" itemprop="name">SVM using Wine data</h1>
-        <p itemprop="description" class="subtitle">Exploring Support vector machines using open wine data</p>
+        <h1 class="post-title" itemprop="name">Using ML to filter tasks for RPA</h1>
+        <p itemprop="description" class="subtitle">Not all process are primed for RPA, and this is not black and white. Some process may have counterparts which are automatable. It is a matter of being able to cherry pick these cases</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -121,17 +121,156 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <p>According to <a href="https://www.winestyr.com/wine-guide/how-many-different-types-of-wine-grapes-are-there">Winestyr</a> there are over 10,000 varieties of wine grapes in the world.  The data-set provided has only around 6,500 samples of wine compositions. Many variables can affect the perception of the final product such as seasons, transport, storage, age and possibly even price. It is also good to keep in mind that the data-set is imbalanced, there are much more white wine samples than red wine. And most of the samples are for average wines, very few excellent or poor ones, causing bias in the data-set.</p>
+                <h1 id="case-scenario">Case Scenario</h1>
 
-<h1 id="chemically-speaking-what-types-of-wine-are-there"><code class="highlighter-rouge">Chemically</code> speaking, <code class="highlighter-rouge">what</code> types <code class="highlighter-rouge">of</code> wine <code class="highlighter-rouge">are</code> there?</h1>
+<p>It’s 9 AM and Charlie is just getting into the office. Charlie works in a prestiguos Insurance firm. One of her main daily tasks is to look through customer interactions and decide what to do with a case.</p>
 
-<p>This data-set narrows the question to <em>“what chemical types of red and white variants of the Portuguese “Vinho Verde” wine are there?”</em> This can be a tricky question to answer since there aren’t any immediate divisions between the datapoints which can be seen on a scatter plot.</p>
+<p>When a customer calls up the contact centre employee answering the call makes notes on what was discussed on the call. Notes are automatically added to customer’s account.</p>
 
-<p>I combined both wine data and omitted the outputs non-chemical features: quality and color. Since there was still 11 features left, I performed a <code class="highlighter-rouge">Principal Component Analysis(PCA)</code> to see look for the importance of each component to the data set. Removing 3 components only resulted in a variance reduction of 3%.</p>
+<p>Charlie needs to go read each of these notes and decide what to do with these cases. These appear as work items on the system. Some of the options might be:</p>
 
-<p>I performed a <code class="highlighter-rouge">k-means clustering</code> on the chemical properties, with values for k ranging from 2 to 50. For each clustering, the <code class="highlighter-rouge">average silhouette score</code> was taken to validate the clustering.</p>
+<ul>
+  <li>Send confirmation of insurance cancellation</li>
+  <li>Send Policy certificate</li>
+  <li>Pass onto Fraud Team</li>
+  <li>Pass to Claim Team</li>
+  <li>Update Customer’s details on the System</li>
+</ul>
 
-<p>K-value of 2 scored the highest score suggesting two types of wines, as shown below.</p>
+<p>Charlie and her team has to 1000’s of notes to go through each day. Most of these notes end in an action that involves a simple action. If an automation was in place to manage the first 4 tasks Charlie and the team can focus on just the updating details.</p>
+
+<p>The first 4 notes rely on reading a <code class="highlighter-rouge">free text</code> box and unfortuantely there is no logical structure on what the call attendant might write here. It’s easy for a human such as Charlie to read and understand what action to take but not rules based enough for a robot.</p>
+
+<p>In this ideal scenario a Machine Learning model can be used as a filter to classify these cases. Once the classification has been done an RPA solution can start processes these cases. Unfortuantely updation of customer details might not be suitable as it will require a high degree of verification and high risk if details include names,address, or bank details.</p>
+
+<p>The task of sending a confirmation of cancellation comes with medium risk and we would want the classification model to have high degree of accuracy. Wrongly issued cancellations will lower customer satisfaction.</p>
+
+<p>The other three tasks such as sending policy certificate, passing the case to different teams comes with low risk as wrongly flagged cases can be salvaged.</p>
+
+<h1 id="code-example">Code Example</h1>
+
+<p>Real company data is not available. But <a href="https://research.google/tools/datasets/taskmaster-1/">Taskmaster-1</a> contains text descriptions of tasks that are generated from conversations.</p>
+
+<p>The machine learning models can be made using python or higher level software such as DataRobot. Before using higher level solutions such as DataRobot it’s a good idea to understand how much effort it will save.</p>
+
+<h3 id="setting-up-the-data">Setting up the Data</h3>
+<p>Import Pandas - to build a dataframe for training</p>
+
+<p><code class="highlighter-rouge">re</code> - regular expression, to clean the data later</p>
+
+<p>Load the <code class="highlighter-rouge">.json</code> file and convert it a pandas dataframe <code class="highlighter-rouge">df</code></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span> <span class="p">(</span><span class="s">r'/home/mandala/Downloads/self-dialogs.json'</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></code></pre></figure>
+
+<h3 id="the-data-has-three-main-parts-here">The Data has three main parts here:</h3>
+<ul>
+  <li>The conversation ID</li>
+  <li>Instruction-ID (target label)</li>
+  <li>Utterance (the actual text/conversation)</li>
+</ul>
+
+<p>We can peek into the text phrases below. Each conversation is separated into blocks of speech in a script fashion.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="p">[</span><span class="s">"utterances"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span></code></pre></figure>
+
+<blockquote>
+  <p>“Hi, I’m looking to book a table for Korean fod.”</p>
+</blockquote>
+
+<h3 id="cleaning-up">Cleaning up</h3>
+
+<p>The phrases are now stitched into single blocks to make it easier to train. Removing the .json tags we don’t need and using regex to take away anything thats not alpanumeric.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">list_of_utterances</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="s">"utterances"</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="n">prelim_list</span> <span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"utterances"</span><span class="p">][</span><span class="n">i</span><span class="p">])):</span>
+        <span class="n">text</span><span class="o">=</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s">"utterances"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"text"</span><span class="p">)))</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+        
+        <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">'[^A-Za-z0-9]+'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span> <span class="c">#The filter</span>
+
+        <span class="n">prelim_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="o">+</span><span class="s">' '</span><span class="p">)</span> <span class="c">#adding a space before joining</span>
+    <span class="n">list_of_utterances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prelim_list</span><span class="p">))</span></code></pre></figure>
+
+<h3 id="visualising-the-text">Visualising the text</h3>
+<p>Now we can see a whole conversation with no special characters. Reading over the text extract you have a good idea what the topic of conversation here is.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">list_of_utterances</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></code></pre></figure>
+
+<blockquote>
+  <p>Hi I m looking to book a table for Korean fod  Ok what area are you thinking about  Somewhere in Southern NYC maybe the East Village  Ok great There s Thursday Kitchen it has great reviews  That s great So I need a table for tonight at 7 pm for 8 people We don t want to sit at the bar but anywhere else is fine  They don t have any availability for 7 pm  What times are available  5 or 8  Yikes we can t do those times  Ok do you have a second choice  Let me check  Ok  Lets try Boka are they free for 8 people at 7  Yes  Great let s book that  Ok great are there any other requests  No that s it just book  Great should I use your account you have open with them  Yes please  Great You will get a confirmation to your phone soon</p>
+</blockquote>
+
+<h3 id="readying-for-training">Readying for training</h3>
+<p>Adding the labels and text into a dictionary <code class="highlighter-rouge">d</code> then rewriting the dataframe <code class="highlighter-rouge">df</code>
+The several categories can be seen.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'instruction_id'</span><span class="p">:</span><span class="n">df</span><span class="p">[</span><span class="s">"instruction_id"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="p">,</span> <span class="s">'utterance'</span><span class="p">:</span> <span class="n">list_of_utterances</span><span class="p">}</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"instruction_id"</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span></code></pre></figure>
+
+<blockquote>
+  <p>[‘movie-tickets-1’, ‘uber-lyft-1’, ‘restaurant-table-3’, ‘restaurant-table-1’, ‘coffee-ordering-1’, ‘movie-ticket-1’, ‘auto-repair-appt-1’, ‘pizza-ordering-2’, ‘uber-lyft-2’, ‘movie-tickets-3’, ‘pizza-ordering-1’, ‘movie-tickets-2’, ‘coffee-ordering-2’, ‘movie-finder’, ‘restaurant-table-2’]</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span></code></pre></figure>
+
+<p>Some of the labels have number suffix’s. This is because those conversations have been generated using different methods. For our example we just need to classify the text and don’t care about how they were generated so we can take the suffixes out.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'-</span><span class="err">\</span><span class="s">d+'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="c">#consolidating all like for like labels</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'movie-tickets'</span><span class="p">,</span> <span class="s">'movie-ticket'</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'instruction_id'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span></code></pre></figure>
+
+<blockquote>
+  <p>pizza-ordering      1468</p>
+
+  <p>coffee-ordering     1376</p>
+
+  <p>restaurant-table    1300</p>
+
+  <p>movie-ticket        1251</p>
+
+  <p>auto-repair-appt    1161</p>
+
+  <p>uber-lyft           1098</p>
+
+  <p>movie-finder          54</p>
+
+  <p>Name: instruction_id, dtype: int64</p>
+</blockquote>
+
+<p>Dropping <code class="highlighter-rouge">movie-tickets</code> since it has very low volume. A model with a label that has 54 text samples is not good to train with, especially when we have other samples in the thousands.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">instruction_id</span> <span class="o">!=</span> <span class="s">'movie-finder'</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'instruction_id'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span></code></pre></figure>
+
+<blockquote>
+  <p>pizza-ordering      1468</p>
+
+  <p>coffee-ordering     1376</p>
+
+  <p>restaurant-table    1300</p>
+
+  <p>movie-ticket        1251</p>
+
+  <p>auto-repair-appt    1161</p>
+
+  <p>uber-lyft           1098</p>
+
+  <p>Name: instruction_id, dtype: int64</p>
+</blockquote>
+
+<h3 id="data-is-now-clean--ish">Data is now clean (-ish)</h3>
+
+<p>We’ll be using scikit-learn packages for processing the data.
+FIrstly, split into test and train sets. 77% train and 33% test.</p>
 
 <p><img src="/assets/img/IntelAI/SVM1.png" alt="Output" class="img-responsive" /></p>
 
@@ -492,15 +631,15 @@
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/svm-wine/%20via%20&#64;jimmyable_&hashtags=python,svm,machine learning,svc,sklearn,gridsearchcv,error metrics,wine,gaussian,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/intelligent-rpa/%20via%20&#64;jimmyable_&hashtags=python,rpa,machine learning,business process,sklearn,gridsearchcv,error metrics,tasks,pipeline,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/svm-wine/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/intelligent-rpa/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/svm-wine/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/intelligent-rpa/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -529,7 +668,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/svm-wine/';
+        var disqus_url = '/intelligent-rpa/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

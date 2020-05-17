@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Using ML to filter tasks for RPA",
+      "category" : "RPA",
+      "tags"     : "python, rpa, machine learning, business process, sklearn, gridsearchcv, error metrics, tasks, and pipeline",
+      "url"      : "/intelligent-rpa/",
+      "date"     : "25 Mar 2020"
+    } ,
+  
+    {
       "title"    : "SVM using Wine data",
       "category" : "Intel AI Machine Leaning",
       "tags"     : "python, svm, machine learning, svc, sklearn, gridsearchcv, error metrics, wine, and gaussian",
