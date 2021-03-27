@@ -17,14 +17,14 @@
     <meta name="twitter:title" content="YOLO">
     <meta name="twitter:description" content="You Only Look Once #YOLO">
     
-    <meta property="twitter:image:src" content="http://jimmyjoseph.co.uk/assets/img/">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://jimmyjoseph.co.uk/yolo/">
+    <meta property="og:url" content="http://localhost:4000/yolo/">
     <meta property="og:title" content="YOLO">
     
-    <meta property="og:image" content="http://jimmyjoseph.co.uk/assets/img/">
+    <meta property="og:image" content="http://localhost:4000/assets/img/">
     
     <meta property="og:description" content="You Only Look Once #YOLO">
     <meta property="og:site_name" content="Jimmy Joseph">
@@ -32,7 +32,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="YOLO"/>
     <meta itemprop="description" content="You Only Look Once #YOLO">
-    <meta itemprop="image" content="http://jimmyjoseph.co.uk/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -57,8 +57,8 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://jimmyjoseph.co.uk/yolo/">
-    <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://jimmyjoseph.co.uk/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/yolo/">
+    <link rel="alternate" type="application/rss+xml" title="Jimmy Joseph" href="http://localhost:4000/feed.xml" />
 </head>
 
 
@@ -93,22 +93,22 @@
   <ul>
     
     
-      <li><a href="http://jimmyjoseph.co.uk/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
     
     
-      <li><a href="http://jimmyjoseph.co.uk/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
     
     
-      <li><a href="http://jimmyjoseph.co.uk/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
     
     
-      <li><a href="http://jimmyjoseph.co.uk/about">About Me</a></li>
+      <li><a href="http://localhost:4000/about">About Me</a></li>
     
     
-    <li><a class="feed" href="http://jimmyjoseph.co.uk/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -148,7 +148,7 @@ Spoiler alert: The hardest part is installing CUDA</p>
 
 <p>Install kernel headers and dev packages by issuing:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get install linux-headers-<span class="k">$(</span>uname <span class="nt">-r</span><span class="k">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>linux-headers-<span class="si">$(</span><span class="nb">uname</span> <span class="nt">-r</span><span class="si">)</span></code></pre></figure>
 
 <h3 id="cuda-installation">CUDA Installation</h3>
 <p>You can install the .deb you downloaded by issuing:</p>
@@ -157,7 +157,7 @@ Spoiler alert: The hardest part is installing CUDA</p>
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key add /var/cuda-repo-&lt;version&gt;/7fa2af80.pub
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-key adv <span class="nt">--fetch-keys</span> https://developer.download.nvidia.com/compute/cuda/repos/&lt;distro&gt;/&lt;architecture&gt;/7fa2af80.pub
 username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
-username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get install cuda</code></pre></figure>
+username@hostname:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>cuda</code></pre></figure>
 
 <h3 id="cuda-post-install-instructions">CUDA Post Install Instructions</h3>
 <p>Set up the environment and etc by issuing:</p>
@@ -201,11 +201,11 @@ WantedBy=multi-user.target</code></pre></figure>
 
 <p>Remove existing links</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rm /usr/bin/gcc
-rm /usr/bin/g++</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">rm</span> /usr/bin/gcc
+<span class="nb">rm</span> /usr/bin/g++</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln <span class="nt">-s</span> /usr/local/bin/gcc-6 gcc
-ln <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/gcc-6 gcc
+<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
 
 <p>OR</p>
 
@@ -219,7 +219,7 @@ ln <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
 <h2 id="opencv">OpenCV</h2>
 <p><a href="https://opencv.org/">OpenCV</a> is a computer vision library. It’s state of the art. We will need to install this too. But this is easy.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install libopencv-dev</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>libopencv-dev</code></pre></figure>
 
 <p>You can check if that worked by issuing:</p>
 
@@ -241,15 +241,15 @@ ln <span class="nt">-s</span> /usr/local/bin/g++-6 g++</code></pre></figure>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://jimmyjoseph.co.uk/yolo/%20via%20&#64;jimmyable_&hashtags=yolo,object detection,neural nets,cuda,opencv,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/yolo/%20via%20&#64;jimmyable_&hashtags=yolo,object detection,neural nets,cuda,opencv,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://jimmyjoseph.co.uk/yolo/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/yolo/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://jimmyjoseph.co.uk/yolo/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/yolo/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>

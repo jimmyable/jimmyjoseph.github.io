@@ -3,272 +3,18 @@
   <channel>
     <title>Jimmy Joseph</title>
     <description>A blog of stuff I find interesting/learning</description>
-    <link>http://jimmyjoseph.co.uk/</link>
-    <atom:link href="http://jimmyjoseph.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2020 13:46:19 +0100</pubDate>
-    <lastBuildDate>Sun, 17 May 2020 13:46:19 +0100</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
-    
-      <item>
-        <title>Using ML to filter tasks for RPA</title>
-        <description>&lt;h1 id=&quot;case-scenario&quot;&gt;Case Scenario&lt;/h1&gt; &lt;p&gt;It’s 9 AM and Charlie is just getting into the office. Charlie works in a prestiguos Insurance firm. One of her main daily tasks is to look through customer interactions and decide what to do with a case.&lt;/p&gt; &lt;p&gt;When a customer calls up the contact centre employee answering the call makes notes on what was discussed on the call. Notes are automatically added to customer’s account.&lt;/p&gt; &lt;p&gt;Charlie needs to go read each of these notes and decide what to do with these cases. These appear as work items on the system. Some of the options might be:&lt;/p&gt;...</description>
-        <pubDate>Wed, 25 Mar 2020 12:24:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/intelligent-rpa/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/intelligent-rpa/</guid>
-        
-        <category>python</category>
-        
-        <category>rpa</category>
-        
-        <category>machine learning</category>
-        
-        <category>business process</category>
-        
-        <category>sklearn</category>
-        
-        <category>gridsearchcv</category>
-        
-        <category>error metrics</category>
-        
-        <category>tasks</category>
-        
-        <category>pipeline</category>
-        
-        
-        <category>RPA</category>
-        
-      </item>
-    
-      <item>
-        <title>SVM using Wine data</title>
-        <description>&lt;p&gt;According to &lt;a href=&quot;https://www.winestyr.com/wine-guide/how-many-different-types-of-wine-grapes-are-there&quot;&gt;Winestyr&lt;/a&gt; there are over 10,000 varieties of wine grapes in the world. The data-set provided has only around 6,500 samples of wine compositions. Many variables can affect the perception of the final product such as seasons, transport, storage, age and possibly even price. It is also good to keep in mind that the data-set is imbalanced, there are much more white wine samples than red wine. And most of the samples are for average wines, very few excellent or poor ones, causing bias in the data-set.&lt;/p&gt; &lt;h1 id=&quot;chemically-speaking-what-types-of-wine-are-there&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Chemically&lt;/code&gt; speaking, &lt;code class=&quot;highlighter-rouge&quot;&gt;what&lt;/code&gt; types &lt;code class=&quot;highlighter-rouge&quot;&gt;of&lt;/code&gt; wine &lt;code...</description>
-        <pubDate>Wed, 09 Jan 2019 11:56:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/svm-wine/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/svm-wine/</guid>
-        
-        <category>python</category>
-        
-        <category>svm</category>
-        
-        <category>machine learning</category>
-        
-        <category>svc</category>
-        
-        <category>sklearn</category>
-        
-        <category>gridsearchcv</category>
-        
-        <category>error metrics</category>
-        
-        <category>wine</category>
-        
-        <category>gaussian</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>Naive Bayes</title>
-        <description>&lt;h1 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h1&gt; &lt;p&gt;Probability of a single event occuring, and both occuring(joint) can be shown as a venn diagriam below.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/NB1.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;p&gt;What if we only get &lt;strong&gt;P(Y)&lt;/strong&gt; and want to predict the &lt;strong&gt;P(X&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;Y)&lt;/strong&gt;? This is represented below as conditional probability.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/NB2.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;p&gt;The joint probability can be caculated then as follows:&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/NB3.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;p&gt;Finally, &lt;strong&gt;Bayes&lt;/strong&gt; theorem can be derived from the conditional and join relationship as:&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/NB4.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;p&gt;Furthermore, Bayes theorem can be written as:&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/NB5.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;p&gt;But this is not &lt;strong&gt;Naive Bayes&lt;/strong&gt;....</description>
-        <pubDate>Mon, 24 Dec 2018 18:11:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/naive-bayes/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/naive-bayes/</guid>
-        
-        <category>python</category>
-        
-        <category>naive bayes</category>
-        
-        <category>machine learning</category>
-        
-        <category>bayes</category>
-        
-        <category>scikit</category>
-        
-        <category>classification</category>
-        
-        <category>probability</category>
-        
-        <category>error metrics</category>
-        
-        <category>confusion matrix</category>
-        
-        <category>train test split</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>Logistic Regression and Classification Error Metrics</title>
-        <description>&lt;h1 id=&quot;logistic-regression-and-classification-error-metrics&quot;&gt;Logistic Regression and Classification Error Metrics&lt;/h1&gt; &lt;p&gt;In this worked example, we use &lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones&quot;&gt;Human Activity Recognition with Smartphones&lt;/a&gt; database, which was built from the recordings of study participants performing activities of daily living (ADL) while carrying a smartphone with an embedded inertial sensors. The objective is to classify activities into one of the six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) performed.&lt;/p&gt; &lt;p&gt;For each record in the dataset it is provided:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.&lt;/li&gt; &lt;li&gt;Triaxial Angular velocity from the gyroscope.&lt;/li&gt; &lt;li&gt;A 561-feature vector with time and...</description>
-        <pubDate>Mon, 03 Dec 2018 10:28:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/log-regress-classification-error/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/log-regress-classification-error/</guid>
-        
-        <category>python</category>
-        
-        <category>logistic regression</category>
-        
-        <category>machine learning</category>
-        
-        <category>numpy</category>
-        
-        <category>scikit</category>
-        
-        <category>classification</category>
-        
-        <category>ridge regression</category>
-        
-        <category>error metrics</category>
-        
-        <category>lasso regression</category>
-        
-        <category>stratified shuffle split</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>Regularization and Gradient Descent</title>
-        <description>&lt;h1 id=&quot;regularization-and-gradient-descent&quot;&gt;Regularization and Gradient Descent&lt;/h1&gt; &lt;p&gt;In this worked example we will explore &lt;code class=&quot;highlighter-rouge&quot;&gt;regression&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;polynomial features&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;regularization&lt;/code&gt; using very simple sparse data.&lt;/p&gt; &lt;p&gt;First we import the data, which contains and x and y columns of noisy data.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/X_Y_Sinusoid_Data.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Now we will generate 100 equally spaced &lt;strong&gt;x&lt;/strong&gt; data points and over the range of 0 to 1. Using these points we will generate the &lt;strong&gt;y&lt;/strong&gt; points of &lt;em&gt;ground truth&lt;/em&gt; from...</description>
-        <pubDate>Tue, 27 Nov 2018 07:26:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/regularization-gradient-descent/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/regularization-gradient-descent/</guid>
-        
-        <category>python</category>
-        
-        <category>regularization</category>
-        
-        <category>machine learning</category>
-        
-        <category>numpy</category>
-        
-        <category>scikit</category>
-        
-        <category>stochastic gradient descent</category>
-        
-        <category>ridge regression</category>
-        
-        <category>scaling</category>
-        
-        <category>lasso regression</category>
-        
-        <category>elastic net</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>Data Splitting &amp; Cross Validation</title>
-        <description>&lt;h1 id=&quot;splitting-and-cross-validation&quot;&gt;Splitting and Cross Validation&lt;/h1&gt; &lt;p&gt;If we use all the available data to train and test the model then the model is overfitting the data. This means the model is really good at passing the test stage because it has seen all the examples beforehand.&lt;/p&gt; &lt;p&gt;The aim of ML is to create a generalised model, which can be tested on unseen data. To do this we split the available data into a train and test datasets.&lt;/p&gt; &lt;p&gt;Furthermore we can perform cross-validation, which is essentially shuffling training and test data to see the effects on the errors produced.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Underfitting&lt;/strong&gt; -...</description>
-        <pubDate>Mon, 19 Nov 2018 04:55:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/data-splitting-cross-val/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/data-splitting-cross-val/</guid>
-        
-        <category>python</category>
-        
-        <category>knn</category>
-        
-        <category>machine learning</category>
-        
-        <category>numpy</category>
-        
-        <category>scikit</category>
-        
-        <category>cross validation</category>
-        
-        <category>splitting</category>
-        
-        <category>scaling</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>KNN Example</title>
-        <description>&lt;h1 id=&quot;k-nearest-neighbors-example&quot;&gt;K Nearest Neighbors Example&lt;/h1&gt; &lt;p&gt;Using the telecom customer churn data we will do some preprocessing and the use a KNN model to make some predictions. First we will import the .csv file and display its contents&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileloc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;data/Orange_Telecom_Churn_Data.csv&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/IntelAI/knn1.png&quot; alt=&quot;Output&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;pre-processing&quot;&gt;Pre-processing&lt;/h1&gt; &lt;p&gt;Some features such as &lt;strong&gt;state, area code, phone number&lt;/strong&gt; are not useful for the predictive model...</description>
-        <pubDate>Fri, 09 Nov 2018 09:41:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/knn-example/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/knn-example/</guid>
-        
-        <category>python</category>
-        
-        <category>knn</category>
-        
-        <category>machine learning</category>
-        
-        <category>numpy</category>
-        
-        <category>scikit</category>
-        
-        <category>classification</category>
-        
-        <category>feature scaling</category>
-        
-        <category>regression</category>
-        
-        <category>knn</category>
-        
-        <category>telecoms</category>
-        
-        <category>accuracy</category>
-        
-        
-        <category>Intel AI Machine Leaning</category>
-        
-      </item>
-    
-      <item>
-        <title>[Book Review] - FOCUS</title>
-        <description>&lt;h1 id=&quot;focus&quot;&gt;&lt;strong&gt;FOCUS&lt;/strong&gt;&lt;/h1&gt; &lt;h1 id=&quot;part-1---finding-your-focus&quot;&gt;&lt;em&gt;Part 1 - Finding your Focus&lt;/em&gt;&lt;/h1&gt; &lt;h2 id=&quot;ch1-your-vital-20&quot;&gt;CH1 Your vital 20%&lt;/h2&gt; &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;80/20&lt;/code&gt; rule. Use it to filter your life commitments.&lt;/p&gt; &lt;p&gt;Every morning when you wake up take a minute to remind what you’re thankful in life and things you’re looking forward to that day.&lt;/p&gt; &lt;p&gt;20% of bad thoughts cause 80% of the worries. Note good points throughout the day and compliment yourself on why even the most trivial ones(since you worry about trivial negatives).&lt;/p&gt; &lt;p&gt;Compliment others on their positive work.&lt;/p&gt; &lt;p&gt;At the end of the day, look over the events of the day highlighting good...</description>
-        <pubDate>Sun, 04 Nov 2018 14:26:47 +0000</pubDate>
-        <link>http://jimmyjoseph.co.uk/book-focus/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/book-focus/</guid>
-        
-        <category>Focus</category>
-        
-        <category>Development</category>
-        
-        <category>Time-Management</category>
-        
-        
-        <category>Books</category>
-        
-      </item>
-    
-      <item>
-        <title>The Big O</title>
-        <description>&lt;h1 id=&quot;what-is-the-big-o&quot;&gt;What is the “Big O”&lt;/h1&gt; &lt;p&gt;&lt;strong&gt;Big O&lt;/strong&gt;, is a metric used to describe how &lt;em&gt;complex&lt;/em&gt; an algorithm is. Not understanding is might lead to algorithms or code that is unnecessarily complex.&lt;/p&gt; &lt;h1 id=&quot;the-analogy&quot;&gt;The Analogy&lt;/h1&gt; &lt;p&gt;You want to send file X to friend A. He lives 500 miles away. If the file was 1MB then sending it using the internet would be the quickest. But what if the file is 100MB? Sure it’s slower than transferring 1MB but quicker than driving 500 miles?&lt;/p&gt; &lt;p&gt;Now what about 1TB? or 100TB? Now driving might be quicker.&lt;/p&gt; &lt;h1 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h1&gt; &lt;p&gt;An algorithm is...</description>
-        <pubDate>Sat, 06 Oct 2018 13:49:47 +0100</pubDate>
-        <link>http://jimmyjoseph.co.uk/the-big-o/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/the-big-o/</guid>
-        
-        <category>BigO</category>
-        
-        <category>CompSci</category>
-        
-        <category>complexity</category>
-        
-        
-        <category>CompSci</category>
-        
-      </item>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 27 Mar 2021 20:20:08 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Mar 2021 20:20:08 +0000</lastBuildDate>
+    <generator>Jekyll v4.0.1</generator>
     
       <item>
         <title>Farming Likes on Instagram</title>
         <description>&lt;h1 id=&quot;what-is-farming-likes&quot;&gt;What is farming likes?&lt;/h1&gt; &lt;p&gt;Farming likes usually takes the form of posting “click-bait” articles or photos. Sometimes it is possible to pay to buy followers and likes/dislikes for your/someone else’s posts. What’s the point? &lt;code class=&quot;highlighter-rouge&quot;&gt;To get more likes on posts&lt;/code&gt;, yeah this is society now.&lt;/p&gt; &lt;p&gt;Anyways, there is another way!&lt;/p&gt; &lt;h1 id=&quot;gets-bots-to-do-your-dirty-work&quot;&gt;Gets Bots to do your dirty work&lt;/h1&gt; &lt;p&gt;&lt;a href=&quot;https://timgrossmann.github.io/InstaPy/&quot;&gt;InstaPy&lt;/a&gt; is a bot thats designed for exactly this. &lt;strong&gt;“An automation script that uses your Instagram account to like and follow others with the aim of them liking and following back”.&lt;/strong&gt;&lt;/p&gt; &lt;h1 id=&quot;so-whats-the-gist&quot;&gt;So whats the gist?&lt;/h1&gt; &lt;p&gt;You give your...</description>
         <pubDate>Tue, 28 Aug 2018 21:52:47 +0100</pubDate>
-        <link>http://jimmyjoseph.co.uk/farming-likes-on-instagram/</link>
-        <guid isPermaLink="true">http://jimmyjoseph.co.uk/farming-likes-on-instagram/</guid>
+        <link>http://localhost:4000/farming-likes-on-instagram/</link>
+        <guid isPermaLink="true">http://localhost:4000/farming-likes-on-instagram/</guid>
         
         <category>Instagram</category>
         
@@ -279,6 +25,72 @@
         <category>InstaPy</category>
         
         <category>python</category>
+        
+        
+        <category>Miscellaneous</category>
+        
+      </item>
+    
+      <item>
+        <title>YOLO</title>
+        <description>&lt;h1 id=&quot;darknet&quot;&gt;DarkNet&lt;/h1&gt; &lt;p&gt;Joseph Redmon showcased DarkNet at &lt;a href=&quot;https://www.ted.com/talks/joseph_redmon_how_a_computer_learns_to_recognize_objects_instantly?language=en&quot;&gt;TED2017&lt;/a&gt;. Less than a decade ago classification problems between a cat or dog was almost impossible, but advances in deep learning has changed that. Joseph worked on YOLO which is a revolutionary system that can identify objects it has been trained on, and it does it incredibly fast.&lt;/p&gt; &lt;p&gt;Fast enough and accurate enough to track objects in live video feeds. This technology can be employed in self-driving cars, CCTV cameras, factory lines etc.&lt;/p&gt; &lt;h1 id=&quot;how-to-install&quot;&gt;How to install&lt;/h1&gt; &lt;p&gt;Joseph has a pretty good guide on his &lt;a href=&quot;https://pjreddie.com/darknet/install/&quot;&gt;website&lt;/a&gt;. But I will explain some...</description>
+        <pubDate>Sat, 17 Feb 2018 14:07:47 +0000</pubDate>
+        <link>http://localhost:4000/yolo/</link>
+        <guid isPermaLink="true">http://localhost:4000/yolo/</guid>
+        
+        <category>yolo</category>
+        
+        <category>object detection</category>
+        
+        <category>neural nets</category>
+        
+        <category>cuda</category>
+        
+        <category>opencv</category>
+        
+        
+        <category>Miscellaneous</category>
+        
+      </item>
+    
+      <item>
+        <title>MultiAgent Systems</title>
+        <description>&lt;h1 id=&quot;what-are-multiagent-systems&quot;&gt;What are MultiAgent Systems?&lt;/h1&gt; &lt;p&gt;MultiAgent systems is a field of Computer Science focusing on building autonomous agents, that can communicate with other agents.&lt;/p&gt; &lt;h1 id=&quot;why-multiagent-systems&quot;&gt;Why MultiAgent Systems?&lt;/h1&gt; &lt;p&gt;Computing is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;ubiquitous&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;interconnected&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;intelligent&lt;/code&gt;, more and more tasks are &lt;code class=&quot;highlighter-rouge&quot;&gt;delegated&lt;/code&gt; to it, and it is becoming more &lt;code class=&quot;highlighter-rouge&quot;&gt;human-oriented&lt;/code&gt;. What does this mean? Computing itself is becoming faster and more efficient. The internet created a global network interconnected devices, and now we are seeing more and more tasks delegated to these systems. A good example is a self-driving car, almost unthinkable a decade ago.&lt;/p&gt; &lt;p&gt;As...</description>
+        <pubDate>Mon, 12 Feb 2018 10:23:47 +0000</pubDate>
+        <link>http://localhost:4000/multiagent-systems/</link>
+        <guid isPermaLink="true">http://localhost:4000/multiagent-systems/</guid>
+        
+        <category>agents</category>
+        
+        <category>society</category>
+        
+        <category>intelligence</category>
+        
+        <category>autonomy</category>
+        
+        <category>interacting</category>
+        
+        
+        <category>Miscellaneous</category>
+        
+      </item>
+    
+      <item>
+        <title>Intro to JADE</title>
+        <description>&lt;h1 id=&quot;java-agent-development-framework&quot;&gt;&lt;em&gt;J&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ava&lt;/code&gt; &lt;em&gt;A&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gent&lt;/code&gt; &lt;em&gt;DE&lt;/em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;velopment&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;framework&lt;/code&gt;&lt;/h1&gt; &lt;p&gt;JADE is a framework in java that allows the realisation of agents and multi-agent systems. It complies with the &lt;a href=&quot;http://www.fipa.org/&quot;&gt;FIPA&lt;/a&gt; specifications. The agent platform can be distributed within a network and thus does not need to reside within one machine/OS.&lt;/p&gt; &lt;h2 id=&quot;jade-adminstration-tutorial&quot;&gt;JADE Adminstration Tutorial&lt;/h2&gt; &lt;p&gt;Introducing the notions of:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Platform&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Main Container&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AMS&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DF&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Follow the figure below. A JADE application will have &lt;code class=&quot;highlighter-rouge&quot;&gt;Agent&lt;/code&gt; elements, each with a unique name(A1,A2,..). &lt;code class=&quot;highlighter-rouge&quot;&gt;Agents&lt;/code&gt; act and interact by exchanging messages.&lt;/p&gt; &lt;p&gt;Agents...</description>
+        <pubDate>Fri, 09 Feb 2018 14:21:47 +0000</pubDate>
+        <link>http://localhost:4000/jade/</link>
+        <guid isPermaLink="true">http://localhost:4000/jade/</guid>
+        
+        <category>java</category>
+        
+        <category>FIPA</category>
+        
+        <category>agents</category>
+        
+        <category>queues</category>
+        
+        <category>compile</category>
         
         
         <category>Miscellaneous</category>

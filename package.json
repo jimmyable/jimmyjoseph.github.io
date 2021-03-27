@@ -4,7 +4,11 @@
   "description": "My jekyll blog template.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   },
   "keywords": [
     "frontend",
@@ -31,6 +35,7 @@
   "dependencies": {
     "jeet": "^6.1.4",
     "kouto-swiss": "^0.11.14",
+    "natives": "^1.1.6",
     "rupture": "^0.6.1"
   }
 }
